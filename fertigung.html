@@ -1,0 +1,580 @@
+
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Stylesheet CSS - Fontawesome -->
+        <link rel="stylesheet" href="sass/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <title>AGS-Engineering</title>
+    </head>
+    <body>
+    
+    <!-- NavBar -->
+    <header class="navbar" role="banner">
+        <div class="container flex">
+            <div class="logo-style">
+                <a href="index.html"><img src="img/Logo AGS_2018_300_194.png" alt="Logo AGS" height="94"></a>
+            </div>
+          
+            <nav>
+                <ul> 
+                    <li><a href="unternehmen.html">Unternehmen</a></li>
+                    <li><a href="produkte.html">Produkte</a></li>
+                    <li><a href="fertigung.html">Fertigung</a></li>
+                    <li><a href="entwicklung.html">Entwicklung</a></li>
+                    <li><a href="qualitaet.html">Qualität</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+    
+    <!-- Verwendete Icons 
+        <a href="https://www.flaticon.com/de/kostenlose-icons/metall" title="metall Icons">Metall Icons erstellt von Smashicons - Flaticon</a>
+        <a href="https://www.flaticon.com/de/kostenlose-icons/gewalzter-stahl" title="gewalzter stahl Icons">Gewalzter stahl Icons erstellt von Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/de/kostenlose-icons/material" title="material Icons">Material Icons erstellt von Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/de/kostenlose-icons/metall" title="metall Icons">Metall Icons erstellt von Freepik - Flaticon</a>                        
+        <a href="https://www.flaticon.com/de/kostenlose-icons/metallisch" title="metallisch Icons">Metallisch Icons erstellt von Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/de/kostenlose-icons/metallisch" title="metallisch Icons">Metallisch Icons erstellt von Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/de/kostenlose-icons/metall" title="metall Icons">Metall Icons erstellt von Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/de/kostenlose-icons/stahl" title="stahl Icons">Stahl Icons erstellt von Smashicons - Flaticon</a>
+        <a href="https://www.flaticon.com/de/kostenlose-icons/schweisser" title="schweißer Icons">Schweißer Icons erstellt von wanicon - Flaticon</a>
+        <a href="https://www.flaticon.com/de/kostenlose-icons/metall" title="metall Icons">Metall Icons erstellt von surang - Flaticon</a>
+                        -->
+
+
+    <div class="container">
+
+    <div class="tabs">
+  
+        <input type="radio" id="tab1" name="tab-control" checked>
+        <input type="radio" id="tab2" name="tab-control">
+        <input type="radio" id="tab3" name="tab-control">  
+        <input type="radio" id="tab4" name="tab-control">
+        <input type="radio" id="tab5" name="tab-control">  
+        <input type="radio" id="tab6" name="tab-control">
+        <ul>
+            <li title="Features"><label for="tab1" role="button"><svg viewBox="0 0 24 24"><path d="M14,2A8,8 0 0,0 6,10A8,8 0 0,0 14,18A8,8 0 0,0 22,10H20C20,13.32 17.32,16 14,16A6,6 0 0,1 8,10A6,6 0 0,1 14,4C14.43,4 14.86,4.05 15.27,4.14L16.88,2.54C15.96,2.18 15,2 14,2M20.59,3.58L14,10.17L11.62,7.79L10.21,9.21L14,13L22,5M4.93,5.82C3.08,7.34 2,9.61 2,12A8,8 0 0,0 10,20C10.64,20 11.27,19.92 11.88,19.77C10.12,19.38 8.5,18.5 7.17,17.29C5.22,16.25 4,14.21 4,12C4,11.7 4.03,11.41 4.07,11.11C4.03,10.74 4,10.37 4,10C4,8.56 4.32,7.13 4.93,5.82Z"/>
+            </svg><br><span>Mechanische-fertigung</span></label></li>
+            <li title="Delivery Contents"><label for="tab2" role="button"><svg viewBox="0 0 24 24"><path d="M2,10.96C1.5,10.68 1.35,10.07 1.63,9.59L3.13,7C3.24,6.8 3.41,6.66 3.6,6.58L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.66,6.72 20.82,6.88 20.91,7.08L22.36,9.6C22.64,10.08 22.47,10.69 22,10.96L21,11.54V16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V10.96C2.7,11.13 2.32,11.14 2,10.96M12,4.15V4.15L12,10.85V10.85L17.96,7.5L12,4.15M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V12.69L14,15.59C13.67,15.77 13.3,15.76 13,15.6V19.29L19,15.91M13.85,13.36L20.13,9.73L19.55,8.72L13.27,12.35L13.85,13.36Z" />
+            </svg><br><span>Blechbearbeitung</span></label></li>
+            <li title="Shipping"><label for="tab3" role="button"><svg viewBox="0 0 24 24">
+            <path d="M3,4A2,2 0 0,0 1,6V17H3A3,3 0 0,0 6,20A3,3 0 0,0 9,17H15A3,3 0 0,0 18,20A3,3 0 0,0 21,17H23V12L20,8H17V4M10,6L14,10L10,14V11H4V9H10M17,9.5H19.5L21.47,12H17M6,15.5A1.5,1.5 0 0,1 7.5,17A1.5,1.5 0 0,1 6,18.5A1.5,1.5 0 0,1 4.5,17A1.5,1.5 0 0,1 6,15.5M18,15.5A1.5,1.5 0 0,1 19.5,17A1.5,1.5 0 0,1 18,18.5A1.5,1.5 0 0,1 16.5,17A1.5,1.5 0 0,1 18,15.5Z" />
+            </svg><br><span>gieszen---schmieden---umformen</span></label></li>    
+            <li title="Returns"><label for="tab4" role="button"><svg viewBox="0 0 24 24">
+            <path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+            </svg><br><span>Schweißen - Löten - Klebeverbindungen Verzahnungen</span></label></li>
+
+            <li title="Features"><label for="tab5" role="button"><svg viewBox="0 0 24 24"><path d="M14,2A8,8 0 0,0 6,10A8,8 0 0,0 14,18A8,8 0 0,0 22,10H20C20,13.32 17.32,16 14,16A6,6 0 0,1 8,10A6,6 0 0,1 14,4C14.43,4 14.86,4.05 15.27,4.14L16.88,2.54C15.96,2.18 15,2 14,2M20.59,3.58L14,10.17L11.62,7.79L10.21,9.21L14,13L22,5M4.93,5.82C3.08,7.34 2,9.61 2,12A8,8 0 0,0 10,20C10.64,20 11.27,19.92 11.88,19.77C10.12,19.38 8.5,18.5 7.17,17.29C5.22,16.25 4,14.21 4,12C4,11.7 4.03,11.41 4.07,11.11C4.03,10.74 4,10.37 4,10C4,8.56 4.32,7.13 4.93,5.82Z"/>
+            </svg><br><span>Rapid Prototyping Bereich - Baugruppen</span></label></li>
+            <li title="Delivery Contents"><label for="tab6" role="button"><svg viewBox="0 0 24 24"><path d="M2,10.96C1.5,10.68 1.35,10.07 1.63,9.59L3.13,7C3.24,6.8 3.41,6.66 3.6,6.58L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.66,6.72 20.82,6.88 20.91,7.08L22.36,9.6C22.64,10.08 22.47,10.69 22,10.96L21,11.54V16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V10.96C2.7,11.13 2.32,11.14 2,10.96M12,4.15V4.15L12,10.85V10.85L17.96,7.5L12,4.15M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V12.69L14,15.59C13.67,15.77 13.3,15.76 13,15.6V19.29L19,15.91M13.85,13.36L20.13,9.73L19.55,8.72L13.27,12.35L13.85,13.36Z" />
+            </svg><br><span>Maschinenbau Grosse-Bauteile</span></label></li>
+        </ul>
+  
+        <div class="slider"><div class="indicator"></div></div>
+        <div class="content">
+
+<!-- ////// TAB 1 -->
+            <section>
+              <h2>Mechanische-fertigung</h2>
+
+              <div class="acc-wraper">
+                <div class="accordion">
+                  <div>
+                    <img src="img/acc/Mecha_1_533.jpg" alt="">
+                  </div>
+                  <div>
+                    <img src="img/acc/Mecha_2_533.jpg" alt="">
+                  </div>
+                  <div>
+                    <img src="img/acc/Mecha_3_533.jpg" alt="">
+                  </div>
+                  <div>
+                    <img src="img/acc/Mecha_4_533.jpg" alt="">
+                  </div>
+                  <div>
+                    <img src="img/acc/Mecha_5_533.jpg" alt="">
+                  </div>
+                  
+                </div>
+              </div>  
+
+              <div class="headbox">
+                <div class="headbox__item">
+                    <p>Drehen-Fräsen</p>
+                </div>
+                <div class="headbox__item">
+                    <p>Rollieren-Glattwalzen</p>
+                </div>
+                <div class="headbox__item">
+                    <p>Polieren-Gewindeschneiden</p>
+                </div>
+                <div class="headbox__item">
+                    <p>Räumen-Sägen</p>
+                </div>
+                </div>
+              
+                <dl class="art-fertigung">
+                    <dt class="art-fertigung__item">Bearbeitung von Drehteile auf CNC- Lang- und Kurzdrehautomaten ( Bereich Ø 0,3- 58 mm x 130 mm )</dt>
+                    <dt class="art-fertigung__item">Bearbeitung auf Kurvendrehautomaten, 2,5 D und 3D</dt>
+                    <dt class="art-fertigung__item">Präzisionsdrehteile</dt>
+                    <dt class="art-fertigung__item">Mikrodrehteile</dt>
+                    <dt class="art-fertigung__item">CNC-Futterdrehteile bis Ø 180 mm, größer siehe Seite</dt>
+                    <dt class="art-fertigung__item">Machinenbau</dt>
+                    <dt class="art-fertigung__item">CNC-Stangendrehteile bis Ø 95 mm</dt>
+                    <dt class="art-fertigung__item">Langdrehteile</dt>
+                    <dt class="art-fertigung__item">von 3 Achsen bis 5 Achsen Bearbeitung</dt>  
+                    <dt class="art-fertigung__item">Konventionelle Drehteile</dt>
+                    <dt class="art-fertigung__item">Gewinderollen, Gewindeschneiden</dt>
+                    <dt class="art-fertigung__item">Roldteren, Glattwalzen</dt>
+                    <dt class="art-fertigung__item">Bohren, Räumen</dt>
+                    <dt class="art-fertigung__item">Mikrobohren mit Laser ( Bereich ab Ø 0,15 - 2 mm )</dt>
+                    <dt class="art-fertigung__item">CNC-Fräsen</dt>
+                    <dt class="art-fertigung__item">CNC-Stangenfrästeile bis Ø 65 mm</dt>
+                    <dt class="art-fertigung__item">Langfrästeile</dt>
+                    <dt class="art-fertigung__item">Mikrofrästeile</dt>
+                    <dt class="art-fertigung__item">von 3 Achsen bis 5 Achsen Bearbeitung</dt>
+                    <dt class="art-fertigung__item">Konventionelle Frästeile, große siehe Maschinenbau</dt>
+                </dl>
+                
+                    <h4>Bearbeitung</h4>
+                    <dl class="art-fertigung-ebenezwei"> 
+                        <dt class="art-fertigung-ebenezwei__item">auf Portalfräsmaschinen</dt>
+                        <dt class="art-fertigung-ebenezwei__item">auf Kopierfräsmaschinen</dt>
+                        <dt class="art-fertigung-ebenezwei__item">auf Bearbeitungszentren</dt>
+                        <dt class="art-fertigung-ebenezwei__item">auf Tischfräsmaschinen</dt>
+                        <dt class="art-fertigung-ebenezwei__item">auf Komplettbearbeitungsmaschinen</dt>
+                        <dt class="art-fertigung-ebenezwei__item">auf Fräsautomaten, 2,5 D und 3D, uvm.</dt>
+                        <dt class="art-fertigung-ebenezwei__item">Präzisionsfrästeile</dt>
+                    </dl>
+              
+            </section>
+
+<!-- ////// TAB 2 -->
+            <section>
+              <h2>Blechbearbeitung</h2>
+
+              <div class="acc-wraper">
+                <div class="accordion">
+                  <div>
+                    <img src="img/acc/Blech_1_533.jpg" alt="">
+                  </div>
+                  <div>
+                    <img src="img/acc/Blech_2_533.jpg" alt="">
+                  </div>
+                  <div>
+                    <img src="img/acc/Blech_3_533.jpg" alt="">
+                  </div>
+                  <div>
+                    <img src="img/acc/Blech_4_533.jpg" alt="">
+                  </div>
+                  <div>
+                    <img src="img/acc/Blech_5_533.jpg" alt="">
+                  </div>
+                  
+                </div>
+              </div> 
+
+              <dl class="art-fertigung">
+                <dt class="art-fertigung__item">Blechbearbeitung allgemein</dt>
+                <dt class="art-fertigung__item">Laserschneiden, Wasserstrahlschneiden, Plasmaschneiden, Drahtschneiden</dt>
+                <dt class="art-fertigung__item">Rohrverarbeitung, 3D-Laserschneiden</dt>
+                <dt class="art-fertigung__item">Mikroschneidteile</dt>
+                <dt class="art-fertigung__item">Lochstanzen, stanzen, biegen, drücken, tiefziehen</dt> 
+                <dt class="art-fertigung__item">CNC-Abkanten, CNC-Laserschneiden</dt>
+                <dt class="art-fertigung__item">CNC-Stanzen und -Nibbeln</dt>
+                <dt class="art-fertigung__item">CNC-Schwenkbiegen</dt>
+                <dt class="art-fertigung__item">CNC-Rollbiegen, Rundbiegen</dt>
+                <dt class="art-fertigung__item">Laserschweissen mit Roboter</dt>
+                <dt class="art-fertigung__item">MIG-/MAG-Schweißen, WIG-Schweißen, Plasmaschweißen</dt>
+                <dt class="art-fertigung__item">Widerstandspunktschweißen, Bolzenschweißen, Clinchen</dt>
+            </dl>
+            </section>
+
+<!-- ////// TAB 3 -->
+            <section>
+              <h2>gieszen---schmieden---umformen</h2>
+
+
+              <div class="acc-wraper">
+                <div class="accordion">
+                  <div>
+                    <img src="img/acc/gsu_1_533.jpg" alt="">
+                  </div>
+                  <div>
+                    <img src="img/acc/gsu_2_533.jpg" alt="">
+                  </div>
+                  <div>
+                    <img src="img/acc/gsu_3_533.jpg" alt="">
+                  </div>
+                  <div>
+                    <img src="img/acc/gsu_4_533.jpg" alt="">
+                  </div>
+                  <div>
+                    <img src="img/acc/gsu_5_533.jpg" alt="">
+                  </div>
+                  
+                </div>
+              </div>
+
+                <div class="headbox">
+                  <div class="headbox__item">
+                      <p>Spritzgussteile Profilextrusion-Kunststoffbearbeitung</p>
+                  </div>
+                  <div class="headbox__item">
+                      <p>Gussteile - Schmiedeteile Schleifen</p>
+                  </div>
+                  <div class="headbox__item">
+                      <p>Honen - Polieren Entgraten</p>
+                  </div>
+                  <div class="headbox__item">
+                      <p>Oberflächenbehandlung Wärmebehandlung Reinigung</p>
+                  </div>
+                </div>
+
+                <dl class="art-fertigung">
+                    <dt class="art-fertigung__item">bis 3 Komponenten-Technik</dt>
+                    <dt class="art-fertigung__item">1-Kavitätenformwerkzeuge oder Etagenwerkzeugformen</dt>
+                    <dt class="art-fertigung__item">Profilextrusion</dt>
+                    <dt class="art-fertigung__item">Schläuche</dt>
+                    <dt class="art-fertigung__item">Gummiteile</dt>
+                    <dt class="art-fertigung__item">Kunststoffschweißen</dt>
+                    <dt class="art-fertigung__item">Fräs-/Dreh-/Schneidteile</dt>
+                    <dt class="art-fertigung__item">Gussteile jeglicher Art</dt>
+                    <dt class="art-fertigung__item">Schmiedeteile jeglicher Art</dt>
+                    <dt class="art-fertigung__item">Kaltfließpressteile</dt>
+                    <dt class="art-fertigung__item">Verbindungselemente</dt>
+                    <dt class="art-fertigung__item">Bearbeitung auf Flachschleifmaschinen</dt>
+                    <dt class="art-fertigung__item">auf Kurvenschleifmaschinen</dt>
+                    <dt class="art-fertigung__item">auf Rundschleifmaschinen</dt>
+                    <dt class="art-fertigung__item">spitzenloses Schleifen </dt>
+                    <dt class="art-fertigung__item">Formhonen, Laser-Honen, Nanohonen, Positionshonen</dt>
+                    <dt class="art-fertigung__item">Elektropolieren und von Hand</li>
+                    <dt class="art-fertigung__item">Entgraten von Hand, Gleitschleifen, Trommeln</dt>
+                    <dt class="art-fertigung__item">Oberflächenbehandlungen jeglicher Art</dt>
+                    <dt class="art-fertigung__item">Wärmebehandlungen jeglicher Art</dt>
+                    <dt class="art-fertigung__item">Reinigung jeglicher Art z.B. Ultraschallreinigung</dt>
+                </dl>
+            </section>
+
+<!-- ////// TAB 4 -->
+            <section>
+              <h2>Schweißen - Löten - Klebeverbindungen-Verzahnungen</h2>
+
+              <div class="acc-wraper">
+                <div class="accordion">
+                  <div>
+                    <img src="img/acc/slkv_1_533.jpg" alt="">
+                  </div>
+                  <div>
+                    <img src="img/acc/slkv_2_533.jpg" alt="">
+                  </div>
+                  <div>
+                    <img src="img/acc/slkv_3_533.jpg" alt="">
+                  </div>
+                  <div>
+                    <img src="img/acc/slkv_4_533.jpg" alt="">
+                  </div>
+                  <div>
+                    <img src="img/acc/slkv_5_533.jpg" alt="">
+                  </div>
+                  
+                </div>
+              </div>
+             
+              <div class="headbox ">
+                <div class="headbox__item ">
+                    <p>schweiszen,-verzahnungen,-loeten,-kleben</p>
+                </div>
+                <div class="headbox__item">
+                    <p>tig---mag---wig--Schweißen</p>
+                </div>
+                <div class="headbox__item">
+                    <p>Löten</p>
+                </div>
+                <div class="headbox__item">
+                    <p>Klebeverbindungen-Verzahnungen</p>
+                </div>
+              </div>
+             
+                <dl class="art-fertigung">
+                    <dt class="art-fertigung__item">Auftragsschweißen</dt> 
+                        <dd class="art-fertigung-detail__item">( Bsp.: Stahl mit Ampco Buchse auftragsgeschweißt )</dd>
+                    <dt class="art-fertigung__item">Schmelzschweißen</dt>
+                        <dd class="art-fertigung-detail__item">vor allem geeignet für schmale Zonen, Ineinanderfließen</dd>
+                    <dt class="art-fertigung__item">Gasschmelzschweißen ( Autogenschweißen )</dt>
+                        <dd class="art-fertigung-detail__item">legierte und unlegierte Stähle</dd>
+                    <dt class="art-fertigung__item">Lichtbogenschweißen, Laserschweißen</dt> 
+                        <dd class="art-fertigung-detail__item">vor allem bei dünnen Blechen</dd>
+                    <dt class="art-fertigung__item">Preßschweißen</dt>
+                        <dd class="art-fertigung-detail__item">für Metalle die in einen teigigen Zustand übergehen</dd>
+                    <dt class="art-fertigung__item">Hammerschweißen ( Feuerschweißen )</dt>
+                        <dd class="art-fertigung-detail__item">hohe Reinheitsstähle</dd>
+                    <dt class="art-fertigung__item">Wassergasschweißen</dt>
+                        <dd class="art-fertigung-detail__item">z. Verschweißen von legierten und unlegierten Stahl</dd>
+                    <dt class="art-fertigung__item">Abbrennstumpfscheißen</dt>
+                        <dd class="art-fertigung-detail__item">für stumpf bzw., bei stoßenden Teile</dd>
+                    <dt class="art-fertigung__item">Buckelschweißen</dt>
+                    <dt class="art-fertigung__item">Thermitschweißen</dt>
+                        <dd class="art-fertigung-detail__item">GG-Stahlverbindungen</dd>
+                    <dt class="art-fertigung__item">Bolzenschweißung</dt>
+                    <dt class="art-fertigung__item">Lötverbindungen</dt>
+                    <dt class="art-fertigung__item">Kleben jeglicher Teile</dt>
+                    <dt class="art-fertigung__item">Schrägverzahnung</dt>
+                    <dt class="art-fertigung__item">Geradeverzahnung</dt>
+                    <dt class="art-fertigung__item">Kegelverzahnung</dt>
+                    <dt class="art-fertigung__item">Bogenverzahnung</dt>
+                    <dt class="art-fertigung__item">Stirnverzahnung</dt>
+                    <dt class="art-fertigung__item">Schraubenverzahnung</dt>
+                    <dt class="art-fertigung__item">Evolventenverzahnung</dt>
+                    <dt class="art-fertigung__item">Sonderverzahnungen, Zahnstangen etc.</dt>
+                </dl>
+            </section>
+
+<!-- ////// TAB 5 -->
+            <section>
+              <h2>rapid-prototyping-bereich,-baugruppen, montage,-werkzeugbau,-formenbau</h2>
+             
+
+              <div class="acc-wraper">
+                <div class="accordion">
+                  <div>
+                    <img src="img/acc/rapid_1_533.jpg" alt="">
+                  </div>
+                  <div>
+                    <img src="img/acc/rapid_2_533.jpg" alt="">
+                  </div>
+                  <div>
+                    <img src="img/acc/rapid_3_533.jpg" alt="">
+                  </div>
+                  <div>
+                    <img src="img/acc/rapid_4_533.jpg" alt="">
+                  </div>
+                  <div>
+                    <img src="img/acc/rapid_5_533.jpg" alt="">
+                  </div>
+                  
+                </div>
+              </div>
+
+              <div class="headbox">
+                <div class="headbox__item">
+                    <p>Rapid Prototyping Bereich - Baugruppen</p>
+                </div>
+                <div class="headbox__item">
+                    <p>Montage - Werkzeugbau - Formenbau</p>
+                </div>
+              </div>
+             
+              
+
+              <dt class="art-fertigung__item">Prototyping (RPD)</dt> 
+                  <dd class="art-fertigung-detail__item">Herstellung von Modellen und Vorserienteile</dd>
+              <dt class="art-fertigung__item">Rapid Tooling (RPT)</dt> 
+                  <dd class="art-fertigung-detail__item">Herstellung von Werkzeugeinsätze für Vor-/Kleinserien</dd>
+              <dt class="art-fertigung__item">Rapid Manufacturing (RPM)</dt>
+                  <dd class="art-fertigung-detail__item">Herstellung von gebrauchsfähigen Teilen</dd>
+              <dt class="art-fertigung__item">Verfahren.....</dt>
+
+              <dt class="art-fertigung__item">Stereolithografie (STL)</dt> 
+                 <dd class="art-fertigung-detail__item">selektives Lasersintern (SLS), Lasergenerieren</dd>
+
+              <dt class="art-fertigung__item">Laminated Object Modelling (LOM), 3D Printing</dt>
+
+              <dt class="art-fertigung__item">Formenbau / Werkzeugbau</dt>
+
+              <dt class="art-fertigung__item">Baugruppenmontage unterschiedlicher Werkstoffkomponenten</dt>
+
+              <dt class="art-fertigung__item">Vor-/Fertigmontage</dt>
+
+              <dt class="art-fertigung__item">Teilmontage</dt>
+
+              <dt class="art-fertigung__item">Zusammenbau selbst bearbeitete Teile</dt>
+
+              <dt class="art-fertigung__item">kleben</dt>
+
+              <dt class="art-fertigung__item">Verpackungslösungen</dt>
+
+              <dt class="art-fertigung__item">Hand-/Automatisierte Montage</dt>
+            </section>
+            
+<!-- ////// TAB 6 -->
+            <section>
+              <h2>Maschinenbau---Grosze-bauteile</h2>
+
+
+              <div class="acc-wraper">
+                <div class="accordion">
+                  <div>
+                    <img src="img/acc/grobau_1_533.jpg" alt="">
+                  </div>
+                  <div>
+                    <img src="img/acc/grobau_2_533.jpg" alt="">
+                  </div>
+                  <div>
+                    <img src="img/acc/grobau_3_533.jpg" alt="">
+                  </div>
+                  <div>
+                    <img src="img/acc/grobau_4_533.jpg" alt="">
+                  </div>
+                  <div>
+                    <img src="img/acc/grobau_5_533.jpg" alt="">
+                  </div>
+                  
+                </div>
+              </div>
+
+               <div class="headbox">
+                 <div class="headbox__item">
+                     <p>Anlagenbau</p>
+                 </div>
+                 <div class="headbox__item">
+                     <p>Maschinenbau</p>
+                 </div>
+                 <div class="headbox__item">
+                     <p>Große Bauteile</p>
+                 </div>
+                 <div class="headbox__item">
+                     <p>Konstruktionen</p>
+                 </div>
+               </div>
+
+             
+                <dl class="art-fertigung">
+                    <li class="art-fertigung__item">große Frästeile von 500 - 12.000 mm</li>
+                    <li class="art-fertigung__item">große Drehteile von 400 - 4000 mm</li>
+                    <li class="art-fertigung__item">Schweißkonstruktionen bis zu 20 Meter</li>
+                    <li class="art-fertigung__item">Maschinenbauanlagen</li>
+                    <li class="art-fertigung__item">kompletter Anlangenbau</li>
+                    <li class="art-fertigung__item">Gestelle, Rahmen uvm.</li>
+                </dl>
+            </section>
+
+        </div>
+    </div>
+
+</div>
+
+
+                
+            </section>
+        </article>
+        <article role="article" class="konstruktion cont-style">
+            <section>
+                <h3>Konstruktionsbereich:</h3>
+                <p>Diese Foto-Gallerie oben, gibt Ihnen einen kleinen Einblick in unsere Realisierungen.</p> 
+                <p>Von der Idee, zum fertigen Produkt.</p>
+                <p>Methodisches Konstruieren mit</p>
+                <ul>
+                    <li>FMEA</li>
+                    <li>moderne Konstruktions-Methoden</li>
+                    <li>Berechnungen</li>
+                    <li>Netzplantechnik</li>
+                    <li>Gant-Diagramme</li>
+                    <li>Erzeugnisstrukturen</li>
+                    <li>Pflichtenhefte</li>
+                    <li>Funktionsstrukturen</li>
+                </ul>
+                <p>... sind unsere Werkzeuge, für eine erfolgreiche und pünktliche Lösungsfindung.</p>
+            </section>
+        </article>
+        <article role="article" class="service cont-style">
+            <section>
+                <h3>Spezielle-serviceleistungen</h3>
+                <ul>
+                    <li>Auditierungen von Lieferanten International.</li>
+                    <li>Wir helfen Ihnen die Produktionskosten zu senken.</li>
+                    <li>Lieferantenmanagement weltweit.</li>
+                    <li>Verlagerung ( Outsourcing ) der Fertigung oder Montage ins Ausland.</li>
+                    <li>Ist Ihr Produkt im Inland zu kostenaufwendig?</li>
+                    <li>Sie möchten ein Produkt im Ausland vermarkten?</li>
+                    <li>fertige Produkte aus dem Ausland.</li>
+                    <li>Serviceleistungen für Ihre Lieferanten International.</li>
+                    <li>von der Idee zum fertigen Produkt.</li>
+                    <li>Übernahme Ihrer Einkaufsabteilung.</li>
+                    <li>mittels Vertragsvereinbarungen, direkter Kontakt zu Lieferanten weltweit.</li>
+                </ul>
+            </section>
+
+            AGS macht es Ihnen einfach. Alles aus einer Hand
+            Wir stellen uns der Aufgabe und finden die beste Lösung für Sie.
+
+            Gewinnerziehlung in Waage mit Qualität ist unsere Passion.
+
+            Sollten Sie noch Fragen haben oder wir Ihnen irgendwie behilflich sein können, zögern Sie nicht, uns unter 06127-7003383 anzurufen.
+        </article>
+        <article role="article" class="qualitaet cont-style">
+            <section>
+                <h3>Qualitaetsabteilung</h3>
+                <span>EMPB nach VDA- IMDS Einträge</span>
+                <span>PPC-RRP-8D-PPAP report</span>
+                <span>Cpk, Cp, Cmk und Cm Werte</span>
+                <span>FMEA-SPC Auswertungen</span>
+
+                <p>Mit uns als Full-Service Dienstleister geht es einfacher und effizienter.</p>
+                <p>Um unseren Kunden ein hohes Maß an Qualität zu liefern, 
+                arbeiten wir mit neuwertiger, modernster Bearbeitungstechnik.</p>
+                <p>Wir setzen auf hohe Qualität und ein ebenso hohes Maß an Präzision.</p>
+                <p>Qualität bedeutet für uns:</p>
+                <ul>
+                    <li>Guter Service</li>
+                    <li>Qualität fängt schon ab dem ersten Kontakt an</li>
+                    <li>Sehr gut verarbeitete Teile</li>
+                    <li>flexibel und kooperativ</li>
+                </ul>
+                <p>Wir arbeiten International und natürlich auch im Inland. Lieferanten in Italien, Polen, Bulgarien, China und Indien.
+                Größtenteils sind unsere Zulieferer nach DIN ISO 9001:2000 zertifiziert, einige auch mit ISO/TS16949.</p>
+                <p>Natürlich können wir Ihre Produkte mit folgender Dokumentation ausliefern.:</p>
+                <ul>
+                    <li>EMPB nach VDA (Erstmusterprüfberichte)</li>
+                    <li>IMDS Einträge (International Material Data System)</li>
+                    <li>Cpk und Cp Werte, für die Prozessfähigkeit</li>
+                    <li>Cmk und Cm Werte, für die Maschinenfähigkeit</li>
+                    <li>PPAP Production Part Approval Process</li>
+                    <li>FMEA ,Prozess-FMEA (Fehlermöglichkeits- und Einflussanalyse Auswirkungsanalyse</li>
+                    <li>SPC-Auswertungen</li>
+                    <li>Werkstoffzeugnisse usw. gelten als selbstverständlich</li>
+                </ul>
+                <p>Qualität ist, wenn der Kunde wieder kommt und nicht das Produkt.</p>
+            </section>
+        </article>
+    </main>
+
+
+    <footer class="footer bg-secondary-dark" role="contentinfo">
+        <div class="container flex">
+            <div class="logo-style">
+                <a href="index.html"><img src="img/Logo AGS_2018_300_194.png" alt="Logo AGS" height="94"></a>
+            </div>
+            <address class="grid">
+                <div class="">
+                    AGS Engineering Metalltechnik GmbH<br>
+                    Ernt-Wiss-Straße<br>
+                    65933 Frankfurt am Main<br></div>
+                <div class="">
+                    Telefonnummer <br>
+                    Faxnummer<br>
+                    Email<br>
+                </div>
+            </address>
+            <nav>
+                <ul>
+                    <li><a href="kontakt.html">Impressum</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="kontakt.html">Datenschutz</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    </body>
+</html>

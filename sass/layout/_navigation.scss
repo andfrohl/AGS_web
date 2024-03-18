@@ -1,0 +1,58 @@
+/* NavBar */
+.navbar {
+    margin: 2rem 0;
+    color: $color-white;
+    height: 12rem;
+    padding: 2rem 0;
+    
+    
+
+    & .flex {
+        justify-content: space-between; /*Sorgt dafür das Logo links und Navigation rechts ist*/
+        align-items: flex-end;
+    }
+
+    & ul {
+        display: flex;
+        
+
+        & li {
+            background-color: $color-primary;
+            border-radius: .5rem;
+            
+            padding: 1.5rem 1rem;
+            box-shadow: 0 3px 1rem rgba($color-black, .2);
+
+            &:hover {
+                transition: transform 0.2s ease-in-out;
+                transform: scale(1.1);
+               
+            }
+
+
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+
+           
+        }
+      
+
+        & a {
+            color: $color-white;
+            padding: 5rem 0;
+            margin: 0 1rem;
+            
+            
+            
+        }
+    }   
+}
+ 
+.top-logo-style {
+    background-color: $color-primary;
+    border-radius: .5rem;
+    box-shadow: 0 3px 1rem rgba($color-black, .2);
+    padding: 1rem 1.5rem;
+
+}

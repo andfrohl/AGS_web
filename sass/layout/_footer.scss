@@ -1,0 +1,32 @@
+/* Footer */
+
+.footer {
+    background-color: $color-primary-dark;
+    color: #fff;
+    height: 10rem;    
+    padding: 2rem;
+
+    & address {
+        font-size: small;
+        gap: 10rem;
+    }
+
+    & .flex {
+        justify-content: space-between; /*Sorgt dafür das Logo links und Navigation rechts ist*/
+    }
+
+    & ul  {
+        display: flex; 
+    }
+
+    & ul a {
+        color: $color-white;
+        margin: 1rem 2rem;
+
+        &:hover {
+            border-bottom: 2px $color-white solid;
+        }
+    }
+}
+
+
