@@ -26,9 +26,9 @@
     border-radius: 1rem;
     min-width: 10rem;
     text-align: center;
-    padding: 1rem;
+    padding: .5rem 1rem;
     margin: 1rem;
-    
+    line-height: 1;
   }
 }
 
@@ -91,7 +91,8 @@ $content-selector: "~ .content > section";
   position: relative;
   background: white;
   padding: 2rem;
-  padding-bottom: 80px;
+  padding-bottom: 20px;
+  margin-bottom: 3rem;
   width: 90%;
   height: auto;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -300,7 +301,7 @@ $content-selector: "~ .content > section";
   flex-shrink:1;
   overflow:hidden;
   transition:all .5s ease;
-  border:5px solid aliceblue;
+  border: 2px solid $color-grey-light-1;
   border-radius:10px;
   position:relative
 }
@@ -328,7 +329,7 @@ $content-selector: "~ .content > section";
 
 .art-fertigung,
 .art-fertigung-ebenezwei {
-  
+ 
  
   margin: 3rem 0;
   padding: 3rem 0;
@@ -340,15 +341,15 @@ $content-selector: "~ .content > section";
      
 
   &__item {
-    flex: 0 0 90%;
+    flex: 0 0 80%;
     margin-bottom: .7rem;
     text-indent: 1rem;
-    
+    list-style-position: outside;
   }
 
   &-detail__item {
     flex: 0 0 80%;
-    margin-left: .3rem;
+    margin-left: 3rem;
     margin-bottom: 1.5rem;
     
   }
@@ -372,11 +373,10 @@ $content-selector: "~ .content > section";
 
   &-detail__item::before {
     content: "";
-    display: inline-block;
+    display: inline-flex;
     height: 2rem;
     width: 2rem;
     margin-right: .7rem;
-    list-style-position: outside;
 
     background-color: $color-primary;
     -webkit-mask-image: url(./../img/chevron-right.svg);

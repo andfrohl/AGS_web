@@ -383,6 +383,10 @@ img {
   display: none;
 }
 
+.navbar {
+  background: none;
+  pointer-events: none;
+}
 .navbar-container {
   display: flex;
   color: #fff;
@@ -432,6 +436,7 @@ img {
   box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.2);
   z-index: 200;
   flex-basis: 100%;
+  pointer-events: auto;
 }
 .navigation__item:hover, .navigation__item:active {
   transition: transform 0.2s ease-in-out;
@@ -454,6 +459,7 @@ img {
 .top-logo-style img {
   width: 100%;
   height: 13rem;
+  pointer-events: auto;
 }
 
 .navbar .active {
@@ -478,6 +484,7 @@ img {
 .navbar .active img {
   width: 100%;
   height: 7.5rem;
+  pointer-events: auto;
 }
 
 @media (max-width: 56.25em) {
@@ -496,6 +503,7 @@ img {
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
     text-align: center;
     cursor: pointer;
+    pointer-events: auto;
   }
   .navigation__background {
     height: 6rem;
@@ -528,6 +536,7 @@ img {
     list-style: none;
     text-align: center;
     width: 100%;
+    pointer-events: auto;
   }
   .navigation__item {
     margin: 3rem 8rem;
@@ -1088,8 +1097,9 @@ img {
   border-radius: 1rem;
   min-width: 10rem;
   text-align: center;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   margin: 1rem;
+  line-height: 1;
 }
 
 /* colors */
@@ -1103,7 +1113,8 @@ img {
   position: relative;
   background: white;
   padding: 2rem;
-  padding-bottom: 80px;
+  padding-bottom: 20px;
+  margin-bottom: 3rem;
   width: 90%;
   height: auto;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -1372,7 +1383,7 @@ img {
   flex-shrink: 1;
   overflow: hidden;
   transition: all 0.5s ease;
-  border: 5px solid aliceblue;
+  border: 2px solid #faf9f9;
   border-radius: 10px;
   position: relative;
 }
@@ -1398,14 +1409,15 @@ img {
 }
 .art-fertigung__item,
 .art-fertigung-ebenezwei__item {
-  flex: 0 0 90%;
+  flex: 0 0 80%;
   margin-bottom: 0.7rem;
   text-indent: 1rem;
+  list-style-position: outside;
 }
 .art-fertigung-detail__item,
 .art-fertigung-ebenezwei-detail__item {
   flex: 0 0 80%;
-  margin-left: 0.3rem;
+  margin-left: 3rem;
   margin-bottom: 1.5rem;
 }
 .art-fertigung__item::before,
@@ -1425,11 +1437,10 @@ img {
 .art-fertigung-detail__item::before,
 .art-fertigung-ebenezwei-detail__item::before {
   content: "";
-  display: inline-block;
+  display: inline-flex;
   height: 2rem;
   width: 2rem;
   margin-right: 0.7rem;
-  list-style-position: outside;
   background-color: #4BB3FD;
   -webkit-mask-image: url(./../img/chevron-right.svg);
   -webkit-mask-size: cover;
