@@ -1395,6 +1395,7 @@ img {
   -webkit-mask-image: url(img/chevron-right.svg);
   -webkit-mask-size: cover;
   mask-image: url(img/chevron-right.svg);
+  mask-size: cover;
 }
 
 .video_file {
