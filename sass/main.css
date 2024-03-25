@@ -881,14 +881,16 @@ img {
 
 .vorstellung {
   display: flex;
+  flex-wrap: wrap;
   gap: 5rem;
   margin: 5rem 0;
   z-index: 50;
 }
 .vorstellung-text {
-  max-width: 40%;
+  max-width: 50rem;
 }
 .vorstellung-bild {
+  max-width: 50rem;
   animation: slideInFromRight 1s ease-in;
   border-radius: 0.5rem;
   box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.2);
