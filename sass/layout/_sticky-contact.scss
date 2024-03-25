@@ -21,6 +21,7 @@
     
     @include respond(tab-port) {
       right: 3rem;
+      top: 80%;
     }  
     
     @include respond(phone) {
@@ -183,7 +184,7 @@
   
   .postToggle:checked {
     ~ .sticky-contact-Btn {
-      background: $color-primary;
+      background: rgba($color-success, 0.9);
       transform: scale(0.85);
       
       &:after {
@@ -193,7 +194,7 @@
         align-self: center;
         
 
-        background-color: $color-grey-light-2;
+        background-color: $color-white;
         -webkit-mask-image: url(./../img/cross.svg);
         -webkit-mask-size: cover;
         mask-image: url(./../img/cross.svg);
