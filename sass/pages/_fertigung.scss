@@ -337,9 +337,9 @@ $content-selector: "~ .content > section";
     
 
     background-color: $color-primary;
-    -webkit-mask-image: url(~/img/chevron-right.svg);
+    -webkit-mask-image: url(./../img/chevron-right.svg);
     -webkit-mask-size: cover;
-    mask-image: url(~/img/chevron-right.svg);
+    mask-image: url(./../img/chevron-right.svg);
     mask-size: cover;
   }
 
@@ -351,9 +351,9 @@ $content-selector: "~ .content > section";
     margin-right: .7rem;
 
     background-color: $color-primary;
-    -webkit-mask-image: url(~/img/chevron-right.svg);
+    -webkit-mask-image: url(./../img/chevron-right.svg);
     -webkit-mask-size: cover;
-    mask-image: url(~/img/chevron-right.svg);
+    mask-image: url(./../img/chevron-right.svg);
     mask-size: cover;
   }
 

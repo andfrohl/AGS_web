@@ -1376,9 +1376,9 @@ img {
   width: 1.5rem;
   margin-right: 0.7rem;
   background-color: #4BB3FD;
-  -webkit-mask-image: url(~/img/chevron-right.svg);
+  -webkit-mask-image: url(./../img/chevron-right.svg);
   -webkit-mask-size: cover;
-  mask-image: url(~/img/chevron-right.svg);
+  mask-image: url(./../img/chevron-right.svg);
   mask-size: cover;
 }
 .art-fertigung-detail__item::before,
@@ -1389,9 +1389,9 @@ img {
   width: 2rem;
   margin-right: 0.7rem;
   background-color: #4BB3FD;
-  -webkit-mask-image: url(~/img/chevron-right.svg);
+  -webkit-mask-image: url(./../img/chevron-right.svg);
   -webkit-mask-size: cover;
-  mask-image: url(~/img/chevron-right.svg);
+  mask-image: url(./../img/chevron-right.svg);
   mask-size: cover;
 }
 
