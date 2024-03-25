@@ -1,0 +1,74 @@
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:		Phone
+600 - 900px:	Tablet portrait
+900 - 1200px:	Tablet landscape
+[1200 - 1800] is where normale styles apply
+1800px + :		Big desktop
+
+$breakpoint argument choices::after
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16px
+
+*/
+
+@mixin respond($breakpoint) {
+	@if $breakpoint == phone {
+		@media (max-width: 25em) { @content };     // 400px / 16px
+	}
+	@if $breakpoint == tab-port {
+		@media (max-width: 56.25em) { @content };     // 900px / 16px
+	}
+	@if $breakpoint == tab-land {
+		@media (max-width: 75em) { @content };     // 1200px / 16px
+	}
+	@if $breakpoint == big-desktop {
+		@media (min-width: 112.5em) { @content };     // 1800px / 16 px
+	}
+}
+
+
+
+
+
+
+@mixin white-gradient-down {
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}
+
+
+@mixin transition($properties) {
+	-webkit-transition: $properties;
+	-moz-transition: $properties;
+	-o-transition: $properties;
+	transition: $properties;
+  }
+
+@mixin translate($x, $y) {
+	transform: translate($x, $y);
+  }
+
+  @mixin translate3d($x, $y, $z) {
+	-webkit-transform: translate3d($x, $y, $z);
+	-moz-transform: translate3d($x, $y, $z);
+	-o-transform: translate3d($x, $y, $z);
+	transform: translate3d($x, $y, $z);
+  }
+
+  @mixin background-clip($clip) {
+	-webkit-background-clip: $clip;
+	-moz-background-clip: $clip;
+	background-clip: $clip;
+  }
+
+  @mixin scale($factor) {
+	transform: scale($factor);
+	-webkit-transform: scale($factor);
+	-moz-transform: scale($factor);
+	-ms-transform: scale($factor);
+	-o-transform: scale($factor);
+  }

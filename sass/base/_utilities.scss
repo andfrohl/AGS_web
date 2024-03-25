@@ -1,12 +1,20 @@
-.container {
-    max-width: 115rem;
+.container-big {
+    max-width: 120rem;
     margin: 0 auto;
     overflow: hidden; /* Fixed die Lücke über der NavBar, verursacht durch die margin des h1, h2 */
-    padding: 0 2rem;
+    padding: 0 1rem;
     // background-color: orangered;
     overflow: visible;
 }
 
+.container {
+    max-width: 118rem;
+    margin: 0 auto;
+    overflow: hidden; /* Fixed die Lücke über der NavBar, verursacht durch die margin des h1, h2 */
+    padding: 0 1rem;
+    // background-color: orangered;
+    overflow: visible;
+}
 
 .card {
     background-color: $color-grey-light-1;
@@ -14,26 +22,6 @@
     box-shadow: 0 3px 1rem rgba($color-black, .2);
     padding: 2rem;
     margin: 1rem;
-}
-
-.btn {
-    display: inline-block;
-    padding: 1rem 3rem;
-    cursor: pointer;
-    background-color: $color-primary;
-    color: $color-white;
-    border: none;
-    border-radius: 5px;
-    
-
-    &-outline {
-        background-color: transparent;
-        border: 1px $color-white solid;
-    }
-
-    &:hover {
-        transform: scale(0.98);
-    }
 }
 
 // Backgrounds & colored buttons
@@ -106,8 +94,8 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     justify-content: center;
-    align-items: center;
-    height: 90%;
+    align-items: flex-start;
+    height: 100%;
 }
 
 .grid-3 {

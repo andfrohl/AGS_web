@@ -1,10 +1,15 @@
 .landing-slider {
     overflow: hidden;
     max-width: 100%;
-    background-size: cover;
+    // background-size: cover;
     position: relative;
     
    }
+
+   /// Timing - 4s - 23.75s - 0s -4.75s -9.5s  -14.25s -19s
+   /// Timing - 5s - 28.75s - 0s -5.75s -11.5s -17.25s -23s
+   /// Timing - 6s - 33.75s - 0s -6.75s -13.5s -20.25s -27s
+   /// Timing - 7s - 38.75s - 0s -7.75s -15.5s -23.25s -31s
     
    .landing-slider .landing-slide {
     position: absolute;
@@ -14,7 +19,7 @@
     height: 100%;
     background-size: cover;
     background-position: center;
-    animation: slider 38.75s infinite;
+    animation: slider-fade 28.75s infinite;
    }
     
    .landing-slider .landing-slide:nth-child(1) {
@@ -24,54 +29,52 @@
    
    .landing-slider .landing-slide:nth-child(2) {
       background-image: url(../../img/IMG_074602_1920.jpg);
-      animation-delay: -7.75s;
+      animation-delay: -5.75s;
    }
    
    .landing-slider .landing-slide:nth-child(3) {
       background-image: url(../../img/IMG_091141345_1920.jpg);
-      animation-delay: -15.5s;
+      animation-delay: -11.5s;
    }
    
    .landing-slider .landing-slide:nth-child(4) {
       background-image: url(../../img/IMG_110201_1920.jpg);
-      animation-delay: -23.25s;
+      animation-delay: -17.25s;
    }
    
    .landing-slider .landing-slide:nth-child(5) {
       background-image: url(../../img/IMG_121845773_1920.jpg);
-      animation-delay: -31s;
+      animation-delay: -23s;
    }
    
-   @keyframes slider {
-    0%, 16%, 100% {
-      transform: translateX(0);
-      animation-timing-function: ease;
-    }
-    20% {
-      transform: translateX(-100%);
-      animation-timing-function: step-end;
-    }
-    96% {
-      transform: translateX(100%);
-      animation-timing-function: ease;
-    }
-   }  
+   
 
 /* About - Hero */
 .about {
-    height: 70rem;
-    clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
-    background-image: linear-gradient(to right bottom, 
-        rgba($color-primary-light, 0.7), 
-        rgba($color-primary-dark, 0.7)), 
-        url(../../img/hero.jpg);
-        background-size: auto;
-        background-position: top;
-        overflow: visible;  // Damit die graue Box überragt
-    position: relative;
+    height: 75rem;
+    width: 90%;
+    margin-top: 20rem;
+    padding: 1rem;
+    box-shadow: 0 3px 1rem rgba($color-black, .2);
+
+    @include respond (tab-port) {
+        height: 55rem;
+    }
+    
+    // clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+    // background-image: linear-gradient(to right bottom, 
+    //     rgba($color-primary-light, 0.7), 
+    //     rgba($color-primary-dark, 0.7)), 
+    //     url(../../img/hero.jpg);
+    //     background-size: auto;
+    //     background-position: top;
+    //     overflow: visible;  // Damit die graue Box überragt
+    // position: relative;
+    
         
     & h1 {
         font-size: 6rem;
+        font-weight: 700;
         text-shadow: -1px -1px 0px rgba($color-grey-light-3, 0.7),
         3px 3px 0px rgba($color-grey-light-1, 0.7),
         6px 6px 0px #00000055;
@@ -80,7 +83,7 @@
 
     & .grid {
         grid-template-columns: 2fr 1fr;
-        gap: 28rem;
+        gap: 24rem;
     }
 
     &-text {
@@ -90,6 +93,8 @@
         z-index: 100; 
 
         animation: slideInFromLeft 1s ease-in;
+
+        
     }
 
     &-kontakt {
@@ -133,33 +138,39 @@
         }
     }
 
-    //  // Schräge
-    //  &::before,
-    //  &::after {
-    //      content: '';
-    //      position: absolute;
-    //      height: 10rem;
-    //      bottom: -5rem;
-    //      right: 0;
-    //      left: 0;
-    //      background: $color-white;
-    //      transform: skewY(-3deg);
-    //  }
 }
 
 .vorstellung {
-    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+    display: flex;
+    // justify-content: space-between;
+    gap: 5rem;
+    // flex-wrap: wrap;
+    margin: 5rem 0;
     
-    background-color: $color-grey-light-1;
-    border-radius: 1rem;
-    box-shadow: 0 3px 1rem rgba($color-black, .2);
+    z-index: 50;
     
+    &-text {
+        max-width: 40%;
+    }
     
-   
-
     &-bild {
-        animation: slideInFromRight 1s ease-in;
         
+        animation: slideInFromRight 1s ease-in;
+        border-radius: .5rem;
+        box-shadow: 0 3px 1rem rgba($color-black, .2);
+        padding: 1rem;
+        max-width: auto;
+        margin: 1rem;
+        flex: 1;
+
+        
+        & img {
+            height: 50rem;
+            width: 50rem;
+            
+        }
+        
+
     }
 }
    
@@ -241,7 +252,7 @@ $animationSpeed: 40s;
 // Styling
 .industrie-slider {
 	background: white;
-	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	// box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
 	height: 20rem;
 	margin: auto;
 	overflow:hidden;
@@ -303,10 +314,13 @@ $animationSpeed: 40s;
 @media (max-width: 768px) {
     .grid,
     .about .grid,
+    .vorstellung, 
     address .grid {
         grid-template-columns: 1fr;
     }
     
+    
+
     .footer {
         height: fit-content;
 
@@ -319,6 +333,7 @@ $animationSpeed: 40s;
         }
     }
 
+    
     
     .about {
         background-size: cover;
@@ -333,29 +348,62 @@ $animationSpeed: 40s;
         }
     }
 
-
+    
 
 }
 
 // Mobile
 @media (max-width: 500px) {
     
-    .navbar {
-        height: auto;
+    // .navbar .active{
+    //     // height: auto;
+    //     // align-items: center;
+    //     background-color: $color-white;  
+        
 
-        & .flex {
-            flex-direction: column;
-        }
+    //     & .flex {
+    //         background-color: $color-white;    
+            
+    //     }
 
-        & ul {
-            padding: 1rem;
-            background-color: rgba($color-primary-dark, 0.7);
+    //     & nav {
+    //         //    background-color: red;
+    //         //    border-bottom: 1px solid red;
+    //         //    height: 10rem;
+            
+    //         flex: 1 100%;
+    //         background-color: orange;
+    //         }
+
+    // }
+
+    .top-logo-style {
+        align-items: center;
+        // margin-bottom: 2rem;
+        
+        & img {
+            width: 100%;
+            height: 10rem;
         }
     }
+
 
     .acc-wraper {
         display: none;
     }
 
+    /// NAVBAR FIXING
+
+    // .navbar-background .active {
+    //     display: flex;
+    //     height: 18.5rem;
+    //     max-width: 100%;
+    //     position: fixed;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     z-index: 150;
+    //     background-color: orange;
+    // }
 
 }

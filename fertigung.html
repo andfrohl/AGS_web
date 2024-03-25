@@ -19,38 +19,55 @@
     
     <!-- NavBar -->
     <header class="navbar" role="banner">
-        <div class="container flex">
-            <div class="logo-style">
-                <a href="index.html"><img src="img/Logo AGS_2018_300_194.png" alt="Logo AGS" height="94"></a>
-            </div>
-          
-            <nav>
-                <ul> 
-                    <li><a href="unternehmen.html">Unternehmen</a></li>
-                    <li><a href="produkte.html">Produkte</a></li>
-                    <li><a href="fertigung.html">Fertigung</a></li>
-                    <li><a href="entwicklung.html">Entwicklung</a></li>
-                    <li><a href="qualitaet.html">Qualität</a></li>
-                    <li><a href="kontakt.html">Kontakt</a></li>
-                </ul>
-            </nav>
+      <div class="navigation navbar-container flex">
+                
+        <div class="top-logo-style">
+            <a href="index.html"><img src="img/Logo AGS_2018_300_194.png" alt="Logo AGS" height="94"></a>
         </div>
+
+        <input class="navigation__checkbox" type="checkbox" id="navi-toggle" />
+        <label class="navigation__button" for="navi-toggle"><span class="navigation__icon"></span></label>
+        
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav  class="navigation__nav">
+            <ul class="navigation__list"> 
+                <li class="navigation__item"><a href="index.html" class="navigation__link">Unternehmen</a></li>
+                <li class="navigation__item"><a href="produkte.html" class="navigation__link">Produkte</a></li>
+                <li class="navigation__item"><a href="fertigung.html" class="navigation__link">Fertigung</a></li>
+                <li class="navigation__item"><a href="entwicklung.html" class="navigation__link">Entwicklung</a></li>
+            </ul>
+        </nav>
+        
+        <div class="shade"></div>
+
+    </div>       
     </header>
 
     <main>
     
-    <!-- Verwendete Icons 
-        <a href="https://www.flaticon.com/de/kostenlose-icons/metall" title="metall Icons">Metall Icons erstellt von Smashicons - Flaticon</a>
-        <a href="https://www.flaticon.com/de/kostenlose-icons/gewalzter-stahl" title="gewalzter stahl Icons">Gewalzter stahl Icons erstellt von Freepik - Flaticon</a>
-        <a href="https://www.flaticon.com/de/kostenlose-icons/material" title="material Icons">Material Icons erstellt von Freepik - Flaticon</a>
-        <a href="https://www.flaticon.com/de/kostenlose-icons/metall" title="metall Icons">Metall Icons erstellt von Freepik - Flaticon</a>                        
-        <a href="https://www.flaticon.com/de/kostenlose-icons/metallisch" title="metallisch Icons">Metallisch Icons erstellt von Freepik - Flaticon</a>
-        <a href="https://www.flaticon.com/de/kostenlose-icons/metallisch" title="metallisch Icons">Metallisch Icons erstellt von Freepik - Flaticon</a>
-        <a href="https://www.flaticon.com/de/kostenlose-icons/metall" title="metall Icons">Metall Icons erstellt von Freepik - Flaticon</a>
-        <a href="https://www.flaticon.com/de/kostenlose-icons/stahl" title="stahl Icons">Stahl Icons erstellt von Smashicons - Flaticon</a>
-        <a href="https://www.flaticon.com/de/kostenlose-icons/schweisser" title="schweißer Icons">Schweißer Icons erstellt von wanicon - Flaticon</a>
-        <a href="https://www.flaticon.com/de/kostenlose-icons/metall" title="metall Icons">Metall Icons erstellt von surang - Flaticon</a>
-                        -->
+    <section class="container flex">
+      <div class="fertigung">
+        <div class="fertigung_description">
+
+        </div>
+      </div>  
+    </section>
+
+        <!-- Sticky Contact -->
+        <div role='navigation' class="sticky-contact">
+  
+          <input type="checkbox" id="post" class="postToggle" />
+          <label for="post" class="sticky-contact-Btn"></label>
+          <div class="sticky-contact-list">
+          
+            <div class="sticky-contact-list__item landline"><a href="tel:+496915394928"></a></div>
+            <div class="sticky-contact-list__item mobile"><a href="tel:++4915257629112"></a></div>
+            <div class="sticky-contact-list__item mail"><a href="mailto:info@ags-engineering.de?subject=Anfrage%20Konstruktion%20Teile"></a></div>
+            
+          </div>
+        </div>
+  
 
 
     <div class="container">
@@ -576,5 +593,6 @@
             </nav>
         </div>
     </footer>
+    <script src="/js/mini-navbar.js"></script>
     </body>
 </html>

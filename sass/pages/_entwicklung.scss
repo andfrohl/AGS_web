@@ -1,0 +1,19 @@
+.start-container {
+    display: flex;
+    justify-content: center;
+    
+    
+    width: 97%;
+    height: 100%;
+    margin-top: 20rem;
+    padding: 1rem;
+    // box-shadow: 0 3px 1rem rgba($color-black, .2);
+}
+
+.content_layout {
+  width: 50%;
+
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
