@@ -149,7 +149,7 @@
       -webkit-mask-size: cover;
       mask-image: url(img/deskphone_100.svg);
       mask-size: cover;
-      z-index: 205;
+      
     }
    
     .mobile::before {
@@ -176,7 +176,7 @@
       -webkit-mask-size: cover;
       mask-image: url(img/mail_100.svg);
       mask-size: cover;
-      z-index: 205;
+      
     }
   
   }
@@ -198,7 +198,7 @@
         -webkit-mask-size: cover;
         mask-image: url(img/cross.svg);
         mask-size: cover;
-        z-index: 205;
+        
       }
     }
     ~ .sticky-contact-list {

@@ -716,7 +716,6 @@ img {
   -webkit-mask-size: cover;
   mask-image: url(img/deskphone_100.svg);
   mask-size: cover;
-  z-index: 205;
 }
 .sticky-contact .mobile::before {
   content: "";
@@ -737,7 +736,6 @@ img {
   -webkit-mask-size: cover;
   mask-image: url(img/mail_100.svg);
   mask-size: cover;
-  z-index: 205;
 }
 
 .postToggle:checked ~ .sticky-contact-Btn {
@@ -754,7 +752,6 @@ img {
   -webkit-mask-size: cover;
   mask-image: url(img/cross.svg);
   mask-size: cover;
-  z-index: 205;
 }
 .postToggle:checked ~ .sticky-contact-list .sticky-contact-list__item {
   opacity: 1;
