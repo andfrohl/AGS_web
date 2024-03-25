@@ -657,10 +657,10 @@ img {
   width: 3.5rem;
   align-self: center;
   background-color: #faf9f9;
-  -webkit-mask-image: url(../../img/phone.svg);
-          mask-image: url(../../img/phone.svg);
+  -webkit-mask-image: url(img/phone.svg);
   -webkit-mask-size: cover;
-          mask-size: cover;
+  mask-image: url(img/phone.svg);
+  mask-size: cover;
 }
 .sticky-contact .postToggle {
   display: none;
@@ -712,30 +712,32 @@ img {
   height: 5rem;
   width: 5rem;
   background-color: #faf9f9;
-  -webkit-mask-image: url(../../img/deskphone_100.svg);
-          mask-image: url(../../img/deskphone_100.svg);
+  -webkit-mask-image: url(img/deskphone_100.svg);
   -webkit-mask-size: cover;
-          mask-size: cover;
+  mask-image: url(img/deskphone_100.svg);
+  mask-size: cover;
+  z-index: 205;
 }
 .sticky-contact .mobile::before {
   content: "";
   height: 5rem;
   width: 5rem;
   background-color: #faf9f9;
-  -webkit-mask-image: url(../../img/phone_mob_100.svg);
-          mask-image: url(../../img/phone_mob_100.svg);
+  -webkit-mask-image: url(img/phone_mob_100.svg);
   -webkit-mask-size: cover;
-          mask-size: cover;
+  mask-image: url(img/phone_mob_100.svg);
+  mask-size: cover;
 }
 .sticky-contact .mail::before {
   content: "";
   height: 5rem;
   width: 5rem;
   background-color: #faf9f9;
-  -webkit-mask-image: url(../../img/mail_100.svg);
-          mask-image: url(../../img/mail_100.svg);
+  -webkit-mask-image: url(img/mail_100.svg);
   -webkit-mask-size: cover;
-          mask-size: cover;
+  mask-image: url(img/mail_100.svg);
+  mask-size: cover;
+  z-index: 205;
 }
 
 .postToggle:checked ~ .sticky-contact-Btn {
@@ -748,10 +750,11 @@ img {
   width: 2rem;
   align-self: center;
   background-color: #f4f2f2;
-  -webkit-mask-image: url(../../img/cross.svg);
-          mask-image: url(../../img/cross.svg);
+  -webkit-mask-image: url(img/cross.svg);
   -webkit-mask-size: cover;
-          mask-size: cover;
+  mask-image: url(img/cross.svg);
+  mask-size: cover;
+  z-index: 205;
 }
 .postToggle:checked ~ .sticky-contact-list .sticky-contact-list__item {
   opacity: 1;
@@ -793,27 +796,27 @@ img {
 }
 
 .landing-slider .landing-slide:nth-child(1) {
-  background-image: url(../../img/IMG_061052705_1920.jpg);
+  background-image: url(img/IMG_061052705_1920.jpg);
   animation-delay: 0s;
 }
 
 .landing-slider .landing-slide:nth-child(2) {
-  background-image: url(../../img/IMG_074602_1920.jpg);
+  background-image: url(img/IMG_074602_1920.jpg);
   animation-delay: -5.75s;
 }
 
 .landing-slider .landing-slide:nth-child(3) {
-  background-image: url(../../img/IMG_091141345_1920.jpg);
+  background-image: url(img/IMG_091141345_1920.jpg);
   animation-delay: -11.5s;
 }
 
 .landing-slider .landing-slide:nth-child(4) {
-  background-image: url(../../img/IMG_110201_1920.jpg);
+  background-image: url(img/IMG_110201_1920.jpg);
   animation-delay: -17.25s;
 }
 
 .landing-slider .landing-slide:nth-child(5) {
-  background-image: url(../../img/IMG_121845773_1920.jpg);
+  background-image: url(img/IMG_121845773_1920.jpg);
   animation-delay: -23s;
 }
 
@@ -1376,10 +1379,10 @@ img {
   width: 1.5rem;
   margin-right: 0.7rem;
   background-color: #4BB3FD;
-  -webkit-mask-image: url(../../img/chevron-right.svg);
-          mask-image: url(../../img/chevron-right.svg);
+  -webkit-mask-image: url(img/chevron-right.svg);
   -webkit-mask-size: cover;
-          mask-size: cover;
+  mask-image: url(img/chevron-right.svg);
+  mask-size: cover;
 }
 .art-fertigung-detail__item::before,
 .art-fertigung-ebenezwei-detail__item::before {
@@ -1389,8 +1392,9 @@ img {
   width: 2rem;
   margin-right: 0.7rem;
   background-color: #4BB3FD;
-  -webkit-mask-image: url(../../img/chevron-right.svg);
-          mask-image: url(../../img/chevron-right.svg);
+  -webkit-mask-image: url(img/chevron-right.svg);
+  -webkit-mask-size: cover;
+  mask-image: url(img/chevron-right.svg);
 }
 
 .video_file {
