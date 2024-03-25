@@ -155,7 +155,8 @@
     // background-color: $color-success;
     height: 10.6rem;
     padding: 1rem .5rem;
-    
+    background: none;
+    pointer-events:none;
 
     & .shade {
         @include white-gradient-down;

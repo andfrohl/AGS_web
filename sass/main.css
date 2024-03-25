@@ -451,6 +451,8 @@ img {
 .navbar .active {
   height: 10.6rem;
   padding: 1rem 0.5rem;
+  background: none;
+  pointer-events: none;
 }
 .navbar .active .shade {
   background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
