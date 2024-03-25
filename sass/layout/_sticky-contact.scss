@@ -145,8 +145,11 @@
            
   
       background-color: $color-grey-light-1;
+      -webkit-mask-image: url(../../img/deskphone_100.svg);
+      -webkit-mask-size: cover;
       mask-image: url(../../img/deskphone_100.svg);
       mask-size: cover;
+      z-index: 205;
     }
    
     .mobile::before {
@@ -156,6 +159,8 @@
            
   
       background-color: $color-grey-light-1;
+      -webkit-mask-image: url(../../img/phone_mob_100.svg);
+      -webkit-mask-size: cover;
       mask-image: url(../../img/phone_mob_100.svg);
       mask-size: cover;
     }
@@ -167,8 +172,11 @@
            
   
       background-color: $color-grey-light-1;
+      -webkit-mask-image: url(../../img/mail_100.svg);
+      -webkit-mask-size: cover;
       mask-image: url(../../img/mail_100.svg);
       mask-size: cover;
+      z-index: 205;
     }
   
   }
@@ -186,8 +194,11 @@
         
 
         background-color: $color-grey-light-2;
+        -webkit-mask-image: url(../../img/cross.svg);
+        -webkit-mask-size: cover;
         mask-image: url(../../img/cross.svg);
         mask-size: cover;
+        z-index: 205;
       }
     }
     ~ .sticky-contact-list {
