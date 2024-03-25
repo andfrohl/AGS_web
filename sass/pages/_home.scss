@@ -23,12 +23,12 @@
    }
     
    .landing-slider .landing-slide:nth-child(1) {
-      background-image: url(../img/IMG_061052705_1920.jpg);
+      background-image: url(~/img/IMG_061052705_1920.jpg);
       animation-delay: 0s;
    }
    
    .landing-slider .landing-slide:nth-child(2) {
-      background-image: url(../../img/IMG_074602_1920.jpg);
+      background-image: url(./../img/IMG_074602_1920.jpg);
       animation-delay: -5.75s;
    }
    
