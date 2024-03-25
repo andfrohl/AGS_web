@@ -15,18 +15,18 @@
     
 
  
-  @include respond(big-desktop) {
-    right: 18rem;
-  }
-  
-  @include respond(tab-port) {
-    right: 3rem;
-  }  
-
-  @include respond(phone) {
-    right: 3rem;
-    top: 80%;
-  }  
+    @include respond(big-desktop) {
+      right: 18rem;
+    }
+    
+    @include respond(tab-port) {
+      right: 3rem;
+    }  
+    
+    @include respond(phone) {
+      right: 3rem;
+      top: 80%;
+    }  
     
     &-Btn {
       
