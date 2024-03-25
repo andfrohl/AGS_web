@@ -67,6 +67,8 @@
         
 
         background-color: $color-grey-light-1;
+        -webkit-mask-image: url(../../img/phone.svg);
+        -webkit-mask-size: cover;
         mask-image: url(../../img/phone.svg);
         mask-size: cover;
 
