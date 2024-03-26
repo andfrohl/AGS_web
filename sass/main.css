@@ -921,7 +921,7 @@ img {
   margin-left: 4rem;
 }
 .vorstellung-bild {
-  max-width: 48rem;
+  max-width: 45rem;
   animation: slideInFromRight 1s ease-in;
   border-radius: 0.5rem;
   box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.2);
@@ -931,8 +931,8 @@ img {
   flex: 1;
 }
 .vorstellung-bild img {
-  height: 48rem;
-  width: 48rem;
+  height: 45rem;
+  width: 45rem;
 }
 
 .ags {
@@ -946,7 +946,7 @@ img {
   max-width: 45rem;
 }
 .ags-bild {
-  max-width: 50rem;
+  max-width: 45rem;
   animation: slideInFromRight 1s ease-in;
   border-radius: 0.5rem;
   box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.2);
@@ -957,8 +957,8 @@ img {
   margin-left: 3rem;
 }
 .ags img {
-  height: 48rem;
-  width: 48rem;
+  height: 45rem;
+  width: 45rem;
 }
 
 .industrie-slider {
