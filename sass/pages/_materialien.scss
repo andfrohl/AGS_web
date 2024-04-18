@@ -1,0 +1,58 @@
+.landing-slider {
+    overflow: hidden;
+    max-width: 100%;
+    // background-size: cover;
+    position: relative;
+    
+   }
+
+   /// Timing - 4s - 23.75s - 0s -4.75s -9.5s  -14.25s -19s
+   /// Timing - 5s - 28.75s - 0s -5.75s -11.5s -17.25s -23s
+   /// Timing - 6s - 33.75s - 0s -6.75s -13.5s -20.25s -27s
+   /// Timing - 7s - 38.75s - 0s -7.75s -15.5s -23.25s -31s
+    
+   .landing-slider .landing-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slider-fade 28.75s infinite;
+   }
+    
+   .landing-slider .landing-slide:nth-child(1) {
+      background-image: url(./../img/IMG_110201_1920.jpg);
+      animation-delay: 0s;
+   }
+   
+   .landing-slider .landing-slide:nth-child(2) {
+      background-image: url(./../img/IMG_121845773_1920.jpg);
+      animation-delay: -5.75s;
+   }
+   
+   .landing-slider .landing-slide:nth-child(3) {
+      background-image: url(./../img/IMG_074602_1920.jpg);
+      animation-delay: -11.5s;
+   }
+   
+   .landing-slider .landing-slide:nth-child(4) {
+      background-image: url(./../img/IMG_061052705_1920.jpg);
+      animation-delay: -17.25s;
+   }
+   
+   .landing-slider .landing-slide:nth-child(5) {
+      background-image: url(./../img/IMG_091141345_1920.jpg);
+      animation-delay: -23s;
+   }
+   
+   .landing-slide--heading {
+    
+    display: flex;
+    top: 1rem;
+    height: 60%;
+    z-index: 100; 
+
+    animation: slideInFromLeft 1s ease-in;
+   }

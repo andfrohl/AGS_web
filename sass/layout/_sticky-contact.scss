@@ -1,7 +1,7 @@
 
   .sticky-contact {
     position: fixed;
-    display: flex;
+    display: none;
     right: 3rem;
     top: 50%;
     z-index: 200;
@@ -17,14 +17,18 @@
  
     @include respond(big-desktop) {
       right: 18rem;
+      display: none;
     }
-    
+
+     
     @include respond(tab-port) {
+      display: flex;
       right: 3rem;
       top: 80%;
     }  
     
     @include respond(phone) {
+      display: flex;
       right: 3rem;
       top: 80%;
     }  

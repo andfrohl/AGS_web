@@ -39,9 +39,10 @@
                 <nav  class="navigation__nav">
                     <ul class="navigation__list"> 
                         <li class="navigation__item"><a href="index.html" class="navigation__link">Unternehmen</a></li>
-                        <li class="navigation__item"><a href="produkte.html" class="navigation__link">Produkte</a></li>
-                        <li class="navigation__item"><a href="fertigung.html" class="navigation__link">Fertigung</a></li>
                         <li class="navigation__item"><a href="entwicklung.html" class="navigation__link">Entwicklung</a></li>
+                        <li class="navigation__item"><a href="materialien.html" class="navigation__link">Materialien</a></li>
+                        <li class="navigation__item"><a href="fertigung.html" class="navigation__link">Fertigung</a></li>
+                        <li class="navigation__item"><a href="produkte.html" class="navigation__link">Produkte</a></li>
                     </ul>
                 </nav>
                 
@@ -81,18 +82,88 @@
       
 
     <!-- Hero - About -->
-    <section class="container about">
+    <div class="container">
+        <div class="carousel">
+
+            <input type="radio" id="carousel-css-slide-1" name="carousel-css" value="slide-1" checked/>
+            <input type="radio" id="carousel-css-slide-2" name="carousel-css" value="slide-2"/>
+            <input type="radio" id="carousel-css-slide-3" name="carousel-css" value="slide-3"/>
+            <input type="radio" id="carousel-css-slide-4" name="carousel-css" value="slide-4"/>
+            <input type="radio" id="carousel-css-slide-5" name="carousel-css" value="slide-5"/>
+
+            <label for="carousel-css-slide-1" data-value="slide-1"></label>
+            <label for="carousel-css-slide-2" data-value="slide-2"></label>
+            <label for="carousel-css-slide-3" data-value="slide-3"></label>
+            <label for="carousel-css-slide-4" data-value="slide-4"></label>
+            <label for="carousel-css-slide-5" data-value="slide-5"></label>
+
+            <div class="carousel-wrapper">
+                <div class="carousel-slide">
+                    <img src="img/IMG_110201_1920.jpg" alt="">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/IMG_121845773_1920.jpg" alt="">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/IMG_074602_1920.jpg" alt="">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/IMG_061052705_1920.jpg" alt="">
+                </div>
+              <div class="carousel-slide">
+                    <img src="img/IMG_091141345_1920.jpg" alt="">
+                </div>
+            </div>
+        
+            <div class="heading-wrapper">
+                <div class="heading-slide">
+                  <p>
+                    <span class="heading-slide--text">Wir konstruieren</span>
+                  </p>        
+                </div>
+            
+                <div class="heading-slide">
+                  <p>
+                    <span class="heading-slide--text">Wir fertigen</span>
+                  </p>          
+                </div>
+            
+                <div class="heading-slide">
+                  <p>
+                    <span class="heading-slide--text">Wir optimieren</span>
+                  </p>        
+                </div>
+            
+                <div class="heading-slide">
+                  <p>
+                    <span class="heading-slide--text">Wir stehen an Ihrer Seite</span>
+                  </p>       
+                </div>
+            
+                <div class="heading-slide">
+                  <p>
+                    <span class="heading-slide--text">Von der Idee zum Produkt</span>
+                  </p>   
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    <section class="container">
       
-        <div class="landing-slider flex">
-            <div class="landing-slide"></div>
-            <div class="landing-slide"></div>
-            <div class="landing-slide"></div>
-            <div class="landing-slide"></div>
-            <div class="landing-slide"></div>
+        
+        
         
             <div class="grid">
                 <div class="about-text">
                     <h1>Wir fertigen Teile</h1>
+
+
+                    
                 
                 </div>
 
@@ -120,7 +191,7 @@
                 </div>
             </div>
 
-        </div>
+        
     </section>
 
 
@@ -136,7 +207,7 @@
           <div class="sticky-contact-list__item mail"><a href="mailto:info@ags-engineering.de?subject=Anfrage%20Konstruktion%20Teile"></a></div>
           
         </div>
-      </div>
+    </div>
 
     <section class="container">
         <div class="vorstellung">
@@ -412,5 +483,6 @@
     </footer>
   
     <script src="js/mini-navbar.js"></script>
+    <script src="js/hero-carousel.js"></script>
     </body>
 </html>
