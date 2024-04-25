@@ -18,31 +18,34 @@
     <body>
     
     <!-- NavBar -->
-    <header class="navbar" role="banner">
-        <div class="navigation navbar-container flex">
+    <header class="header flex" role="banner">
+       
+        <div class="navbar">    
+            <div class="navigation navbar-container">
                 
-            <div class="top-logo-style">
-                <a href="index.html"><img src="img/Logo AGS_2018_300_194.png" alt="Logo AGS" height="94"></a>
+                <div class="top-logo-style">
+                    <a href="index.html"><img src="img/Logo AGS_2018_300_194.png" alt="Logo AGS" height="94"></a>
+                </div>
+
+                <input class="navigation__checkbox" type="checkbox" id="navi-toggle" />
+                <label class="navigation__button" for="navi-toggle"><span class="navigation__icon"></span></label>
+                
+                <div class="navigation__background">&nbsp;</div>
+
+                <nav  class="navigation__nav">
+                    <ul class="navigation__list"> 
+                        <li class="navigation__item"><a href="index.html" class="navigation__link">Unternehmen</a></li>
+                        <li class="navigation__item"><a href="entwicklung.html" class="navigation__link">Entwicklung</a></li>
+                        <li class="navigation__item"><a href="materialien.html" class="navigation__link">Materialien</a></li>
+                        <li class="navigation__item"><a href="fertigung.html" class="navigation__link">Fertigung</a></li>
+                        <li class="navigation__item"><a href="produkte.html" class="navigation__link">Produkte</a></li>
+                    </ul>
+                </nav>
+            
             </div>
 
-            <input class="navigation__checkbox" type="checkbox" id="navi-toggle" />
-            <label class="navigation__button" for="navi-toggle"><span class="navigation__icon"></span></label>
-            
-            <div class="navigation__background">&nbsp;</div>
-
-            <nav  class="navigation__nav">
-                <ul class="navigation__list"> 
-                    <li class="navigation__item"><a href="index.html" class="navigation__link">Unternehmen</a></li>
-                    <li class="navigation__item"><a href="entwicklung.html" class="navigation__link">Entwicklung</a></li>
-                    <li class="navigation__item"><a href="materialien.html" class="navigation__link">Materialien</a></li>
-                    <li class="navigation__item"><a href="fertigung.html" class="navigation__link">Fertigung</a></li>
-                    <li class="navigation__item"><a href="produkte.html" class="navigation__link">Produkte</a></li>
-                </ul>
-            </nav>
-            
-            <div class="shade"></div>
-
-        </div>
+        </div>          
+        
     </header>
     <main>
 

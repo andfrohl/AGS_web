@@ -5,7 +5,7 @@ img {
   }
   
   .carousel{
-    margin-top: 15rem;  
+    margin-top: 9rem;  
       width: 100%;
       height: 65rem;
       background-color: grey;
@@ -40,7 +40,7 @@ img {
       position: absolute;
       overflow: hidden;
       top: 2rem;
-      left: 3rem;
+      left: 10rem;
       z-index: 2;
   }
   
@@ -83,15 +83,15 @@ img {
     color: $color-grey-light-1;
     padding: 1rem 5rem;
     text-align: center;
-    line-height: 3;
+    line-height: 1;
     border-radius: 5px;
     font-size: 5rem;
-        font-weight: 700;
+        //font-weight: 500;
         // text-shadow: -1px -1px 0px rgba($color-grey-light-3, 0.7),
         // 3px 3px 0px rgba($color-grey-light-1, 0.7),
         // 6px 6px 0px #00000055;
         text-transform: uppercase;
-        box-shadow: 5px 3px 1rem rgba($color-black, .2);
+        //box-shadow: 5px 3px 1rem rgba($color-black, .2);
   }
   
   input[name="carousel-css"]{
@@ -254,7 +254,7 @@ img {
   input[name="carousel-css"][value="slide-5"]:checked ~ label[data-value="slide-4"]::before
   {
       display: inline-block;
-      left: 1rem;
+      left: 3rem;
   }
   
   input[name="carousel-css"][value|="slide"]:last-of-type:checked ~ label[data-value="slide-1"]::after,
@@ -263,7 +263,7 @@ img {
   input[name="carousel-css"][value="slide-3"]:checked ~ label[data-value="slide-4"]::after,
   input[name="carousel-css"][value="slide-4"]:checked ~ label[data-value="slide-5"]::after{
       display: inline-block;
-      right: 1rem;
+      right: 3rem;
   }
   
   /* Special functions for the carousel */
@@ -284,7 +284,7 @@ img {
 .about {
     height: 75rem;
     width: 90%;
-    margin-top: 20rem;
+    margin-top: 12rem;
     padding: 1rem;
     box-shadow: 0 3px 1rem rgba($color-black, .2);
 
