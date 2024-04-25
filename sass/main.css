@@ -553,6 +553,7 @@ img {
   }
   .navigation__item {
     margin: 3rem 8rem;
+    background-color: #4BB3FD;
   }
   .navigation__link:link, .navigation__link:visited {
     display: inline-block;
