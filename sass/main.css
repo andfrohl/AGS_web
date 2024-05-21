@@ -176,6 +176,24 @@ img {
   width: 100%;
 }
 
+.heading-secondary {
+  margin-top: 5rem;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to right, #005088, rgba(27, 124, 194, 0.9176470588));
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+}
+.heading-secondary:hover {
+  transform: skewY(2deg) skewX(5deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
 .container-big {
   max-width: 120rem;
   margin: 0 auto;
@@ -1153,6 +1171,44 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 .vorstellung-bild img {
   height: 45rem;
   width: 45rem;
+}
+
+.cnc__maschine {
+  position: relative;
+  max-width: auto;
+  flex: 1;
+  animation: slideInFromRight 1s ease-in;
+}
+.cnc__maschine__bild {
+  width: 35%;
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.4);
+  border-radius: 1px;
+  position: absolute;
+  z-index: 10;
+  transition: all 0.2s;
+  outline-offset: 2rem;
+}
+.cnc__maschine__bild--p1 {
+  left: 3rem;
+  top: 0;
+}
+.cnc__maschine__bild--p2 {
+  right: 3rem;
+  top: 15rem;
+}
+.cnc__maschine__bild--p3 {
+  left: 30%;
+  top: 17rem;
+  width: 40%;
+}
+.cnc__maschine__bild:hover {
+  outline: 1.5rem solid #4BB3FD;
+  transform: scale(1.05) translateY(-0.5rem);
+  box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
+.cnc__maschine:hover .cnc__maschine__bild:not(:hover) {
+  transform: scale(0.95);
 }
 
 .ags {
