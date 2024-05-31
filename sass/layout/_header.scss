@@ -1,0 +1,20 @@
+.introduction {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+    grid-column-gap: 10rem;
+    grid-row-gap: 0px;
+
+  
+    justify-content: center;
+    align-items: flex-start;
+
+    &-text {
+
+    }
+
+    &-bild {
+        height: 100%;
+        width: fit-content;
+    }
+}
