@@ -398,14 +398,19 @@ img {
 }
 
 .introduction {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 10rem;
-  grid-row-gap: 0px;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
+  gap: 5rem;
+}
+.introduction-text {
+  max-width: 55rem;
+  padding-top: 4rem;
 }
 .introduction-bild {
+  max-width: 55rem;
+  padding-top: 4rem;
   height: 100%;
   width: -moz-fit-content;
   width: fit-content;
@@ -1188,8 +1193,10 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 }
 
 .cnc__maschine {
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
-  max-width: auto;
+  max-width: 55rem;
   flex: 1;
   animation: slideInFromRight 1s ease-in;
 }

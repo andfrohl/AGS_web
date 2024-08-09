@@ -1,19 +1,25 @@
 .introduction {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
     
-    grid-column-gap: 10rem;
-    grid-row-gap: 0px;
+    // grid-column-gap: 10rem;
+    // grid-row-gap: 0px;
 
+    display: flex;
+    flex-wrap: wrap;
   
     justify-content: center;
     align-items: flex-start;
+    gap: 5rem;
 
     &-text {
-
+        max-width: 55rem;
+        padding-top: 4rem;
     }
 
     &-bild {
+        max-width: 55rem;
+        padding-top: 4rem;
         height: 100%;
         width: fit-content;
     }
