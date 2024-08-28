@@ -1880,6 +1880,50 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   grid-area: 3/2/4/3;
 }
 
+.introduction_entwicklung-text {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.leichtbau {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin: 5rem 0;
+  z-index: 50;
+}
+.leichtbau__heading-secondary {
+  margin-top: 5dvb;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  background-image: linear-gradient(to right, #005088, rgba(27, 124, 194, 0.9176470588));
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+}
+.leichtbau-text {
+  max-width: 50rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+.leichtbau-bild {
+  max-width: 45rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  max-width: auto;
+  margin: 1rem;
+  flex: 1;
+}
+.leichtbau-bild img {
+  height: 45rem;
+  width: auto;
+}
+
 .landing-slider {
   overflow: hidden;
   max-width: 100%;
@@ -1941,7 +1985,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 .aspect-tab {
   position: relative;
   width: 100%;
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto 10px;
   border-radius: 4px;
   background-color: #fff;
@@ -2045,7 +2089,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 }
 
 .aspect-info {
-  width: 60%;
+  width: 80%;
   white-space: nowrap;
   font-size: 0;
 }
@@ -2068,8 +2112,8 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 
 .sentiment-wrapper > div {
   display: inline-block;
-  width: 48%;
-  max-width: 390px;
+  width: 100%;
+  max-width: 350px;
   padding: 0 5px;
   box-sizing: border-box;
   vertical-align: top;
@@ -2156,4 +2200,100 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   .all-opinions + div > span:first-child {
     margin: 0;
   }
+}
+.introduction_materialien-text {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.titan,
+.schiffbohr {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin: 5rem 0;
+  z-index: 50;
+}
+.titan__heading-secondary,
+.schiffbohr__heading-secondary {
+  margin-top: 5dvb;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  background-image: linear-gradient(to right, #005088, rgba(27, 124, 194, 0.9176470588));
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+}
+.titan-text,
+.schiffbohr-text {
+  max-width: 50rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+.titan-bild,
+.schiffbohr-bild {
+  max-width: 45rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  max-width: auto;
+  margin: 1rem;
+  flex: 1;
+}
+.titan-bild img,
+.schiffbohr-bild img {
+  height: 45rem;
+  width: auto;
+}
+
+.hssteile,
+.luftraum,
+.hochschweiß {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin: 5rem 0;
+  z-index: 50;
+}
+.hssteile__heading-secondary,
+.luftraum__heading-secondary,
+.hochschweiß__heading-secondary {
+  margin-top: 5dvb;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  background-image: linear-gradient(to right, #005088, rgba(27, 124, 194, 0.9176470588));
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+}
+.hssteile-text,
+.luftraum-text,
+.hochschweiß-text {
+  max-width: 40rem;
+  margin-left: 5rem;
+  margin-top: 1rem;
+}
+.hssteile-bild,
+.luftraum-bild,
+.hochschweiß-bild {
+  max-width: 55rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  max-width: auto;
+  margin: 1rem;
+  flex: 1;
+}
+.hssteile-bild img,
+.luftraum-bild img,
+.hochschweiß-bild img {
+  height: 45rem;
+  width: auto;
 }/*# sourceMappingURL=main.css.map */
