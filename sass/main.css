@@ -2209,7 +2209,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 
 .titan,
 .dreidteile,
-.schiffbohr {
+.luftraum {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
@@ -2218,7 +2218,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 }
 .titan__heading-secondary,
 .dreidteile__heading-secondary,
-.schiffbohr__heading-secondary {
+.luftraum__heading-secondary {
   margin-top: 5dvb;
   margin-bottom: 1rem;
   font-size: 2.5rem;
@@ -2233,14 +2233,14 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 }
 .titan-text,
 .dreidteile-text,
-.schiffbohr-text {
+.luftraum-text {
   max-width: 50rem;
   margin-left: 1rem;
   margin-top: 1rem;
 }
 .titan-bild,
 .dreidteile-bild,
-.schiffbohr-bild {
+.luftraum-bild {
   max-width: 45rem;
   border-radius: 0.5rem;
   padding: 1rem;
@@ -2250,13 +2250,13 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 }
 .titan-bild img,
 .dreidteile-bild img,
-.schiffbohr-bild img {
+.luftraum-bild img {
   height: 45rem;
   width: auto;
 }
 
 .hssteile,
-.luftraum,
+.schiffbohr,
 .hochschweiß {
   display: flex;
   flex-wrap: wrap;
@@ -2265,7 +2265,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   z-index: 50;
 }
 .hssteile__heading-secondary,
-.luftraum__heading-secondary,
+.schiffbohr__heading-secondary,
 .hochschweiß__heading-secondary {
   margin-top: 5dvb;
   margin-bottom: 1rem;
@@ -2280,14 +2280,14 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   transition: all 0.2s;
 }
 .hssteile-text,
-.luftraum-text,
+.schiffbohr-text,
 .hochschweiß-text {
   max-width: 40rem;
   margin-left: 5rem;
   margin-top: 1rem;
 }
 .hssteile-bild,
-.luftraum-bild,
+.schiffbohr-bild,
 .hochschweiß-bild {
   max-width: 55rem;
   border-radius: 0.5rem;
@@ -2297,7 +2297,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   flex: 1;
 }
 .hssteile-bild img,
-.luftraum-bild img,
+.schiffbohr-bild img,
 .hochschweiß-bild img {
   height: 45rem;
   width: auto;
