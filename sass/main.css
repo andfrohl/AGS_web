@@ -2208,6 +2208,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 }
 
 .titan,
+.dreidteile,
 .schiffbohr {
   display: flex;
   flex-wrap: wrap;
@@ -2216,6 +2217,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   z-index: 50;
 }
 .titan__heading-secondary,
+.dreidteile__heading-secondary,
 .schiffbohr__heading-secondary {
   margin-top: 5dvb;
   margin-bottom: 1rem;
@@ -2230,12 +2232,14 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   transition: all 0.2s;
 }
 .titan-text,
+.dreidteile-text,
 .schiffbohr-text {
   max-width: 50rem;
   margin-left: 1rem;
   margin-top: 1rem;
 }
 .titan-bild,
+.dreidteile-bild,
 .schiffbohr-bild {
   max-width: 45rem;
   border-radius: 0.5rem;
@@ -2245,6 +2249,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   flex: 1;
 }
 .titan-bild img,
+.dreidteile-bild img,
 .schiffbohr-bild img {
   height: 45rem;
   width: auto;
