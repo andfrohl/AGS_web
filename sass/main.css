@@ -2256,6 +2256,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 }
 
 .hssteile,
+.rollieren,
 .schiffbohr,
 .hochschweiß {
   display: flex;
@@ -2265,6 +2266,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   z-index: 50;
 }
 .hssteile__heading-secondary,
+.rollieren__heading-secondary,
 .schiffbohr__heading-secondary,
 .hochschweiß__heading-secondary {
   margin-top: 5dvb;
@@ -2280,6 +2282,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   transition: all 0.2s;
 }
 .hssteile-text,
+.rollieren-text,
 .schiffbohr-text,
 .hochschweiß-text {
   max-width: 40rem;
@@ -2287,6 +2290,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   margin-top: 1rem;
 }
 .hssteile-bild,
+.rollieren-bild,
 .schiffbohr-bild,
 .hochschweiß-bild {
   max-width: 55rem;
@@ -2297,6 +2301,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   flex: 1;
 }
 .hssteile-bild img,
+.rollieren-bild img,
 .schiffbohr-bild img,
 .hochschweiß-bild img {
   height: 45rem;
