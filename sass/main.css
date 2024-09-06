@@ -1345,7 +1345,14 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 .catProdukte_description {
   flex: 1;
   display: flex;
-  align-items: flex-end;
+  align-items: start;
+  flex-direction: column;
+}
+.catEntwicklung_description p a,
+.catMaterialien_description p a,
+.catFertigung_description p a,
+.catProdukte_description p a {
+  text-transform: uppercase;
 }
 .catEntwicklung_img-container,
 .catMaterialien_img-container,

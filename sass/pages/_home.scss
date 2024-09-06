@@ -593,7 +593,12 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
     &_description {
         flex: 1;
         display: flex;
-        align-items: flex-end;
+        align-items: start;
+        flex-direction: column;
+
+        & p a {
+            text-transform: uppercase;
+        }
     }
 
     &_img-container {
