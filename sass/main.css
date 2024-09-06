@@ -1354,8 +1354,8 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 .catMaterialien_heading,
 .catFertigung_heading,
 .catProdukte_heading {
-  flex: 1;
   font-size: 3rem;
+  color: whitesmoke;
   align-items: start;
   padding-bottom: 2rem;
 }
@@ -1365,8 +1365,9 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 .catProdukte_description {
   flex: 1;
   display: flex;
-  align-items: start;
+  align-items: baseline;
   flex-direction: column;
+  color: white;
 }
 .catEntwicklung_description p a,
 .catMaterialien_description p a,
