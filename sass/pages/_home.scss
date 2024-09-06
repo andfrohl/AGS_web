@@ -563,7 +563,7 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
 }
 
 .catEntwicklung {
-    background-image: url('/img/gall/slkv_1_800.jpg') no-repeat center center;
+    background-image: url('./img/gall/slkv_1_800.jpg') no-repeat center center;
     background-size: cover;  /* Ensures the background image covers the entire container */
 }
 .catMaterialien {
@@ -571,7 +571,7 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
     background-size: cover;  /* Ensures the background image covers the entire container */
 }
 .catFertigung {
-    background-image: url('../img/gall/3929_800.jpg') no-repeat center center;
+    background-image: url('./img/gall/3929_800.jpg') no-repeat center center;
     background-size: cover;  /* Ensures the background image covers the entire container */
 }
 .catProdukte {
