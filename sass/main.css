@@ -1319,7 +1319,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 }
 
 .catMaterialien {
-  background: url("./img/gall/material_hero_800.jpg") no-repeat center center;
+  background: url("img/gall/material_hero_800.jpg") no-repeat center center;
   background-size: cover; /* Ensures the background image covers the entire container */
 }
 
@@ -1329,7 +1329,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 }
 
 .catProdukte {
-  background: url("../../img/gall/IMG_061052705_800.jpg") no-repeat center center;
+  background-image: url("img/gall/IMG_061052705_800.jpg") no-repeat center center;
   background-size: cover; /* Ensures the background image covers the entire container */
 }
 
