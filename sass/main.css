@@ -1314,22 +1314,23 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 }
 
 .catEntwicklung {
-  background: url(/img/gall/slkv_1_800.jpg) no-repeat center center;
+  background: url(/img/gall/slkv_1_800.jpg) no-repeat center;
   background-size: cover; /* Ensures the background image covers the entire container */
 }
 
 .catMaterialien {
-  background: url(/img/gall/material_hero_800.jpg) no-repeat center center;
+  background: url(/img/gall/material_hero_800.jpg) no-repeat center;
   background-size: 100%; /* Ensures the background image covers the entire container */
 }
 
 .catFertigung {
-  background: url("/img/gall/3929_800.jpg") no-repeat center center;
+  background: url("/img/gall/3929_800.jpg") no-repeat center;
   background-size: cover; /* Ensures the background image covers the entire container */
 }
 
 .catProdukte {
-  background: url("img/gall/IMG_061052705_800.jpg") no-repeat center center;
+  background: url("img/gall/IMG_061052705_800.jpg") no-repeat center;
+  background-image: url(/img/gall/IMG_061052705_800.jpg) no-repeat center center;
   background-size: cover; /* Ensures the background image covers the entire container */
 }
 
@@ -1340,7 +1341,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   width: 40rem;
   height: 40rem;
   padding: 2rem;
-  background-color: rgba(153, 153, 153, 0.7);
+  /*background-color: rgba($color-grey-dark3, 0.7);*/
   border: 0.5rem;
   border-color: rgba(153, 153, 153, 0.9);
 }
