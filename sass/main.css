@@ -1357,7 +1357,6 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   font-size: 3rem;
   color: whitesmoke;
   align-items: start;
-  padding-bottom: 2rem;
 }
 .catEntwicklung_description,
 .catMaterialien_description,
@@ -1368,12 +1367,6 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   align-items: baseline;
   flex-direction: column;
   color: white;
-}
-.catEntwicklung_description p a,
-.catMaterialien_description p a,
-.catFertigung_description p a,
-.catProdukte_description p a {
-  text-transform: uppercase;
 }
 
 @keyframes scroll {

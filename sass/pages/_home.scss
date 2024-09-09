@@ -605,7 +605,7 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
         font-size: 3rem;
         color: whitesmoke;
         align-items: start;
-        padding-bottom: 2rem;
+        
     }
 
     &_description {
@@ -614,12 +614,6 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
         align-items: baseline;
         flex-direction: column;
         color: white;
-     
-
-        & p a {
-            text-transform: uppercase;
-            
-        }
     }
 
 
