@@ -1314,7 +1314,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 }
 
 .catEntwicklung {
-  background: url(/img/gall/slkv_1_800.jpg) no-repeat center;
+  background-image: url(/img/gall/slkv_1_800.jpg) no-repeat center center;
   background-size: cover; /* Ensures the background image covers the entire container */
 }
 
@@ -1329,8 +1329,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 }
 
 .catProdukte {
-  background: url("img/gall/IMG_061052705_800.jpg") no-repeat center;
-  background-image: url(/img/gall/IMG_061052705_800.jpg) no-repeat center;
+  background: url("/img/gall/IMG_061052705_800.jpg") no-repeat center;
   background-size: cover; /* Ensures the background image covers the entire container */
 }
 
