@@ -1314,17 +1314,17 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 }
 
 .catEntwicklung {
-  background: url("./img/gall/slkv_1_800.jpg") no-repeat center center;
+  background: url(/img/gall/slkv_1_800.jpg) no-repeat center center;
   background-size: cover; /* Ensures the background image covers the entire container */
 }
 
 .catMaterialien {
-  background: url("img/gall/material_hero_800.jpg") no-repeat center center;
+  background: url(/img/gall/material_hero_800.jpg) no-repeat center center;
   background-size: cover; /* Ensures the background image covers the entire container */
 }
 
 .catFertigung {
-  background: url("./img/gall/3929_800.jpg") no-repeat center center;
+  background: url(img/gall/3929_800.jpg) no-repeat center center;
   background-size: cover; /* Ensures the background image covers the entire container */
 }
 
