@@ -2316,8 +2316,8 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 .titan-bild img,
 .dreidteile-bild img,
 .luftraum-bild img {
-  height: 45rem;
-  width: auto;
+  max-width: 45rem;
+  height: auto;
 }
 
 .hssteile,

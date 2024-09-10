@@ -350,8 +350,8 @@ $white-light-gray  : #f9f9f9;
       flex: 1;
       
       & img {
-          height: 45rem;
-          width: auto;
+          max-width: 45rem;  
+          height: auto;
           
       }
   }
