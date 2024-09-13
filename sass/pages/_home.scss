@@ -371,18 +371,44 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
 
 }
 
+.welcome {
+    display: flex;
+    justify-content: center;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    background-color: whitesmoke;
+
+    &_heading {
+        font-style: oblique;
+        font-size: 5rem;
+        font-weight: 500;
+        line-height: 1.4em;
+        //text-shadow: -1px -1px 0px rgba($color-grey-light-3, 0.7),
+          //  3px 3px 0px rgba($color-grey-light-1, 0.7),
+            //6px 6px 0px #00000055;
+        text-transform: uppercase;    
+        color: rgba($color-primary-dark, 0.7);
+    }
+}
+
 .vorstellung {
+    
     display: flex;
     flex-wrap: wrap;
     // justify-content: space-between;
     gap: 3rem;
     // flex-wrap: wrap;
-    margin: 5rem 0;
+    margin: 10rem 0;
 
     z-index: 50;
 
+    &_logo {
+        max-width: 50rem;
+        height: auto;
+    }
+
     &-text {
-        max-width: 45rem;
+        max-width: 55rem;
         margin-left: 4rem;
     }
 
@@ -392,7 +418,7 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
         border-radius: .5rem;
         box-shadow: 0 3px 1rem rgba($color-black, .2);
         padding: 1rem;
-        max-width: auto;
+        max-width: 45rem;
         margin: 1rem;
         flex: 1;
 
@@ -404,6 +430,42 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
     }
 }
 
+
+
+
+
+.ags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    gap: 5rem;
+    margin: 15rem 0;
+
+    z-index: 50;
+
+    &-text {
+        max-width: 55rem;
+        padding-top: 6rem;
+        //padding-left: 5rem;
+    }
+
+    &-bild {
+        max-width: 45rem;
+        animation: slideInFromLeft 1s ease-in;
+        border-radius: .5rem;
+        //box-shadow: 0 3px 1rem rgba($color-black, .2);
+        padding: 1rem;
+        max-width: auto;
+        margin: 1rem;
+        flex: 1;
+        margin-left: 3rem;
+    }
+
+    
+}
+
+
 .cnc__maschine {
     display: flex;
     flex-wrap: wrap;
@@ -411,8 +473,8 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
     position: relative;
     max-width: 55rem;
     flex: 1;
-    animation: slideInFromRight 1s ease-in;
-
+    //animation: slideInFromRight 1s ease-in;
+    
     &__bild {
         width: 35%;
         box-shadow: 0 1.5rem 2rem rgba($color-black, .4);
@@ -424,17 +486,17 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
 
         &--p1 {
             left: 3rem;
-            top: 0;
+            top: 4rem;
         }
 
         &--p2 {
             right: 3rem;
-            top: 15rem;
+            top: 24rem;
         }
 
         &--p3 {
             left: 30%;
-            top: 17rem;
+            top: 20rem;
             width: 40%;
         }
 
@@ -452,42 +514,6 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
     }
 
     //composition:hover composition__photo:not(:hover) {
-}
-
-
-
-.ags {
-    display: flex;
-    flex-wrap: wrap;
-    // justify-content: center;
-    gap: 3rem;
-    margin: 15rem 0;
-
-    z-index: 50;
-
-    &-text {
-        max-width: 55rem;
-        padding-top: 4rem;
-        padding-left: 5rem;
-    }
-
-    &-bild {
-        max-width: 45rem;
-        animation: slideInFromLeft 1s ease-in;
-        border-radius: .5rem;
-        //box-shadow: 0 3px 1rem rgba($color-black, .2);
-        padding: 1rem;
-        max-width: auto;
-        margin: 1rem;
-        flex: 1;
-        margin-left: 3rem;
-    }
-
-    & img {
-        height: 45rem;
-        width: 45rem;
-
-    }
 }
 
 
@@ -587,11 +613,10 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
 .catProdukte {
 
     
-    
-    width: 40rem;
-    height: 40rem;
+    width: 42rem;
+    height: 42rem;
     padding: 2rem;
-
+    
     /*background-color: rgba($color-grey-dark3, 0.7);*/
     
     border: .5rem;
@@ -599,6 +624,7 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
     
     &_link {
         text-decoration: none; /* Entfernt die Standard-Unterstreichung des Links */
+           
     }
 
     &_heading {
@@ -609,11 +635,15 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
     }
 
     &_description {
-        flex: 1;
+        flex: 0;
         display: flex;
+        max-width: 38rem;
+        margin-top: 2rem;
         align-items: baseline;
         flex-direction: column;
+        overflow: visible;
         color: white;
+        background-color: orangered;
     }
 
 

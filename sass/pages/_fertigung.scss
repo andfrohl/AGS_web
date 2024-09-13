@@ -140,13 +140,15 @@ $content-selector: "~ .content > section";
         -webkit-touch-callout: none;
         //@include user-select(none);
         
+        
+        /*
         br {
           display: none;
-        }
+        }   */
         
         svg {
           fill: $secondary;
-          height: 1.2em;
+          height: 3.2em;
           vertical-align: bottom;
           margin-right: 0.2em;
           transition: all 0.2s ease-in-out;
@@ -250,7 +252,8 @@ $content-selector: "~ .content > section";
       }
       
       svg {
-        height: 1.5em;
+        height: 3.2em;
+        padding-bottom: 2rem;
       }
     }
   }

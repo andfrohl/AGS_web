@@ -6,6 +6,13 @@
     height: 10rem;    
     padding: 2rem;
 
+    &_tele, 
+    &_mobil,
+    &_email {
+        color: white;
+        padding-left: 1rem;
+    }
+
     & address {
         font-size: small;
         gap: 10rem;

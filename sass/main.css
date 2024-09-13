@@ -668,6 +668,10 @@ img {
   height: 10rem;
   padding: 2rem;
 }
+.footer_tele, .footer_mobil, .footer_email {
+  color: white;
+  padding-left: 1rem;
+}
 .footer address {
   font-size: small;
   gap: 10rem;
@@ -1166,15 +1170,35 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   animation-delay: 2s;
 }
 
+.welcome {
+  display: flex;
+  justify-content: center;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background-color: whitesmoke;
+}
+.welcome_heading {
+  font-style: oblique;
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 1.4em;
+  text-transform: uppercase;
+  color: rgba(27, 124, 194, 0.7);
+}
+
 .vorstellung {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
-  margin: 5rem 0;
+  margin: 10rem 0;
   z-index: 50;
 }
+.vorstellung_logo {
+  max-width: 50rem;
+  height: auto;
+}
 .vorstellung-text {
-  max-width: 45rem;
+  max-width: 55rem;
   margin-left: 4rem;
 }
 .vorstellung-bild {
@@ -1183,7 +1207,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   border-radius: 0.5rem;
   box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.2);
   padding: 1rem;
-  max-width: auto;
+  max-width: 45rem;
   margin: 1rem;
   flex: 1;
 }
@@ -1192,13 +1216,35 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   width: 45rem;
 }
 
+.ags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+  margin: 15rem 0;
+  z-index: 50;
+}
+.ags-text {
+  max-width: 55rem;
+  padding-top: 6rem;
+}
+.ags-bild {
+  max-width: 45rem;
+  animation: slideInFromLeft 1s ease-in;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  max-width: auto;
+  margin: 1rem;
+  flex: 1;
+  margin-left: 3rem;
+}
+
 .cnc__maschine {
   display: flex;
   flex-wrap: wrap;
   position: relative;
   max-width: 55rem;
   flex: 1;
-  animation: slideInFromRight 1s ease-in;
 }
 .cnc__maschine__bild {
   width: 35%;
@@ -1211,15 +1257,15 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 }
 .cnc__maschine__bild--p1 {
   left: 3rem;
-  top: 0;
+  top: 4rem;
 }
 .cnc__maschine__bild--p2 {
   right: 3rem;
-  top: 15rem;
+  top: 24rem;
 }
 .cnc__maschine__bild--p3 {
   left: 30%;
-  top: 17rem;
+  top: 20rem;
   width: 40%;
 }
 .cnc__maschine__bild:hover {
@@ -1230,33 +1276,6 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 }
 .cnc__maschine:hover .cnc__maschine__bild:not(:hover) {
   transform: scale(0.95);
-}
-
-.ags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
-  margin: 15rem 0;
-  z-index: 50;
-}
-.ags-text {
-  max-width: 55rem;
-  padding-top: 4rem;
-  padding-left: 5rem;
-}
-.ags-bild {
-  max-width: 45rem;
-  animation: slideInFromLeft 1s ease-in;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  max-width: auto;
-  margin: 1rem;
-  flex: 1;
-  margin-left: 3rem;
-}
-.ags img {
-  height: 45rem;
-  width: 45rem;
 }
 
 .industrie-slider {
@@ -1337,8 +1356,8 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 .catMaterialien,
 .catFertigung,
 .catProdukte {
-  width: 40rem;
-  height: 40rem;
+  width: 42rem;
+  height: 42rem;
   padding: 2rem;
   /*background-color: rgba($color-grey-dark3, 0.7);*/
   border: 0.5rem;
@@ -1362,11 +1381,15 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 .catMaterialien_description,
 .catFertigung_description,
 .catProdukte_description {
-  flex: 1;
+  flex: 0;
   display: flex;
+  max-width: 38rem;
+  margin-top: 2rem;
   align-items: baseline;
   flex-direction: column;
+  overflow: visible;
   color: white;
+  background-color: orangered;
 }
 
 @keyframes scroll {
@@ -1547,13 +1570,14 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   transition: all 0.2s ease-in-out;
   white-space: wrap;
   -webkit-touch-callout: none;
-}
-.tabs ul li label br {
-  display: none;
+  /*
+  br {
+    display: none;
+  }   */
 }
 .tabs ul li label svg {
   fill: #929daf;
-  height: 1.2em;
+  height: 3.2em;
   vertical-align: bottom;
   margin-right: 0.2em;
   transition: all 0.2s ease-in-out;
@@ -1731,7 +1755,8 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
     display: initial;
   }
   .tabs ul li label svg {
-    height: 1.5em;
+    height: 3.2em;
+    padding-bottom: 2rem;
   }
 }
 @media (max-width: 900px) {
@@ -1917,8 +1942,9 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-column-gap: 4rem;
+  grid-row-gap: 8rem;
+  margin-bottom: 10rem;
 }
 
 .div1 {
@@ -2299,24 +2325,23 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 .titan-text,
 .dreidteile-text,
 .luftraum-text {
-  max-width: 50rem;
+  max-width: 55rem;
   margin-left: 1rem;
   margin-top: 1rem;
 }
 .titan-bild,
 .dreidteile-bild,
 .luftraum-bild {
-  max-width: 45rem;
+  max-width: 55rem;
   border-radius: 0.5rem;
   padding: 1rem;
-  max-width: auto;
   margin: 1rem;
   flex: 1;
 }
 .titan-bild img,
 .dreidteile-bild img,
 .luftraum-bild img {
-  max-width: 45rem;
+  max-width: 55rem;
   height: auto;
 }
 
@@ -2350,7 +2375,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 .rollieren-text,
 .schiffbohr-text,
 .hochschweiß-text {
-  max-width: 40rem;
+  max-width: 50rem;
   margin-left: 5rem;
   margin-top: 1rem;
 }
@@ -2361,7 +2386,6 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   max-width: 55rem;
   border-radius: 0.5rem;
   padding: 1rem;
-  max-width: auto;
   margin: 1rem;
   flex: 1;
 }
@@ -2369,6 +2393,19 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 .rollieren-bild img,
 .schiffbohr-bild img,
 .hochschweiß-bild img {
-  height: 45rem;
-  width: auto;
+  height: auto;
+  max-width: 55rem;
+}
+
+#luftraum,
+#schiffbohr {
+  margin-top: 6rem;
+}
+
+.impressum {
+  margin: 15rem 0;
+}
+
+.datenschutz {
+  margin: 15rem 0;
 }/*# sourceMappingURL=main.css.map */

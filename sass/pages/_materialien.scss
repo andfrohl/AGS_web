@@ -334,23 +334,23 @@ $white-light-gray  : #f9f9f9;
   }
 
   &-text {
-      max-width: 50rem;
+      max-width: 55rem;
       margin-left: 1rem;
       margin-top: 1rem;
   }
   
   &-bild {
-      max-width: 45rem;
+      max-width: 55rem;
       // animation: slideInFromRight 1s ease-in;
       border-radius: .5rem;
       
       padding: 1rem;
-      max-width: auto;
+      
       margin: 1rem;
       flex: 1;
       
       & img {
-          max-width: 45rem;  
+          max-width: 55rem;  
           height: auto;
           
       }
@@ -387,7 +387,7 @@ $white-light-gray  : #f9f9f9;
   }
 
   &-text {
-      max-width: 40rem;
+      max-width: 50rem;
       margin-left: 5rem;
       margin-top: 1rem;
   }
@@ -398,14 +398,19 @@ $white-light-gray  : #f9f9f9;
       border-radius: .5rem;
       
       padding: 1rem;
-      max-width: auto;
+      
       margin: 1rem;
       flex: 1;
       
       & img {
-          height: 45rem;
-          width: auto;
+          height: auto;
+          max-width: 55rem;
           
       }
   }
+}
+
+#luftraum,
+#schiffbohr {
+  margin-top: 6rem;
 }

@@ -58,8 +58,10 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-column-gap: 4rem;
+  grid-row-gap: 8rem;
+  margin-bottom: 10rem;
+  
   }
   
   .div1 { grid-area: 1 / 1 / 2 / 2; }
