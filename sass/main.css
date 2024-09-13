@@ -1246,7 +1246,8 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   background-color: #4BB3FD;
   -webkit-mask-image: url(../img/svg/checkmark.svg);
   -webkit-mask-size: cover;
-  mask-image: url(../img/svg/checkmark.svg);
+  -webkit-mask-image: url(./../img/svg/checkmark.svg);
+          mask-image: url(./../img/svg/checkmark.svg);
   mask-size: cover;
 }
 .ags-bild {
