@@ -405,6 +405,7 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
     &_logo {
         max-width: 50rem;
         height: auto;
+        align-self: center;
     }
 
     &-text {
@@ -451,6 +452,7 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
 
         &__item {
             flex: 0 0 80%;
+            line-height: 1.8em;
             margin-bottom: .7rem;
             text-indent: 1rem;
             list-style-position: outside;
@@ -467,9 +469,9 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
             
         
             background-color: $color-primary;
-            -webkit-mask-image: url(./../img/chevron-right.svg);
+            -webkit-mask-image: url(./../img/svg/checkmark.svg);
             -webkit-mask-size: cover;
-            mask-image: url(./../img/chevron-right.svg);
+            mask-image: url(./../img/svg/checkmark.svg);
             mask-size: cover;
           }
 

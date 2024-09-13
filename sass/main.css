@@ -1196,6 +1196,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 .vorstellung_logo {
   max-width: 50rem;
   height: auto;
+  align-self: center;
 }
 .vorstellung-text {
   max-width: 55rem;
@@ -1230,6 +1231,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 }
 .ags-text__item {
   flex: 0 0 80%;
+  line-height: 1.8em;
   margin-bottom: 0.7rem;
   text-indent: 1rem;
   list-style-position: outside;
@@ -1242,9 +1244,9 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   margin-right: 0.7rem;
   list-style-position: outside;
   background-color: #4BB3FD;
-  -webkit-mask-image: url(./../img/chevron-right.svg);
+  -webkit-mask-image: url(./../img/svg/checkmark.svg);
   -webkit-mask-size: cover;
-  mask-image: url(./../img/chevron-right.svg);
+  mask-image: url(./../img/svg/checkmark.svg);
   mask-size: cover;
 }
 .ags-bild {
