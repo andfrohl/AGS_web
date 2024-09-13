@@ -1228,6 +1228,25 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   max-width: 55rem;
   padding-top: 6rem;
 }
+.ags-text__item {
+  flex: 0 0 80%;
+  margin-bottom: 0.7rem;
+  text-indent: 1rem;
+  list-style-position: outside;
+}
+.ags-text__item::before {
+  content: "";
+  display: inline-flex;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 0.7rem;
+  list-style-position: outside;
+  background-color: #4BB3FD;
+  -webkit-mask-image: url(./../img/chevron-right.svg);
+  -webkit-mask-size: cover;
+  mask-image: url(./../img/chevron-right.svg);
+  mask-size: cover;
+}
 .ags-bild {
   max-width: 45rem;
   animation: slideInFromLeft 1s ease-in;
