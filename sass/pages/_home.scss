@@ -452,7 +452,7 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
 
         &__item {
             flex: 0 0 80%;
-            line-height: 1.8em;
+            line-height: 2em;
             margin-bottom: .7rem;
             text-indent: 1rem;
             list-style-position: outside;
@@ -462,16 +462,16 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
             content: "";
             display: inline-flex;
             
-            height: 1.5rem;
-            width: 1.5rem;
-            margin-right: .7rem;
+            height: 1.9rem;
+            width: 1.9rem;
+            margin-right: .9rem;
             list-style-position: outside;
             
         
             background-color: $color-primary;
             -webkit-mask-image: url(../img/checkmark.svg);
             -webkit-mask-size: cover;
-            mask-image: url(./../img/checkmark.svg);
+            mask-image: url(../img/checkmark.svg);
             mask-size: cover;
           }
 
