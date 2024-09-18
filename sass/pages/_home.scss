@@ -12,7 +12,7 @@ img {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
     min-height: 15rem;
     padding: 0.5rem;
 }
@@ -608,10 +608,24 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
 .catPages {
     display: flex;
     flex-wrap: wrap;
-    gap: 10rem;
-    justify-content: center;
-    margin-top: 20rem;
-    margin-bottom: 20rem;
+
+    background-color: chartreuse;    
+
+    &__heading {
+        display: flex;
+        background-color: bisque;
+        flex: 1;
+    }
+
+    &__boxes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10rem;
+        justify-content: center;
+        margin-top: 20rem;
+        margin-bottom: 20rem;
+        background-color: aquamarine;
+    }
 
 }
 
@@ -677,6 +691,46 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
 
 }
 
+
+.kontaktform {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-grow: 1;
+    align-content: flex-start;
+    gap: 10rem;
+
+
+    &__heading {
+        display: flex;
+        background-color: blue;
+        flex: 1;
+        max-width: 50rem;
+    }
+
+    &__anfahrt {
+        display: flex;
+        flex: 1;
+
+        &-map {
+            background-color: goldenrod;
+            flex: 1;
+        }
+
+        &-beschreibung {
+            background-color: goldenrod;
+            flex: 1;
+        }
+    }
+
+    &__formular {
+        background-color: green;
+        display: flex;
+        flex: 1;
+    }
+
+}
 
 
 

@@ -397,6 +397,162 @@ img {
   transform: scale(0.98);
 }
 
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+@supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+  .popup {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+.popup__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100rem;
+  background-color: #fff;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  display: table;
+  overflow: hidden;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.25);
+  transition: all 0.5s 0.2s;
+}
+.popup__left {
+  width: 33.333333%;
+  display: table-cell;
+}
+.popup__right {
+  width: 66.6666667%;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 2rem 4rem;
+}
+.popup__img {
+  display: block;
+  width: 100%;
+}
+.popup__heading {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  justify-content: left;
+  background-image: linear-gradient(to right, #005088, rgba(27, 124, 194, 0.9176470588));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+}
+.popup__heading:hover {
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.popup-kontakt {
+  display: flex;
+  justify-content: space-between;
+  width: 60rem;
+  z-index: 50;
+}
+.popup-kontakt p {
+  text-align: center;
+  font-weight: 500;
+  font-size: larger;
+}
+.popup-kontakt__button {
+  background-color: rgba(27, 124, 194, 0.7);
+  height: 10rem;
+  max-width: 16rem;
+  margin: 1rem 0;
+  border-radius: 0.8rem;
+  padding: 0 2rem;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  animation: buttonRing 1s ease-in-out;
+  animation-delay: 2s;
+}
+.popup-kontakt__button a {
+  color: #fff;
+  text-align: center;
+}
+.popup-kontakt-phone__icon, .popup-kontakt-home__icon, .popup-kontakt-form__icon {
+  height: 10rem;
+  width: 10rem;
+  align-self: center;
+  fill: #fff;
+  animation: buttonRing 1s ease-in-out;
+  animation-delay: 2s;
+}
+.popup__description {
+  display: flex;
+  justify-content: space-between;
+  width: 60rem;
+  z-index: 50;
+}
+.popup__text {
+  font-size: 1.4rem;
+  margin-bottom: 4rem;
+  align-self: center;
+  -moz-column-count: 2;
+  -moz-column-gap: 4rem;
+  -moz-column-rule: 1px solid #f4f2f2;
+  column-count: 2;
+  column-gap: 4rem;
+  column-rule: 1px solid #f4f2f2;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+.popup__table caption {
+  text-align: left;
+  font-size: 1.5em;
+  padding-bottom: 1rem;
+  margin-top: 2rem;
+  width: 10em;
+}
+.popup__table-cell {
+  padding-left: 5rem;
+  line-height: 2em;
+  overflow: hidden;
+  vertical-align: top;
+}
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+.popup:target .popup__content {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+.popup__close:link, .popup__close:visited {
+  color: #333;
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  font-size: 5em;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s;
+  line-height: 1;
+}
+.popup__close:hover {
+  color: #4BB3FD;
+}
+
 .introduction {
   display: flex;
   flex-wrap: wrap;
@@ -876,7 +1032,7 @@ img {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   min-height: 15rem;
   padding: 0.5rem;
 }
@@ -1347,10 +1503,21 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 .catPages {
   display: flex;
   flex-wrap: wrap;
+  background-color: chartreuse;
+}
+.catPages__heading {
+  display: flex;
+  background-color: bisque;
+  flex: 1;
+}
+.catPages__boxes {
+  display: flex;
+  flex-wrap: wrap;
   gap: 10rem;
   justify-content: center;
   margin-top: 20rem;
   margin-bottom: 20rem;
+  background-color: aquamarine;
 }
 
 .catEntwicklung {
@@ -1411,6 +1578,39 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   overflow: visible;
   color: white;
   background-color: orangered;
+}
+
+.kontaktform {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-grow: 1;
+  align-content: flex-start;
+  gap: 10rem;
+}
+.kontaktform__heading {
+  display: flex;
+  background-color: blue;
+  flex: 1;
+  max-width: 50rem;
+}
+.kontaktform__anfahrt {
+  display: flex;
+  flex: 1;
+}
+.kontaktform__anfahrt-map {
+  background-color: goldenrod;
+  flex: 1;
+}
+.kontaktform__anfahrt-beschreibung {
+  background-color: goldenrod;
+  flex: 1;
+}
+.kontaktform__formular {
+  background-color: green;
+  display: flex;
+  flex: 1;
 }
 
 @keyframes scroll {
@@ -1929,7 +2129,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   height: 65rem;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   min-height: 15rem;
   padding: 0.5rem;
 }
@@ -2013,6 +2213,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   font-weight: 700;
   display: flex;
   background-image: linear-gradient(to right, #005088, rgba(27, 124, 194, 0.9176470588));
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 0.2rem;
