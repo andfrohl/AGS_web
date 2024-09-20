@@ -625,7 +625,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   padding: 0.5rem 1rem;
-  background-color: green;
+  background-color: #fff;
 }
 @media (max-width: 56.25em) {
   .navigation {
@@ -655,7 +655,7 @@ img {
   pointer-events: auto;
 }
 .navigation__item {
-  background-color: gold;
+  /* background-color: gold; */
   align-items: center;
   align-self: center;
   justify-content: space-around;
@@ -1720,17 +1720,16 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   font-weight: 700;
   text-align: center;
 }
-.kontaktForm__anfahrt {
-  display: flex;
-  justify-content: space-between;
-}
 .kontaktForm__anfahrt-map {
-  background-color: goldenrod;
-  width: 45%;
+  height: 40rem;
+  width: 100%;
+  height: 40rem;
 }
 .kontaktForm__anfahrt-beschreibung {
   background-color: goldenrod;
+  margin: 2rem 0;
   width: 45%;
+  flex: 1;
 }
 @keyframes scroll {
   0% {

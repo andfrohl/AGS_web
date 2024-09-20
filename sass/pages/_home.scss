@@ -806,24 +806,22 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
         
     }
 
-    &__anfahrt {
-        display: flex;
+    
+
+        &__anfahrt-map {
+            height: 40rem;
+            
+            width: 100%;
+            height: 40rem;
+        }
+
+        &__anfahrt-beschreibung {
+            
+            background-color: goldenrod;
+            margin: 2rem 0;
+            width: 45%;
+            flex: 1;
         
-        justify-content: space-between;
-
-        &-map {
-            
-            background-color: goldenrod;
-            width: 45%;
-            
-        }
-
-        &-beschreibung {
-            
-            background-color: goldenrod;
-            
-            width: 45%;
-        }
     }
 
     &__formular {
