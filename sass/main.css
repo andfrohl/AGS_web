@@ -553,162 +553,6 @@ img {
   color: #4BB3FD;
 }
 
-.popup {
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 9999;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s;
-}
-@supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
-  .popup {
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-}
-.popup__content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100rem;
-  background-color: #fff;
-  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
-  display: table;
-  overflow: hidden;
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(0.25);
-  transition: all 0.5s 0.2s;
-}
-.popup__left {
-  width: 33.333333%;
-  display: table-cell;
-}
-.popup__right {
-  width: 66.6666667%;
-  display: table-cell;
-  vertical-align: middle;
-  padding: 2rem 4rem;
-}
-.popup__img {
-  display: block;
-  width: 100%;
-}
-.popup__heading {
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-  font-size: 3rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  justify-content: left;
-  background-image: linear-gradient(to right, #005088, rgba(27, 124, 194, 0.9176470588));
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  letter-spacing: 0.2rem;
-  transition: all 0.2s;
-}
-.popup__heading:hover {
-  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
-}
-.popup-kontakt {
-  display: flex;
-  justify-content: space-between;
-  width: 60rem;
-  z-index: 50;
-}
-.popup-kontakt p {
-  text-align: center;
-  font-weight: 500;
-  font-size: larger;
-}
-.popup-kontakt__button {
-  background-color: rgba(27, 124, 194, 0.7);
-  height: 10rem;
-  max-width: 16rem;
-  margin: 1rem 0;
-  border-radius: 0.8rem;
-  padding: 0 2rem;
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-  animation: buttonRing 1s ease-in-out;
-  animation-delay: 2s;
-}
-.popup-kontakt__button a {
-  color: #fff;
-  text-align: center;
-}
-.popup-kontakt-phone__icon, .popup-kontakt-home__icon, .popup-kontakt-form__icon {
-  height: 10rem;
-  width: 10rem;
-  align-self: center;
-  fill: #fff;
-  animation: buttonRing 1s ease-in-out;
-  animation-delay: 2s;
-}
-.popup__description {
-  display: flex;
-  justify-content: space-between;
-  width: 60rem;
-  z-index: 50;
-}
-.popup__text {
-  font-size: 1.4rem;
-  margin-bottom: 4rem;
-  align-self: center;
-  -moz-column-count: 2;
-  -moz-column-gap: 4rem;
-  -moz-column-rule: 1px solid #f4f2f2;
-  column-count: 2;
-  column-gap: 4rem;
-  column-rule: 1px solid #f4f2f2;
-  -webkit-hyphens: auto;
-  hyphens: auto;
-}
-.popup__table caption {
-  text-align: left;
-  font-size: 1.5em;
-  padding-bottom: 1rem;
-  margin-top: 2rem;
-  width: 10em;
-}
-.popup__table-cell {
-  padding-left: 5rem;
-  line-height: 2em;
-  overflow: hidden;
-  vertical-align: top;
-}
-.popup:target {
-  opacity: 1;
-  visibility: visible;
-}
-.popup:target .popup__content {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
-}
-.popup__close:link, .popup__close:visited {
-  color: #333;
-  position: absolute;
-  top: 2.5rem;
-  right: 2.5rem;
-  font-size: 5em;
-  text-decoration: none;
-  display: inline-block;
-  transition: all 0.2s;
-  line-height: 1;
-}
-.popup__close:hover {
-  color: #4BB3FD;
-}
-
 .introduction {
   display: flex;
   flex-wrap: wrap;
@@ -1675,19 +1519,9 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 
 .catPages {
   display: flex;
-  flex-wrap: wrap;
-  background-color: chartreuse;
-}
-.catPages__heading {
-  display: flex;
-  background-color: bisque;
-  flex: 1;
-}
-.catPages__boxes {
-  display: flex;
   justify-content: center;
-  margin-top: 20rem;
-  margin-bottom: 20rem;
+  margin: 0 auto;
+  background-color: #f8f8f8;
 }
 .catPages__container {
   display: flex;
@@ -1759,6 +1593,146 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   flex-direction: row;
   color: white;
   /* background-color: orangered; */
+}
+.catEntwicklung_description-link,
+.catMaterialien_description-link,
+.catFertigung_description-link,
+.catProdukte_description-link {
+  display: flex;
+  padding: 0.5rem 2rem;
+  text-decoration: none;
+  color: #fff;
+}
+.catEntwicklung_description-link:hover,
+.catMaterialien_description-link:hover,
+.catFertigung_description-link:hover,
+.catProdukte_description-link:hover {
+  color: rgba(250, 249, 249, 0.7);
+  background-color: rgba(75, 179, 253, 0.7);
+  transition: all 0.2s;
+}
+.catEntwicklung:hover, .catEntwicklung:hover .catEntwicklung_icon, .catEntwicklung:hover .catEntwicklung_heading,
+.catMaterialien:hover,
+.catEntwicklung:hover .catMaterialien_icon,
+.catEntwicklung:hover .catMaterialien_heading,
+.catFertigung:hover,
+.catEntwicklung:hover .catFertigung_icon,
+.catEntwicklung:hover .catFertigung_heading,
+.catProdukte:hover,
+.catEntwicklung:hover .catProdukte_icon,
+.catEntwicklung:hover .catProdukte_heading,
+.catMaterialien:hover .catEntwicklung_icon,
+.catMaterialien:hover .catEntwicklung_heading,
+.catMaterialien:hover .catMaterialien_icon,
+.catMaterialien:hover .catMaterialien_heading,
+.catMaterialien:hover .catFertigung_icon,
+.catMaterialien:hover .catFertigung_heading,
+.catMaterialien:hover .catProdukte_icon,
+.catMaterialien:hover .catProdukte_heading,
+.catFertigung:hover .catEntwicklung_icon,
+.catFertigung:hover .catEntwicklung_heading,
+.catFertigung:hover .catMaterialien_icon,
+.catFertigung:hover .catMaterialien_heading,
+.catFertigung:hover .catFertigung_icon,
+.catFertigung:hover .catFertigung_heading,
+.catFertigung:hover .catProdukte_icon,
+.catFertigung:hover .catProdukte_heading,
+.catProdukte:hover .catEntwicklung_icon,
+.catProdukte:hover .catEntwicklung_heading,
+.catProdukte:hover .catMaterialien_icon,
+.catProdukte:hover .catMaterialien_heading,
+.catProdukte:hover .catFertigung_icon,
+.catProdukte:hover .catFertigung_heading,
+.catProdukte:hover .catProdukte_icon,
+.catProdukte:hover .catProdukte_heading {
+  fill: rgba(27, 124, 194, 0.7);
+  color: rgba(27, 124, 194, 0.7);
+  transition: all 0.2s;
+}
+.catEntwicklung:hover, .catEntwicklung:hover .catEntwicklung_description, .catEntwicklung:hover .catEntwicklung_description a,
+.catMaterialien:hover,
+.catEntwicklung:hover .catMaterialien_description,
+.catEntwicklung:hover .catMaterialien_description a,
+.catFertigung:hover,
+.catEntwicklung:hover .catFertigung_description,
+.catEntwicklung:hover .catFertigung_description a,
+.catProdukte:hover,
+.catEntwicklung:hover .catProdukte_description,
+.catEntwicklung:hover .catProdukte_description a,
+.catMaterialien:hover .catEntwicklung_description,
+.catMaterialien:hover .catEntwicklung_description a,
+.catMaterialien:hover .catMaterialien_description,
+.catMaterialien:hover .catMaterialien_description a,
+.catMaterialien:hover .catFertigung_description,
+.catMaterialien:hover .catFertigung_description a,
+.catMaterialien:hover .catProdukte_description,
+.catMaterialien:hover .catProdukte_description a,
+.catFertigung:hover .catEntwicklung_description,
+.catFertigung:hover .catEntwicklung_description a,
+.catFertigung:hover .catMaterialien_description,
+.catFertigung:hover .catMaterialien_description a,
+.catFertigung:hover .catFertigung_description,
+.catFertigung:hover .catFertigung_description a,
+.catFertigung:hover .catProdukte_description,
+.catFertigung:hover .catProdukte_description a,
+.catProdukte:hover .catEntwicklung_description,
+.catProdukte:hover .catEntwicklung_description a,
+.catProdukte:hover .catMaterialien_description,
+.catProdukte:hover .catMaterialien_description a,
+.catProdukte:hover .catFertigung_description,
+.catProdukte:hover .catFertigung_description a,
+.catProdukte:hover .catProdukte_description,
+.catProdukte:hover .catProdukte_description a {
+  color: rgba(51, 51, 51, 0.8);
+  transition: all 0.2s;
+}
+.catEntwicklung:hover,
+.catMaterialien:hover,
+.catFertigung:hover,
+.catProdukte:hover {
+  transition: all 0.2s;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.kontaktForm {
+  display: flex;
+  justify-content: space-around;
+  margin: 10rem 0;
+}
+.kontaktForm__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 120rem;
+}
+.kontaktForm__heading {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+}
+.kontaktForm__anfahrt-map {
+  height: 40rem;
+  width: 100%;
+  height: 40rem;
+}
+.kontaktForm__anfahrt-beschreibung {
+  background-color: goldenrod;
+  margin: 2rem 0;
+  width: 45%;
+  flex: 1;
+}
+.kontaktForm__formular {
+  width: 100%;
 }
 
 @keyframes scroll {
