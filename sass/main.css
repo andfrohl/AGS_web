@@ -647,12 +647,23 @@ img {
 }
 .navigation__kontakt {
   background-color: #4BB3FD;
+  color: #fff;
   display: flex;
   align-self: center;
   align-items: center;
-  padding: 0.6rem 0.1rem;
+  padding: 0.8rem 0.8rem;
   line-height: 2rem;
+  border-radius: 1rem;
+  border-color: #4BB3FD;
+  border-width: 1rem;
   pointer-events: auto;
+}
+.navigation__kontakt:hover {
+  /* background-color: $color-white;
+  color: rgba($color-grey-dark2, 0.8);
+  border-color: $color-primary; */
+  transition: transform 0.5s ease-in-out;
+  transform: scale(1.2);
 }
 .navigation__item {
   /* background-color: gold; */
