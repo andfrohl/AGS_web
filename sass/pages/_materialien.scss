@@ -307,8 +307,9 @@ $white-light-gray  : #f9f9f9;
 }
 
 .titan,
-.dreidteile,
-.luftraum {
+.duplex,
+.schiffbohr,
+.dreidteile {
   display: flex;
   flex-wrap: wrap;
   // justify-content: space-between;
@@ -362,7 +363,7 @@ $white-light-gray  : #f9f9f9;
 
 .hssteile,
 .rollieren,
-.schiffbohr,
+.luftraum,
 .hochschweiß {
   display: flex;
   flex-wrap: wrap;

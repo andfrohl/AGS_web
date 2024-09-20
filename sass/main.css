@@ -486,11 +486,11 @@ img {
   animation: buttonRing 1s ease-in-out;
   animation-delay: 2s;
 }
-.popup-kontakt__button a {
+.popup-kontakt__button p {
   color: #fff;
   text-align: center;
 }
-.popup-kontakt-phone__icon, .popup-kontakt-home__icon, .popup-kontakt-form__icon {
+.popup-kontakt-phone__icon, .popup-kontakt-home__icon, .popup-kontakt-mail__icon {
   height: 10rem;
   width: 10rem;
   align-self: center;
@@ -2646,8 +2646,9 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 }
 
 .titan,
-.dreidteile,
-.luftraum {
+.duplex,
+.schiffbohr,
+.dreidteile {
   display: flex;
   flex-wrap: wrap;
   gap: 5rem;
@@ -2655,8 +2656,9 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   z-index: 50;
 }
 .titan__heading-secondary,
-.dreidteile__heading-secondary,
-.luftraum__heading-secondary {
+.duplex__heading-secondary,
+.schiffbohr__heading-secondary,
+.dreidteile__heading-secondary {
   margin-top: 10rem;
   padding-top: 10rem;
   margin-bottom: 1rem;
@@ -2672,15 +2674,17 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   transition: all 0.2s;
 }
 .titan-text,
-.dreidteile-text,
-.luftraum-text {
+.duplex-text,
+.schiffbohr-text,
+.dreidteile-text {
   max-width: 55rem;
   margin-left: 1rem;
   margin-top: 1rem;
 }
 .titan-bild,
-.dreidteile-bild,
-.luftraum-bild {
+.duplex-bild,
+.schiffbohr-bild,
+.dreidteile-bild {
   max-width: 55rem;
   border-radius: 0.5rem;
   padding-left: 4rem;
@@ -2688,15 +2692,16 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   flex: 1;
 }
 .titan-bild img,
-.dreidteile-bild img,
-.luftraum-bild img {
+.duplex-bild img,
+.schiffbohr-bild img,
+.dreidteile-bild img {
   max-width: 55rem;
   height: auto;
 }
 
 .hssteile,
 .rollieren,
-.schiffbohr,
+.luftraum,
 .hochschweiß {
   display: flex;
   flex-wrap: wrap;
@@ -2706,7 +2711,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 }
 .hssteile__heading-secondary,
 .rollieren__heading-secondary,
-.schiffbohr__heading-secondary,
+.luftraum__heading-secondary,
 .hochschweiß__heading-secondary {
   margin-top: 10rem;
   padding-top: 10rem;
@@ -2724,7 +2729,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 }
 .hssteile-text,
 .rollieren-text,
-.schiffbohr-text,
+.luftraum-text,
 .hochschweiß-text {
   max-width: 50rem;
   margin-left: 5rem;
@@ -2732,7 +2737,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 }
 .hssteile-bild,
 .rollieren-bild,
-.schiffbohr-bild,
+.luftraum-bild,
 .hochschweiß-bild {
   max-width: 55rem;
   border-radius: 0.5rem;
@@ -2742,7 +2747,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 }
 .hssteile-bild img,
 .rollieren-bild img,
-.schiffbohr-bild img,
+.luftraum-bild img,
 .hochschweiß-bild img {
   height: auto;
   max-width: 55rem;
