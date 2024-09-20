@@ -607,65 +607,101 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
 
 .catPages {
     display: flex;
-    flex-wrap: wrap;
-
-    background-color: chartreuse;    
+    justify-content: center;
+    // background-color: orangered;
+    margin: 0 auto;
+    background-color: $color-grey-light-5;   
+    
+    &__container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+        max-width: 118rem;
+        flex-direction: column;
+        
+       
+    }
+    
 
     &__heading {
-        display: flex;
-        background-color: bisque;
-        flex: 1;
+        
+        padding: 2rem 2rem;
+        font-size: 3rem;
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-align: center;
+        
     }
 
     &__boxes {
         display: flex;
         flex-wrap: wrap;
+        max-width: 118rem;
+    
+        
         gap: 10rem;
         justify-content: center;
-        margin-top: 20rem;
-        margin-bottom: 20rem;
-        background-color: aquamarine;
+       
+        /* background-color: yellowgreen; */
+        padding: 5rem 1rem;
     }
 
 }
 
-.catEntwicklung {
-    background: url(./../img/gall/slkv_1_800.jpg) no-repeat;
-    background-size: cover;  /* Ensures the background image covers the entire container */
-}
-.catMaterialien {
-    background: url(../img/gall/material_hero_800.jpg) no-repeat;
-    background-size: cover;  /* Ensures the background image covers the entire container */
-}
-.catFertigung {
-    background: url(../img/gall/3929_800.jpg) no-repeat center;
-    background-size: cover;  /* Ensures the background image covers the entire container */
-}
-.catProdukte {
-    background: url(../img/gall/IMG_061052705_800.jpg) no-repeat center;
+  
+// .catEntwicklung {
+//     background: url(./../img/gall/slkv_1_800.jpg) no-repeat;
+//     background-size: cover;  /* Ensures the background image covers the entire container */
+// }
+// .catMaterialien {
+//     background: url(../img/gall/material_hero_800.jpg) no-repeat;
+//     background-size: cover;  /* Ensures the background image covers the entire container */
+// }
+// .catFertigung {
+//     background: url(../img/gall/3929_800.jpg) no-repeat center;
+//     background-size: cover;  /* Ensures the background image covers the entire container */
+// }
+// .catProdukte {
+//     background: url(../img/gall/IMG_061052705_800.jpg) no-repeat center;
     
-    background-size: cover;  /* Ensures the background image covers the entire container */
-}
+//     background-size: cover;  /* Ensures the background image covers the entire container */
+// }
+
 
 
 .catEntwicklung,
 .catMaterialien,
 .catFertigung,
 .catProdukte {
-
     
-    width: 42rem;
-    height: 42rem;
+    flex-direction: column;
+    width: 44rem;
+    height: 30rem;
     padding: 2rem;
     
-    /*background-color: rgba($color-grey-dark3, 0.7);*/
     
-    border: .5rem;
-    border-color: rgba($color-grey-dark3, 0.9);
+    background-color: rgba($color-primary, 0.9);
+    
+    border: .2rem;
+    border-color: rgba($color-primary, 0.9);
+    border-style: solid;
+    
+   
+    
+
+    &_icon {
+        display: flex;
+        height: 8rem;
+        fill: aliceblue;    
+       
+    }
     
     &_link {
         text-decoration: none; /* Entfernt die Standard-Unterstreichung des Links */
-           
+        
     }
 
     &_heading {
@@ -676,58 +712,124 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
     }
 
     &_description {
-        flex: 0;
+        
         display: flex;
-        max-width: 38rem;
-        margin-top: 2rem;
-        align-items: baseline;
-        flex-direction: column;
-        overflow: visible;
+        flex-wrap: wrap;
+        
+        flex-direction: row;
+        
+        
         color: white;
-        background-color: orangered;
+        /* background-color: orangered; */
+
+        &-link {
+            display: flex;
+            padding: .5rem 2rem;
+            
+            text-decoration: none;
+            color: $color-white;
+
+            &:hover {
+                color: rgba($color-grey-light-1, 0.7);
+                background-color: rgba($color-primary, 0.7);
+                transition: all .2s;
+            }
+            
+        }
+    }
+
+    &:hover,
+    &:hover &_icon,
+    &:hover &_heading {
+        
+        fill: rgba($color-primary-dark, 0.7);
+        color: rgba($color-primary-dark, 0.7);
+        transition: all .2s;
+    }
+
+    &:hover,
+    &:hover &_description,
+    &:hover &_description a {
+               
+        color: rgba($color-grey-dark1, 0.8);
+        transition: all .2s;
     }
 
 
+    &:hover {
+        transition: all .2s;
+        background-color: $color-white;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
 
 }
 
 
-.kontaktform {
+.kontaktForm {
     display: flex;
+    
     justify-content: space-around;
-    flex-wrap: wrap;
-    flex-direction: row;
-    flex-grow: 1;
-    align-content: flex-start;
-    gap: 10rem;
+     
+    
+    margin: 10rem 0;
+    
+    
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5rem;
+        flex-direction: column;
+        justify-content: space-around;
+        
+
+        width: 120rem;
+        
+    
+        
+    }
 
 
     &__heading {
         display: flex;
-        background-color: blue;
+        
         flex: 1;
-        max-width: 50rem;
+        width: 100%;
+
+        margin-top: 5rem;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+        
     }
 
     &__anfahrt {
         display: flex;
-        flex: 1;
+        
+        justify-content: space-between;
 
         &-map {
+            
             background-color: goldenrod;
-            flex: 1;
+            width: 45%;
+            
         }
 
         &-beschreibung {
+            
             background-color: goldenrod;
-            flex: 1;
+            
+            width: 45%;
         }
     }
 
     &__formular {
-        background-color: green;
-        display: flex;
-        flex: 1;
+        
+        
+        
     }
 
 }

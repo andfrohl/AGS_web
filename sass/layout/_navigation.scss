@@ -111,20 +111,28 @@
 }
 
 .navigation {
+    
     justify-content: space-between; /*Sorgt dafür das Logo links und Navigation rechts ist*/
-        align-items: flex-end;
-        
-        flex-wrap: wrap;
-        background-color: $color-white; 
+       
+    display: flex;    
+    flex-wrap: wrap;
+    padding: .5rem 1rem;
+    background-color: green; // $color-white
 
         @include respond(tab-port) {
             background-color: transparent;
         }
 
+    &__nav {
+        display: flex;
+        align-content: space-around;
+        justify-content: space-around;
+    }
 
     &__list {
         display: flex;
         
+        justify-content: space-around;
         z-index: 200;
         
     }
@@ -133,15 +141,28 @@
         color: $color-grey-dark1;
     }
 
+    &__kontakt {
+        background-color: $color-primary;
+        display: flex;
+        align-self: center;
+        align-items: center;
+        padding: .6rem 0.1rem;
+        line-height: 2rem;
+        pointer-events: auto;
+    }
+
     &__item {
-        background-color: $color-white;
+        background-color: gold; // $color-white
+        align-items: center;
+        align-self: center; 
         
+        justify-content: space-around;
         //border-radius: .5rem;
         margin: 2rem 1.5rem;
         padding: .6rem 0.1rem;
         //box-shadow: 0 3px 1rem rgba($color-black, .2);
         z-index: 200;
-        flex-basis: 100%;
+        // flex-basis: 80%;
         pointer-events: auto;
         
 
@@ -153,11 +174,13 @@
         }
         & a {
             color: $color-grey-dark1;
-                padding: 5rem 0;
-                margin: 0 1rem;  
-                
+        
+
+                 
             }
     }
+
+   
 
     
 }
@@ -258,7 +281,7 @@
                 opacity: 0;
                 width: 0;
                 transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-                
+                display: flex;
             }
         
             &__list {
@@ -277,6 +300,7 @@
                 margin: 3rem 8rem;
                 background-color: $color-primary;
             }
+
         
             &__link {
                 &:link,

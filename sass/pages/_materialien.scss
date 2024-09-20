@@ -312,14 +312,15 @@ $white-light-gray  : #f9f9f9;
   display: flex;
   flex-wrap: wrap;
   // justify-content: space-between;
-  gap: 3rem;
+  gap: 5rem;
   // flex-wrap: wrap;
   margin: 5rem 0;
   
   z-index: 50;
   
   &__heading-secondary {
-    margin-top: 5dvb;
+    margin-top: 10rem;
+    padding-top: 10rem;
     margin-bottom: 1rem;
     font-size: 2.5rem;
     text-transform: uppercase;
@@ -327,6 +328,7 @@ $white-light-gray  : #f9f9f9;
     display: flex;
     
     background-image: linear-gradient(to right, $color-secondary, $color-primary-dark);
+    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     letter-spacing: .2rem;
@@ -344,7 +346,7 @@ $white-light-gray  : #f9f9f9;
       // animation: slideInFromRight 1s ease-in;
       border-radius: .5rem;
       
-      padding: 1rem;
+      padding-left: 4rem;
       
       margin: 1rem;
       flex: 1;
@@ -372,7 +374,8 @@ $white-light-gray  : #f9f9f9;
   z-index: 50;
   
   &__heading-secondary {
-    margin-top: 5dvb;
+    margin-top: 10rem;
+    padding-top: 10rem;
     margin-bottom: 1rem;
     font-size: 2.5rem;
     text-transform: uppercase;
@@ -380,6 +383,7 @@ $white-light-gray  : #f9f9f9;
     display: flex;
     
     background-image: linear-gradient(to right, $color-secondary, $color-primary-dark);
+    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     letter-spacing: .2rem;
