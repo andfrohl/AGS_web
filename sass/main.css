@@ -2027,6 +2027,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 .headbox {
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: space-around;
   flex-wrap: wrap;
   max-width: 95%;
