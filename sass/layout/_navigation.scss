@@ -1,3 +1,4 @@
+
 .navigation {
     max-width: 100%;
     background: white;
@@ -129,6 +130,15 @@
         display: flex;
         align-content: space-around;
         justify-content: space-around;
+
+        @include respond(tab-port) {
+            display: none;
+          }  
+          
+          @include respond(phone) {
+            display: none;
+          }
+
     }
 
     &__list {
@@ -137,6 +147,14 @@
         justify-content: space-around;
         z-index: 200;
         
+        @include respond(tab-port) {
+            display: none;
+          }  
+          
+          @include respond(phone) {
+            display: none;
+          }
+
     }
 
    
@@ -149,9 +167,9 @@
         align-items: center;
         padding: .5rem 0.8rem;
         line-height: 2rem;
-        border-radius: 1rem;
+        border-radius: .6rem;
         border-color: $color-primary;
-        border-width: 1rem;
+        border-width: .3rem;
         pointer-events: auto;
 
            
@@ -163,20 +181,27 @@
             display: none;
           }
 
-        &:hover {
-            
-            /* background-color: $color-white;
-            color: rgba($color-grey-dark2, 0.8);
-            border-color: $color-primary; */
-            transition: transform 0.5s ease-in-out;
-            transform: scale(1.2);
-        }
+
+          &:hover {
+            transition: all .2s;
+            background-color: $color-white;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            color: rgba($color-primary-dark, 0.7);
+
+           
+            &:hover p {
+                color: rgba($color-primary-dark, 0.7);
+            }
+
+          }
+        
     }
 
       
 
     &__item {
-       /*  background-color: gold; */ // $color-white
+        /* background-color: gold; */  // $color-white
         align-items: center;
         align-self: center; 
         
@@ -188,6 +213,8 @@
         z-index: 200;
         // flex-basis: 80%;
         pointer-events: auto;
+
+      
         
 
         &:hover,
@@ -214,6 +241,8 @@
     &__link {
         
         padding: .6rem 0.1rem;
+
+      
         
         
         &-active {
@@ -223,11 +252,13 @@
             font-weight: 600;
             transition: all .1s;
             color: $color-primary-dark;
+            
         }
         
 
         @include respond(tab-port) {
             border-bottom: none;
+            display: none;
           }  
           
           @include respond(phone) {
@@ -237,10 +268,13 @@
         
     }
 
-
+    
     
 }
  
+
+
+
 
 
 .top-logo-style {
@@ -339,12 +373,14 @@
                 width: 0;
                 transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
                 display: flex;
+
+                
             }
         
             &__list {
                 display: block;
                 position: absolute;
-                top: 30%;
+                top: 40%;
                 left: 50%;
                 transform: translate(-50%,-50%);
                 list-style: none;
@@ -356,6 +392,7 @@
             &__item {
                 margin: 3rem 8rem;
                 background-color: $color-primary;
+                /* visibility: hidden; */
             }
 
         
@@ -373,7 +410,8 @@
                     background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
                     background-size: 220%;
                     transition: all .4s;
-        
+
+           
                     span {
                         margin-right: 1.5rem;
                         display: inline-block;
@@ -397,8 +435,12 @@
             &__checkbox:checked ~ &__nav {
                 opacity: 1;
                 width: 100%;
-                visibility: visible
+                visibility: visible;
             }
+
+           /*  &__checkbox:checked ~ &__item {
+                visibility: hidden;
+            } */
         
         
             //ICON
@@ -455,12 +497,12 @@
     
       }
     
-  
+  /* 
       @include respond(phone) {
-        
+        display: none;
 
       }
-
+ */
 
 
 

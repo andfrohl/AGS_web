@@ -15,7 +15,9 @@
 
     & address {
         font-size: small;
-        gap: 10rem;
+        margin-top: 3rem;
+        gap: 4rem;
+        padding-left: 3rem;
     }
 
     & .flex {
@@ -24,11 +26,12 @@
 
     & ul  {
         display: flex; 
+        margin: 3rem 2rem;
     }
 
     & ul a {
         color: $color-white;
-        margin: 1rem 2rem;
+        margin: 3rem 2rem;
 
         &:hover {
             border-bottom: 2px $color-white solid;

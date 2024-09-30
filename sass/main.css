@@ -168,6 +168,12 @@ h1, h2 {
   margin: 1rem 0;
 }
 
+h3 {
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 1rem 0;
+}
+
 p {
   margin: 1rem 0;
 }
@@ -185,6 +191,7 @@ img {
   display: flex;
   justify-content: center;
   background-image: linear-gradient(to right, #005088, rgba(27, 124, 194, 0.9176470588));
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 0.2rem;
@@ -192,6 +199,35 @@ img {
 }
 .heading-secondary:hover {
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+}
+.page__container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 118rem;
+  flex-direction: column;
+}
+.page__heading {
+  font-style: oblique;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.4em;
+  /* text-transform: uppercase; */
+  color: rgba(51, 51, 51, 0.7);
+}
+
+.introduction_entwicklung-text,
+.introduction_materialien-text,
+.introduction_produkte-text {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: 400;
 }
 
 .container-big {
@@ -281,6 +317,7 @@ img {
   justify-content: center;
   align-items: flex-start;
   height: 100%;
+  width: 50%;
 }
 
 .grid-2 {
@@ -570,6 +607,281 @@ img {
   color: #4BB3FD;
 }
 
+.materialien__liste {
+  justify-content: center;
+  margin: 0 auto;
+  padding: 5rem 0;
+  background-color: #f8f8f8;
+}
+@media (max-width: 56.25em) {
+  .materialien__liste {
+    padding: 0 2.5rem;
+  }
+}
+@media (max-width: 25em) {
+  .materialien__liste {
+    border-bottom: none;
+  }
+}
+
+.weitereFertigung__liste,
+.gaengieMaterialien__liste {
+  justify-content: center;
+  margin: 0 auto;
+  padding: 5rem 0;
+  background-color: #fff;
+}
+@media (max-width: 56.25em) {
+  .weitereFertigung__liste,
+  .gaengieMaterialien__liste {
+    padding: 0 2.5rem;
+  }
+}
+@media (max-width: 25em) {
+  .weitereFertigung__liste,
+  .gaengieMaterialien__liste {
+    border-bottom: none;
+  }
+}
+
+#aspect-content {
+  margin: 50px 0 0;
+  font-family: "Poppins", sans-serif;
+}
+#aspect-content * {
+  box-sizing: border-box;
+}
+
+.aspect-tab {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0.5rem auto 2rem;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgb(236, 236, 236);
+  opacity: 1;
+  transition: box-shadow 0.2s, opacity 0.4s;
+  border: 1px solid #f0eeee;
+}
+.aspect-tab:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.11);
+}
+
+.aspect-input {
+  display: none;
+}
+
+.aspect-input:checked ~ .aspect-content + .aspect-tab-content {
+  max-height: 3000px;
+}
+
+.aspect-input:checked ~ .aspect-content:after {
+  transform: rotate(0);
+}
+
+.aspect-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  max-height: 80px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.aspect-content {
+  position: relative;
+  display: block;
+  height: 80px;
+  margin: 0;
+  padding: 0 87px 0 30px;
+  font-size: 0;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+}
+.aspect-content:before, .aspect-content:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+}
+.aspect-content:before {
+  height: 100%;
+}
+.aspect-content:after {
+  position: absolute;
+  width: 24px;
+  height: 100%;
+  right: 30px;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTI0IDI0SDBWMGgyNHoiIG9wYWNpdHk9Ii44NyIvPgogICAgICAgIDxwYXRoIGZpbGw9IiNBOUFDQUYiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTE1Ljg4IDE1LjI5TDEyIDExLjQxbC0zLjg4IDMuODhhLjk5Ni45OTYgMCAxIDEtMS40MS0xLjQxbDQuNTktNC41OWEuOTk2Ljk5NiAwIDAgMSAxLjQxIDBsNC41OSA0LjU5Yy4zOS4zOS4zOSAxLjAyIDAgMS40MS0uMzkuMzgtMS4wMy4zOS0xLjQyIDB6Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=");
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(180deg);
+}
+
+.aspect-name {
+  display: inline-block;
+  width: 75%;
+  margin-left: 16px;
+  font-weight: 500;
+  color: #005088;
+  white-space: normal;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.aspect-name {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.aspect-content + .aspect-tab-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s;
+}
+
+.aspect-content > div {
+  display: inline-block;
+}
+
+.aspect-content > div {
+  vertical-align: middle;
+}
+
+.aspect-info {
+  width: 80%;
+  white-space: nowrap;
+  font-size: 0;
+}
+.aspect-info:before {
+  content: "";
+  display: inline-block;
+  height: 44px;
+  vertical-align: middle;
+}
+
+.aspect-tab-content {
+  background-color: #f9f9f9;
+  font-size: 0;
+  text-align: justify;
+}
+
+.sentiment-wrapper {
+  padding: 24px 30px 30px;
+}
+
+.sentiment-wrapper > div {
+  display: inline-block;
+  width: 100%;
+  max-width: 350px;
+  padding: 0 5px;
+  box-sizing: border-box;
+  vertical-align: top;
+  cursor: default;
+}
+
+.sentiment-wrapper > div > div {
+  width: 100%;
+  padding: 16px 24px 20px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #ececec;
+  text-align: left;
+}
+
+.opinion-header {
+  position: relative;
+  width: 100%;
+  margin: 0 0 24px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #242a32;
+  text-transform: capitalize;
+}
+
+.opinion-header > span:nth-child(2) {
+  position: absolute;
+  right: 0;
+}
+
+.opinion-header + div > span {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #363636;
+}
+
+@media screen and (max-width: 800px) {
+  .aspect-label {
+    max-height: 102px;
+  }
+  .aspect-content {
+    height: auto;
+    padding: 10px 87px 10px 30px;
+  }
+  .aspect-content:before {
+    display: none;
+  }
+  .aspect-content:after {
+    top: 0;
+  }
+  .aspect-content > div {
+    display: block;
+    width: 100%;
+  }
+  .aspect-stat {
+    margin-top: 10px;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 750px) {
+  .sentiment-wrapper > div {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+  .sentiment-wrapper > div:not(:first-child) {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .aspect-label {
+    max-height: 140px;
+  }
+  .aspect-stat > div {
+    display: block;
+    width: 100%;
+  }
+  .all-opinions {
+    margin-bottom: 10px;
+  }
+  .all-opinions + div > span:first-child {
+    margin: 0;
+  }
+  .aspect-content {
+    height: auto;
+    padding: 10px 57px 10px 15px;
+  }
+  .aspect-content:before {
+    display: none;
+  }
+  .aspect-content:after {
+    top: 0;
+  }
+}
 .introduction {
   display: flex;
   flex-wrap: wrap;
@@ -654,10 +966,30 @@ img {
   align-content: space-around;
   justify-content: space-around;
 }
+@media (max-width: 56.25em) {
+  .navigation__nav {
+    display: none;
+  }
+}
+@media (max-width: 25em) {
+  .navigation__nav {
+    display: none;
+  }
+}
 .navigation__list {
   display: flex;
   justify-content: space-around;
   z-index: 200;
+}
+@media (max-width: 56.25em) {
+  .navigation__list {
+    display: none;
+  }
+}
+@media (max-width: 25em) {
+  .navigation__list {
+    display: none;
+  }
 }
 .navigation__kontakt {
   background-color: #4BB3FD;
@@ -667,9 +999,9 @@ img {
   align-items: center;
   padding: 0.5rem 0.8rem;
   line-height: 2rem;
-  border-radius: 1rem;
+  border-radius: 0.6rem;
   border-color: #4BB3FD;
-  border-width: 1rem;
+  border-width: 0.3rem;
   pointer-events: auto;
 }
 @media (max-width: 56.25em) {
@@ -683,14 +1015,17 @@ img {
   }
 }
 .navigation__kontakt:hover {
-  /* background-color: $color-white;
-  color: rgba($color-grey-dark2, 0.8);
-  border-color: $color-primary; */
-  transition: transform 0.5s ease-in-out;
-  transform: scale(1.2);
+  transition: all 0.2s;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: rgba(27, 124, 194, 0.7);
+}
+.navigation__kontakt:hover:hover p {
+  color: rgba(27, 124, 194, 0.7);
 }
 .navigation__item {
-  /*  background-color: gold; */
+  /* background-color: gold; */
   align-items: center;
   align-self: center;
   justify-content: space-around;
@@ -732,6 +1067,7 @@ img {
 @media (max-width: 56.25em) {
   .navigation__link {
     border-bottom: none;
+    display: none;
   }
 }
 @media (max-width: 25em) {
@@ -780,6 +1116,11 @@ img {
     }
 } */
 @media (max-width: 56.25em) {
+  .navigation {
+    /*  &__checkbox:checked ~ &__item {
+         visibility: hidden;
+     } */
+  }
   .navigation__checkbox {
     display: none;
   }
@@ -823,7 +1164,7 @@ img {
   .navigation__list {
     display: block;
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     list-style: none;
@@ -834,6 +1175,7 @@ img {
   .navigation__item {
     margin: 3rem 8rem;
     background-color: #4BB3FD;
+    /* visibility: hidden; */
   }
   .navigation__link:link, .navigation__link:visited {
     display: inline-block;
@@ -904,6 +1246,12 @@ img {
     transform: rotate(-135deg);
   }
 }
+/* 
+     @include respond(phone) {
+       display: none;
+
+     }
+*/
 /* Footer */
 .footer {
   background-color: rgba(27, 124, 194, 0.9176470588);
@@ -917,17 +1265,20 @@ img {
 }
 .footer address {
   font-size: small;
-  gap: 10rem;
+  margin-top: 3rem;
+  gap: 4rem;
+  padding-left: 3rem;
 }
 .footer .flex {
   justify-content: space-between; /*Sorgt dafür das Logo links und Navigation rechts ist*/
 }
 .footer ul {
   display: flex;
+  margin: 3rem 2rem;
 }
 .footer ul a {
   color: #fff;
-  margin: 1rem 2rem;
+  margin: 3rem 2rem;
 }
 .footer ul a:hover {
   border-bottom: 2px #fff solid;
@@ -1107,10 +1458,267 @@ img {
   box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
+.ags,
+.vorstellung,
+.konstruktion,
+.leichtbau,
+.service,
+.qualitaet,
+.hssteile,
+.rollieren,
+.luftraum,
+.hochschweiß,
+.titan,
+.duplex,
+.schiffbohr,
+.dreidteile,
+.schleifen {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  /* margin: 5rem 0; */
+  z-index: 50;
+  /* background-color: greenyellow; */
+  justify-content: space-around;
+}
+@media (max-width: 56.25em) {
+  .ags,
+  .vorstellung,
+  .konstruktion,
+  .leichtbau,
+  .service,
+  .qualitaet,
+  .hssteile,
+  .rollieren,
+  .luftraum,
+  .hochschweiß,
+  .titan,
+  .duplex,
+  .schiffbohr,
+  .dreidteile,
+  .schleifen {
+    gap: 3rem;
+  }
+}
+@media (max-width: 45em) {
+  .ags,
+  .vorstellung,
+  .konstruktion,
+  .leichtbau,
+  .service,
+  .qualitaet,
+  .hssteile,
+  .rollieren,
+  .luftraum,
+  .hochschweiß,
+  .titan,
+  .duplex,
+  .schiffbohr,
+  .dreidteile,
+  .schleifen {
+    gap: 3rem;
+  }
+}
+.ags__heading-secondary,
+.vorstellung__heading-secondary,
+.konstruktion__heading-secondary,
+.leichtbau__heading-secondary,
+.service__heading-secondary,
+.qualitaet__heading-secondary,
+.hssteile__heading-secondary,
+.rollieren__heading-secondary,
+.luftraum__heading-secondary,
+.hochschweiß__heading-secondary,
+.titan__heading-secondary,
+.duplex__heading-secondary,
+.schiffbohr__heading-secondary,
+.dreidteile__heading-secondary,
+.schleifen__heading-secondary {
+  margin-top: 10rem;
+  padding-top: 10rem;
+  margin-bottom: 5rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  background-image: linear-gradient(to right, #005088, rgba(27, 124, 194, 0.9176470588));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+}
+.ags__heading-secondary-home,
+.vorstellung__heading-secondary-home,
+.konstruktion__heading-secondary-home,
+.leichtbau__heading-secondary-home,
+.service__heading-secondary-home,
+.qualitaet__heading-secondary-home,
+.hssteile__heading-secondary-home,
+.rollieren__heading-secondary-home,
+.luftraum__heading-secondary-home,
+.hochschweiß__heading-secondary-home,
+.titan__heading-secondary-home,
+.duplex__heading-secondary-home,
+.schiffbohr__heading-secondary-home,
+.dreidteile__heading-secondary-home,
+.schleifen__heading-secondary-home {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  background-image: linear-gradient(to right, #005088, rgba(27, 124, 194, 0.9176470588));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+}
+.ags-text,
+.vorstellung-text,
+.konstruktion-text,
+.leichtbau-text,
+.service-text,
+.qualitaet-text,
+.hssteile-text,
+.rollieren-text,
+.luftraum-text,
+.hochschweiß-text,
+.titan-text,
+.duplex-text,
+.schiffbohr-text,
+.dreidteile-text,
+.schleifen-text {
+  width: 55rem;
+  height: auto;
+  margin: 1rem;
+  /* flex: 1; */
+  /* background-color: aqua; */
+}
+@media (max-width: 56.25em) {
+  .ags-text,
+  .vorstellung-text,
+  .konstruktion-text,
+  .leichtbau-text,
+  .service-text,
+  .qualitaet-text,
+  .hssteile-text,
+  .rollieren-text,
+  .luftraum-text,
+  .hochschweiß-text,
+  .titan-text,
+  .duplex-text,
+  .schiffbohr-text,
+  .dreidteile-text,
+  .schleifen-text {
+    width: 45rem;
+  }
+}
+@media (max-width: 45em) {
+  .ags-text,
+  .vorstellung-text,
+  .konstruktion-text,
+  .leichtbau-text,
+  .service-text,
+  .qualitaet-text,
+  .hssteile-text,
+  .rollieren-text,
+  .luftraum-text,
+  .hochschweiß-text,
+  .titan-text,
+  .duplex-text,
+  .schiffbohr-text,
+  .dreidteile-text,
+  .schleifen-text {
+    width: 38rem;
+  }
+}
+.ags-bild,
+.vorstellung-bild,
+.konstruktion-bild,
+.leichtbau-bild,
+.service-bild,
+.qualitaet-bild,
+.hssteile-bild,
+.rollieren-bild,
+.luftraum-bild,
+.hochschweiß-bild,
+.titan-bild,
+.duplex-bild,
+.schiffbohr-bild,
+.dreidteile-bild,
+.schleifen-bild {
+  width: 55rem;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  /* flex: 1; */
+  background-color: beige;
+  align-self: center;
+}
+@media (max-width: 56.25em) {
+  .ags-bild,
+  .vorstellung-bild,
+  .konstruktion-bild,
+  .leichtbau-bild,
+  .service-bild,
+  .qualitaet-bild,
+  .hssteile-bild,
+  .rollieren-bild,
+  .luftraum-bild,
+  .hochschweiß-bild,
+  .titan-bild,
+  .duplex-bild,
+  .schiffbohr-bild,
+  .dreidteile-bild,
+  .schleifen-bild {
+    width: 45rem;
+  }
+}
+@media (max-width: 45em) {
+  .ags-bild,
+  .vorstellung-bild,
+  .konstruktion-bild,
+  .leichtbau-bild,
+  .service-bild,
+  .qualitaet-bild,
+  .hssteile-bild,
+  .rollieren-bild,
+  .luftraum-bild,
+  .hochschweiß-bild,
+  .titan-bild,
+  .duplex-bild,
+  .schiffbohr-bild,
+  .dreidteile-bild,
+  .schleifen-bild {
+    width: 38rem;
+  }
+}
+.ags-bild img,
+.vorstellung-bild img,
+.konstruktion-bild img,
+.leichtbau-bild img,
+.service-bild img,
+.qualitaet-bild img,
+.hssteile-bild img,
+.rollieren-bild img,
+.luftraum-bild img,
+.hochschweiß-bild img,
+.titan-bild img,
+.duplex-bild img,
+.schiffbohr-bild img,
+.dreidteile-bild img,
+.schleifen-bild img {
+  max-width: 100%;
+  height: auto;
+}
+
 img {
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .carousel {
@@ -1209,7 +1817,7 @@ img {
   text-align: center;
   line-height: 1;
   border-radius: 5px;
-  font-size: 5rem;
+  font-size: 4rem;
   text-transform: uppercase;
 }
 @media (max-width: 56.25em) {
@@ -1487,13 +2095,14 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
-  margin: 10rem 0;
+  margin: 2rem 0;
   z-index: 50;
 }
 .vorstellung_logo {
-  max-width: 50rem;
+  max-width: 45rem;
   height: auto;
   align-self: center;
+  padding: 0 1rem;
 }
 .vorstellung-text {
   max-width: 55rem;
@@ -1573,7 +2182,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   flex-wrap: wrap;
   justify-content: space-around;
   max-width: 55rem;
-  padding: 2rem 0;
+  padding: 0 1rem;
 }
 .ags-cnc__maschine__bild {
   width: 20rem;
@@ -1734,6 +2343,16 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   justify-content: center;
   /* background-color: yellowgreen; */
   padding: 5rem 1rem;
+}
+@media (max-width: 56.25em) {
+  .catPages__boxes {
+    gap: 5rem;
+  }
+}
+@media (max-width: 25em) {
+  .catPages__boxes {
+    gap: 3rem;
+  }
 }
 
 .catEntwicklung,
@@ -2437,11 +3056,23 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   justify-content: center;
   align-items: flex-end;
   min-height: 15rem;
-  padding: 0.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* padding: 0.5rem; */
+}
+@media (max-width: 56.25em) {
+  .start-container {
+    height: auto;
+  }
 }
 .start-container__bild {
   min-height: 60rem;
   width: auto;
+}
+@media (max-width: 56.25em) {
+  .start-container__bild {
+    min-height: auto;
+  }
 }
 .start-container__text {
   position: absolute;
@@ -2514,12 +3145,18 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   grid-area: 6/2/6/3;
 }
 
-.introduction_entwicklung-text {
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  font-weight: 700;
-}
+/* .introduction_entwicklung {
 
+
+  &-text {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+
+  }
+} */
+.konstruktion__heading,
+.service__heading,
 .leichtbau__heading,
 .qualitaet__heading {
   margin-top: 5rem;
@@ -2586,357 +3223,65 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   animation: slideInFromLeft 1s ease-in;
 }
 
-#aspect-content {
-  margin: 50px 0 0;
-  font-family: "Poppins", sans-serif;
-}
-#aspect-content * {
-  box-sizing: border-box;
-}
-
-.aspect-tab {
-  position: relative;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto 10px;
-  border-radius: 4px;
-  background-color: #fff;
-  box-shadow: 0 0 0 1px rgb(236, 236, 236);
-  opacity: 1;
-  transition: box-shadow 0.2s, opacity 0.4s;
-}
-.aspect-tab:hover {
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.11);
-}
-
-.aspect-input {
-  display: none;
-}
-
-.aspect-input:checked ~ .aspect-content + .aspect-tab-content {
-  max-height: 3000px;
-}
-
-.aspect-input:checked ~ .aspect-content:after {
-  transform: rotate(0);
-}
-
-.aspect-label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  max-height: 80px;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  font-size: 0;
-  z-index: 1;
-  cursor: pointer;
-}
-
-.aspect-content {
-  position: relative;
-  display: block;
-  height: 80px;
-  margin: 0;
-  padding: 0 87px 0 30px;
-  font-size: 0;
-  white-space: nowrap;
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-}
-.aspect-content:before, .aspect-content:after {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-}
-.aspect-content:before {
-  height: 100%;
-}
-.aspect-content:after {
-  position: absolute;
-  width: 24px;
-  height: 100%;
-  right: 30px;
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTI0IDI0SDBWMGgyNHoiIG9wYWNpdHk9Ii44NyIvPgogICAgICAgIDxwYXRoIGZpbGw9IiNBOUFDQUYiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTE1Ljg4IDE1LjI5TDEyIDExLjQxbC0zLjg4IDMuODhhLjk5Ni45OTYgMCAxIDEtMS40MS0xLjQxbDQuNTktNC41OWEuOTk2Ljk5NiAwIDAgMSAxLjQxIDBsNC41OSA0LjU5Yy4zOS4zOS4zOSAxLjAyIDAgMS40MS0uMzkuMzgtMS4wMy4zOS0xLjQyIDB6Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=");
-  background-repeat: no-repeat;
-  background-position: center;
-  transform: rotate(180deg);
-}
-
-.aspect-name {
-  display: inline-block;
-  width: 75%;
-  margin-left: 16px;
-  font-weight: 500;
-  color: #242a32;
-  white-space: normal;
-  text-align: left;
-  vertical-align: middle;
-}
-
-.aspect-name {
-  font-size: 14px;
-  line-height: 22px;
-}
-
-.aspect-content + .aspect-tab-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s;
-}
-
-.aspect-content > div {
-  display: inline-block;
-}
-
-.aspect-content > div {
-  vertical-align: middle;
-}
-
-.aspect-info {
-  width: 80%;
-  white-space: nowrap;
-  font-size: 0;
-}
-.aspect-info:before {
-  content: "";
-  display: inline-block;
-  height: 44px;
-  vertical-align: middle;
-}
-
-.aspect-tab-content {
-  background-color: #f9f9f9;
-  font-size: 0;
-  text-align: justify;
-}
-
-.sentiment-wrapper {
-  padding: 24px 30px 30px;
-}
-
-.sentiment-wrapper > div {
-  display: inline-block;
-  width: 100%;
-  max-width: 350px;
-  padding: 0 5px;
-  box-sizing: border-box;
-  vertical-align: top;
-  cursor: default;
-}
-
-.sentiment-wrapper > div > div {
-  width: 100%;
-  padding: 16px 24px 20px;
-  box-sizing: border-box;
-  border-radius: 4px;
-  background-color: #fff;
-  border: 1px solid #ececec;
-  text-align: left;
-}
-
-.opinion-header {
-  position: relative;
-  width: 100%;
-  margin: 0 0 24px;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 20px;
-  color: #242a32;
-  text-transform: capitalize;
-}
-
-.opinion-header > span:nth-child(2) {
-  position: absolute;
-  right: 0;
-}
-
-.opinion-header + div > span {
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 22px;
-  color: #363636;
-}
-
-@media screen and (max-width: 800px) {
-  .aspect-label {
-    max-height: 102px;
-  }
-  .aspect-content {
-    height: auto;
-    padding: 10px 87px 10px 30px;
-  }
-  .aspect-content:before {
-    display: none;
-  }
-  .aspect-content:after {
-    top: 0;
-  }
-  .aspect-content > div {
-    display: block;
-    width: 100%;
-  }
-  .aspect-stat {
-    margin-top: 10px;
-    text-align: left;
-  }
-}
-@media screen and (max-width: 750px) {
-  .sentiment-wrapper > div {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-  }
-  .sentiment-wrapper > div:not(:first-child) {
-    margin-top: 10px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .aspect-label {
-    max-height: 140px;
-  }
-  .aspect-stat > div {
-    display: block;
-    width: 100%;
-  }
-  .all-opinions {
-    margin-bottom: 10px;
-  }
-  .all-opinions + div > span:first-child {
-    margin: 0;
-  }
-}
-.introduction_materialien-text {
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  font-weight: 700;
-}
-
-.titan,
-.duplex,
-.schiffbohr,
-.dreidteile,
-.schleifen {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5rem;
-  margin: 5rem 0;
-  z-index: 50;
-}
-.titan__heading-secondary,
-.duplex__heading-secondary,
-.schiffbohr__heading-secondary,
-.dreidteile__heading-secondary,
-.schleifen__heading-secondary {
-  margin-top: 10rem;
-  padding-top: 10rem;
-  margin-bottom: 1rem;
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  display: flex;
-  background-image: linear-gradient(to right, #005088, rgba(27, 124, 194, 0.9176470588));
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  letter-spacing: 0.2rem;
-  transition: all 0.2s;
-}
-.titan-text,
-.duplex-text,
-.schiffbohr-text,
-.dreidteile-text,
-.schleifen-text {
-  max-width: 55rem;
-  margin-left: 1rem;
-  margin-top: 1rem;
-}
-.titan-bild,
-.duplex-bild,
-.schiffbohr-bild,
-.dreidteile-bild,
-.schleifen-bild {
-  max-width: 55rem;
-  border-radius: 0.5rem;
-  padding-left: 4rem;
-  margin: 1rem;
-  flex: 1;
-}
-.titan-bild img,
-.duplex-bild img,
-.schiffbohr-bild img,
-.dreidteile-bild img,
-.schleifen-bild img {
-  max-width: 55rem;
-  height: auto;
-}
-
-.hssteile,
+/* .hssteile,
 .rollieren,
 .luftraum,
 .hochschweiß {
   display: flex;
   flex-wrap: wrap;
+  // justify-content: space-between;
   gap: 3rem;
+  // flex-wrap: wrap;
   margin: 5rem 0;
-  z-index: 50;
-}
-.hssteile__heading-secondary,
-.rollieren__heading-secondary,
-.luftraum__heading-secondary,
-.hochschweiß__heading-secondary {
-  margin-top: 10rem;
-  padding-top: 10rem;
-  margin-bottom: 1rem;
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  display: flex;
-  background-image: linear-gradient(to right, #005088, rgba(27, 124, 194, 0.9176470588));
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  letter-spacing: 0.2rem;
-  transition: all 0.2s;
-}
-.hssteile-text,
-.rollieren-text,
-.luftraum-text,
-.hochschweiß-text {
-  max-width: 50rem;
-  margin-left: 5rem;
-  margin-top: 1rem;
-}
-.hssteile-bild,
-.rollieren-bild,
-.luftraum-bild,
-.hochschweiß-bild {
-  max-width: 55rem;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  margin: 1rem;
-  flex: 1;
-}
-.hssteile-bild img,
-.rollieren-bild img,
-.luftraum-bild img,
-.hochschweiß-bild img {
-  height: auto;
-  max-width: 55rem;
-}
 
-#luftraum,
+  z-index: 50;
+
+  &__heading-secondary {
+    margin-top: 10rem;
+    padding-top: 10rem;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+
+    background-image: linear-gradient(to right, $color-secondary, $color-primary-dark);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    transition: all .2s;
+  }
+
+  &-text {
+      max-width: 50rem;
+      margin-left: 5rem;
+      margin-top: 1rem;
+  }
+
+  &-bild {
+      max-width: 55rem;
+      // animation: slideInFromRight 1s ease-in;
+      border-radius: .5rem;
+
+      padding: 1rem;
+
+      margin: 1rem;
+      flex: 1;
+
+      & img {
+        max-width: 100%;  
+        height: auto;
+
+
+      }
+  }
+}
+ */
+/* #luftraum,
 #schiffbohr {
   margin-top: 6rem;
-}
-
+} */
 .impressum {
   margin: 15rem 0;
 }

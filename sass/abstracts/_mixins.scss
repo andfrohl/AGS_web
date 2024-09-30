@@ -20,6 +20,9 @@ $breakpoint argument choices::after
 	@if $breakpoint == phone {
 		@media (max-width: 25em) { @content };     // 400px / 16px
 	}
+	@if $breakpoint == phone-land {
+		@media (max-width: 45em) { @content };     // 720px / 16px
+	}
 	@if $breakpoint == tab-port {
 		@media (max-width: 56.25em) { @content };     // 900px / 16px
 	}

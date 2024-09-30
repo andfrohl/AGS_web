@@ -2,7 +2,7 @@
 
 img {
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .carousel {
@@ -109,7 +109,7 @@ img {
     text-align: center;
     line-height: 1;
     border-radius: 5px;
-    font-size: 5rem;
+    font-size: 4rem;
     //font-weight: 500;
     // text-shadow: -1px -1px 0px rgba($color-grey-light-3, 0.7),
     // 3px 3px 0px rgba($color-grey-light-1, 0.7),
@@ -445,14 +445,15 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
     // justify-content: space-between;
     gap: 3rem;
     // flex-wrap: wrap;
-    margin: 10rem 0;
+    margin: 2rem 0;
 
     z-index: 50;
 
     &_logo {
-        max-width: 50rem;
+        max-width: 45rem;
         height: auto;
         align-self: center;
+        padding: 0 1rem;
     }
 
     &-text {
@@ -538,7 +539,7 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
     
         justify-content: space-around;
         max-width: 55rem;
-        padding: 2rem 0;
+        padding: 0 1rem;
         
         //animation: slideInFromRight 1s ease-in;
         
@@ -726,9 +727,7 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
         flex-wrap: wrap;
         
         max-width: 118rem;
-        flex-direction: column;
-        
-       
+        flex-direction: column; 
     }
     
 
@@ -755,6 +754,14 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
        
         /* background-color: yellowgreen; */
         padding: 5rem 1rem;
+
+        @include respond(tab-port) {
+            gap: 5rem;
+        }  
+        
+        @include respond(phone) {
+            gap: 3rem;
+        }
     }
 
 }
@@ -845,6 +852,8 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
             
         }
     }
+
+    
 
     &:hover,
     &:hover &_icon,

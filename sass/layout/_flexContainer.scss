@@ -1,0 +1,114 @@
+
+.ags,
+.vorstellung,
+.konstruktion,
+.leichtbau,
+.service,
+.qualitaet,
+.hssteile,
+.rollieren,
+.luftraum,
+.hochschweiß,
+.titan,
+.duplex,
+.schiffbohr,
+.dreidteile,
+.schleifen {
+  display: flex;
+  flex-wrap: wrap;
+  // justify-content: space-between;
+  gap: 4rem;
+  // flex-wrap: wrap;
+  /* margin: 5rem 0; */
+  z-index: 50;
+  /* background-color: greenyellow; */
+  justify-content: space-around;
+
+  @include respond(tab-port) {
+    gap: 3rem;
+  } 
+
+  @include respond(phone-land) {
+    gap: 3rem;
+  }
+  
+
+  &__heading-secondary {
+    margin-top: 10rem;
+    padding-top: 10rem;
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    
+    
+    background-image: linear-gradient(to right, $color-secondary, $color-primary-dark);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    transition: all .2s;
+
+    &-home {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      display: flex;
+      background-image: linear-gradient(to right, $color-secondary, $color-primary-dark);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: .2rem;
+      transition: all .2s;   
+    }
+  }
+
+  
+  &-text {
+      width: 55rem;
+      height: auto;
+      margin: 1rem;
+      /* flex: 1; */
+      /* background-color: aqua; */
+
+      @include respond(tab-port) {
+        width: 45rem;
+      } 
+
+      @include respond(phone-land) {
+        width: 38rem;
+      }
+  }
+  
+  &-bild {
+      width: 55rem;
+      height: auto;
+      // animation: slideInFromRight 1s ease-in;
+      border-radius: .5rem;
+      
+      
+      
+      margin: 1rem;
+      /* flex: 1; */
+      background-color: beige;
+      align-self: center;
+
+      @include respond(tab-port) {
+        width: 45rem;
+      } 
+
+      @include respond(phone-land) {
+        width: 38rem;
+      }
+      
+      & img {
+          max-width: 100%;  
+          height: auto;
+          
+      }
+  }
+}
