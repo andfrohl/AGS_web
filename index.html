@@ -131,44 +131,7 @@
     
     
     
-    <section class="container">
-            
-           
-            <!-- <div class="grid">
-                <div class="about-text">
-                    <h1>Wir fertigen Teile</h1>
 
-
-                    
-                
-                </div> -->
-
-                <!-- <div class="about-kontakt card">
-                    <h2>Einfach kontaktieren</h2>
-                    <div>
-
-                        <p>Rufen Sie an<br>
-                            <div class="about-kontakt__button">
-                                <svg class="about-kontakt-phone__icon">
-                                    <use xlink:href="img/sprite.svg#icon-phone1"></use>
-                                </svg>
-                                <a href="tel:++4915257629112">+49 152 5762 9112</a>
-                            </div>
-
-                            <div class="about-kontakt__button">
-                                <svg class="about-kontakt-home__icon">
-                                    <use xlink:href="img/sprite.svg#icon-home1"></use>
-                                </svg>    
-                                <a href="tel:+496915394928">+49 69 1539 4928</a>
-                            </div>                
-                        </p>
-
-                    </div>
-                </div> -->
-            <!-- </div> -->
-
-        
-    </section>
 
 
     <!-- Sticky Contact -->
@@ -500,11 +463,21 @@
                 <h2> ANfahrt und Kontakt     </h2>
             </div>
             
-            <div class="kontaktForm__anfahrt">
-                <div class="kontaktForm__anfahrt-map">
+            <div class="kontaktForm__anfahrt" >
+                
+                <div id="map-container">
+                    <div id="consent-overlay" class="kontaktForm__anfahrt-map">
+                        <p>Um die Karte anzuzeigen, stimmen Sie bitte der Nutzung von Google Maps zu.</p>
+                        <button id="accept-map">Karte anzeigen</button>
+                    </div>
+                    <div id="map" style="display:none;">
+                        <iframe id="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40941.19822990516!2d8.572919678153477!3d50.10828453248716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd0a3bfdd13df3%3A0xb164e93efb216cf2!2sErnst-Wiss-Stra%C3%9Fe%2018%2C%2065933%20Frankfurt%20am%20Main!5e0!3m2!1sde!2sde!4v1727170068193!5m2!1sde!2sde" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <!-- <div class="kontaktForm__anfahrt-map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40941.19822990516!2d8.572919678153477!3d50.10828453248716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd0a3bfdd13df3%3A0xb164e93efb216cf2!2sErnst-Wiss-Stra%C3%9Fe%2018%2C%2065933%20Frankfurt%20am%20Main!5e0!3m2!1sde!2sde!4v1727170068193!5m2!1sde!2sde" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-    
+     -->
                 <div class="kontaktForm__anfahrt-beschreibung">
                     <ul>    
                     
@@ -519,7 +492,17 @@
             </div>
     
             <div class="kontaktForm__formular">
-                
+                <form action="process_form.php" method="post">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name"><br><br>
+                    <label for="email">E-Mail:</label><br>
+                    <input type="email" id="email" name="email"><br><br>
+                    <label for="message">Nachricht:</label><br>
+                    <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+                    <div class="h-captcha" data-sitekey="DEIN_SITE_KEY"></div><br>
+                    <input type="submit" value="Absenden">
+                    <input type="reset" value="Zurücksetzen">
+                </form>
             </div>
         </div>    
 
@@ -775,6 +758,15 @@
         </div>
     </div>
 
+    <script>
+        document.getElementById('accept-map').addEventListener('click', function() {
+    document.getElementById('consent-overlay').style.display = 'none';
+    document.getElementById('map').style.display = 'block';
+
+    // Google Maps iframe laden
+    document.getElementById('google-map').src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40941.19822990516!2d8.572919678153477!3d50.10828453248716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd0a3bfdd13df3%3A0xb164e93efb216cf2!2sErnst-Wiss-Stra%C3%9Fe%2018%2C%2065933%20Frankfurt%20am%20Main!5e0!3m2!1sde!2sde!4v1727170068193!5m2!1sde!2sde';
+});
+    </script>
   
     <script src="js/mini-navbar.js"></script>
     <script src="js/hero-carousel.js"></script>

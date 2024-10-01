@@ -200,22 +200,25 @@ img {
 }
 
 .page {
+  margin: 0 auto;
   display: flex;
   justify-content: center;
+  background-color: orangered;
   margin: 0 auto;
-  background-color: #f8f8f8;
+  /* background-color: $color-grey-light-5; */
 }
 .page__container {
-  display: flex;
-  flex-wrap: wrap;
+  flex: auto;
   max-width: 118rem;
+  flex-wrap: wrap;
+  text-align: left;
   flex-direction: column;
 }
 .page__heading {
   font-style: oblique;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 500;
-  line-height: 1.4em;
+  line-height: 1.8em;
   /* text-transform: uppercase; */
   color: rgba(51, 51, 51, 0.7);
 }
@@ -241,7 +244,6 @@ img {
   margin: 0 auto;
   overflow: hidden; /* Fixed die Lücke über der NavBar, verursacht durch die margin des h1, h2 */
   padding: 0 1rem;
-  overflow: visible;
 }
 
 .card {
@@ -1653,7 +1655,7 @@ img {
   border-radius: 0.5rem;
   margin: 1rem;
   /* flex: 1; */
-  background-color: beige;
+  /* background-color: burlywood; */
   align-self: center;
 }
 @media (max-width: 56.25em) {
@@ -2013,66 +2015,95 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 }
 
 /* About - Hero */
-.about {
-  height: 75rem;
-  width: 90%;
-  margin-top: 12rem;
-  padding: 1rem;
-  box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.2);
-}
-@media (max-width: 56.25em) {
-  .about {
-    height: 55rem;
-  }
-}
-.about h1 {
-  font-size: 6rem;
-  font-weight: 700;
-  text-shadow: -1px -1px 0px rgba(240, 238, 238, 0.7), 3px 3px 0px rgba(250, 249, 249, 0.7), 6px 6px 0px rgba(0, 0, 0, 0.3333333333);
-  text-transform: uppercase;
-}
-.about .grid {
-  grid-template-columns: 2fr 1fr;
-  gap: 20rem;
-}
-.about-text {
-  position: relative;
-  top: 1rem;
-  height: 60%;
-  z-index: 100;
-  animation: slideInFromLeft 1s ease-in;
-}
-.about-kontakt {
-  max-width: 60rem;
-  z-index: 50;
-  animation: slideInFromRight 1s ease-in;
-}
-.about-kontakt__button {
-  background-color: rgba(27, 124, 194, 0.7);
-  width: 80%;
-  height: 4rem;
-  margin: 1rem 0;
-  border-radius: 0.8rem;
-  padding: 0 2rem;
-  z-index: 100;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  animation: buttonRing 1s ease-in-out;
-  animation-delay: 2s;
-}
-.about-kontakt__button a {
-  color: #fff;
-}
-.about-kontakt-phone__icon, .about-kontakt-home__icon {
-  height: 2rem;
-  width: 2rem;
-  padding-right: 1rem;
-  fill: #fff;
-  animation: buttonRing 1s ease-in-out;
-  animation-delay: 2s;
-}
+/* .about {
+    height: 75rem;
+    width: 90%;
+    margin-top: 12rem;
+    padding: 1rem;
+    box-shadow: 0 3px 1rem rgba($color-black, .2);
 
+    @include respond (tab-port) {
+        height: 55rem;
+    }
+
+    // clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+    // background-image: linear-gradient(to right bottom, 
+    //     rgba($color-primary-light, 0.7), 
+    //     rgba($color-primary-dark, 0.7)), 
+    //     url(../../img/hero.jpg);
+    //     background-size: auto;
+    //     background-position: top;
+    //     overflow: visible;  // Damit die graue Box überragt
+    // position: relative;
+
+
+    & h1 {
+        font-size: 6rem;
+        font-weight: 700;
+        text-shadow: -1px -1px 0px rgba($color-grey-light-3, 0.7),
+            3px 3px 0px rgba($color-grey-light-1, 0.7),
+            6px 6px 0px #00000055;
+        text-transform: uppercase;
+    }
+
+    & .grid {
+        grid-template-columns: 2fr 1fr;
+        gap: 20rem;
+    }
+
+    &-text {
+        position: relative;
+        top: 1rem;
+        height: 60%;
+        z-index: 100;
+
+        animation: slideInFromLeft 1s ease-in;
+
+
+    }
+
+    &-kontakt {
+        max-width: 60rem;
+        z-index: 50;
+
+        animation: slideInFromRight 1s ease-in;
+
+        &__button {
+            background-color: rgba($color-primary-dark, 0.7);
+
+            width: 80%;
+            height: 4rem;
+            margin: 1rem 0;
+            border-radius: .8rem;
+            padding: 0 2rem;
+            z-index: 100;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            animation: buttonRing 1s ease-in-out;
+            animation-delay: 2s;
+
+
+            & a {
+                color: $color-white;
+            }
+        }
+
+        &-phone__icon,
+        &-home__icon {
+            height: 2rem;
+            width: 2rem;
+            padding-right: 1rem;
+            fill: $color-white;
+
+            animation: buttonRing 1s ease-in-out;
+            animation-delay: 2s;
+        }
+    }
+
+} */
 .welcome {
   display: flex;
   justify-content: center;
@@ -2525,17 +2556,27 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   text-align: center;
 }
 .kontaktForm__anfahrt-map {
-  height: 40rem;
   width: 100%;
-  height: 40rem;
+  height: auto;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1000;
 }
 .kontaktForm__anfahrt-beschreibung {
+  display: flex;
   margin: 2rem 0;
   width: 45%;
   flex: 1;
+  background-color: aqua;
 }
 .kontaktForm__formular {
+  background-color: blueviolet;
   width: 100%;
+  height: 40rem;
 }
 
 @keyframes scroll {
@@ -3049,13 +3090,8 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   display: flex;
   margin-top: 9rem;
   width: 100%;
-  height: 65rem;
-  display: flex;
-  justify-content: center;
+  height: 64rem;
   align-items: flex-end;
-  min-height: 15rem;
-  -o-object-fit: cover;
-     object-fit: cover;
   /* padding: 0.5rem; */
 }
 @media (max-width: 56.25em) {
@@ -3064,8 +3100,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   }
 }
 .start-container__bild {
-  min-height: 60rem;
-  width: auto;
+  min-height: auto;
 }
 @media (max-width: 56.25em) {
   .start-container__bild {
@@ -3094,65 +3129,6 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   flex-wrap: wrap;
 }
 
-.parent {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  grid-column-gap: 5rem;
-  grid-row-gap: 5rem;
-  margin-bottom: 10rem;
-}
-
-.div1 {
-  grid-area: 1/1/1/2;
-}
-
-.div2 {
-  grid-area: 1/2/1/3;
-}
-
-.div3 {
-  grid-area: 2/1/2/3;
-}
-
-.div4 {
-  grid-area: 3/1/3/2;
-}
-
-.div5 {
-  grid-area: 3/2/3/3;
-}
-
-.div6 {
-  grid-area: 4/1/4/2;
-}
-
-.div7 {
-  grid-area: 4/2/4/3;
-}
-
-.qualitaet {
-  grid-area: 5/1/5/3;
-}
-
-.div9 {
-  grid-area: 6/1/6/2;
-}
-
-.div10 {
-  grid-area: 6/2/6/3;
-}
-
-/* .introduction_entwicklung {
-
-
-  &-text {
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
-    font-weight: 700;
-
-  }
-} */
 .konstruktion__heading,
 .service__heading,
 .leichtbau__heading,
