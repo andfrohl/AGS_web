@@ -882,6 +882,78 @@ img {
     top: 0;
   }
 }
+.kontaktForm {
+  display: flex;
+  justify-content: space-around;
+  margin: 10rem 0;
+}
+.kontaktForm__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 120rem;
+}
+.kontaktForm__heading {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+}
+.kontaktForm__anfahrt-map {
+  position: relative;
+  display: flex;
+  height: 40rem;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 100;
+}
+.kontaktForm__anfahrt-map-background-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(./../img/gmaps_placeholder_AGS-engineering.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(5px); /* Blur-Effekt hinzufügen */
+  z-index: 1;
+}
+.kontaktForm__anfahrt-map-text {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+.kontaktForm__anfahrt-beschreibung {
+  display: flex;
+  margin: 2rem 0;
+  width: 45%;
+  flex: 1;
+  background-color: aqua;
+}
+.kontaktForm__formular {
+  background-color: blueviolet;
+  width: 100%;
+  height: 40rem;
+}
+
 .introduction {
   display: flex;
   flex-wrap: wrap;
@@ -2529,78 +2601,6 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.kontaktForm {
-  display: flex;
-  justify-content: space-around;
-  margin: 10rem 0;
-}
-.kontaktForm__container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5rem;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 120rem;
-}
-.kontaktForm__heading {
-  display: flex;
-  flex: 1;
-  width: 100%;
-  margin-top: 5rem;
-  margin-bottom: 3rem;
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  text-align: center;
-}
-.kontaktForm__anfahrt-map {
-  position: relative;
-  display: flex;
-  height: 40rem;
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  z-index: 100;
-}
-.kontaktForm__anfahrt-map-background-blur {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(./../img/gmaps_placeholder_AGS-engineering.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: blur(5px); /* Blur-Effekt hinzufügen */
-  z-index: 1;
-}
-.kontaktForm__anfahrt-map-text {
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
-  color: white;
-  font-weight: bold;
-  border: 3px solid #f1f1f1;
-  z-index: 2;
-  width: 80%;
-  padding: 20px;
-  text-align: center;
-}
-.kontaktForm__anfahrt-beschreibung {
-  display: flex;
-  margin: 2rem 0;
-  width: 45%;
-  flex: 1;
-  background-color: aqua;
-}
-.kontaktForm__formular {
-  background-color: blueviolet;
-  width: 100%;
-  height: 40rem;
 }
 
 @keyframes scroll {
