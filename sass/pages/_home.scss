@@ -923,20 +923,44 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
         
     }
 
-    
+        
 
         &__anfahrt-map {
-            
-    
-    width: 100%;
-    height: auto;
-    background: rgba(255, 255, 255, 0.8);
+            position: relative;
     display: flex;
+    height: 40rem;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    z-index: 1000;
+    z-index: 100;
+            
+    &-background-blur {
+        position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./../img/gmaps_placeholder_AGS-engineering.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px); /* Blur-Effekt hinzufügen */
+    z-index: 1;
+    }
+
+            &-text {
+                position: relative;
+                background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+                color: white;
+                font-weight: bold;
+                border: 3px solid #f1f1f1;
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+            }
         }
 
         &__anfahrt-beschreibung {
