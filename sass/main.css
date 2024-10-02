@@ -953,6 +953,15 @@ img {
   width: 100%;
   height: 40rem;
 }
+.kontaktForm__formular input::-moz-placeholder, .kontaktForm__formular textarea::-moz-placeholder {
+  color: #888;
+  font-style: italic;
+}
+.kontaktForm__formular input::placeholder,
+.kontaktForm__formular textarea::placeholder {
+  color: #888;
+  font-style: italic;
+}
 
 .introduction {
   display: flex;
