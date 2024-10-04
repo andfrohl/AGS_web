@@ -82,15 +82,219 @@
     }
 
     &__formular {
-        background-color: blueviolet;
-        width: 100%;
-        height: 40rem;
+        background-color:blanchedalmond;
         
-        input::placeholder, 
-        textarea::placeholder {
-            color: #888;
-            font-style: italic;
+        width: 60rem;
+        margin: 0 auto;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        
+
+        /* .form-group {
+            position: relative;
+            margin-bottom: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
         }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+        }
+        
+        .form-group label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 16px;
+            color: #999;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        
+        .form-group input:focus + label,
+        .form-group input:not(:placeholder-shown) + label,
+        .form-group textarea:focus + label,
+        .form-group textarea:not(:placeholder-shown) + label,
+        .form-group select:focus + label,
+        .form-group select:not([value=""]) + label {
+            top: -20px;
+            left: 10px;
+            font-size: 12px;
+            color: #333;
+        }
+        
+        input[type="submit"],
+        input[type="reset"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        input[type="reset"] {
+            background-color: #f44336;
+            color: white;
+        } */
+        
+        
     }
 
+}
+
+
+/* Block: form */
+.form {
+    width: 100%;
+}
+
+/* Element: form__heading */
+.form__heading {
+    text-align: center;
+}
+
+/* Block: form-group */
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Element: form-group__input, form-group__textarea, form-group__select */
+/*  !!!!!!! Hier sind die Placeholder Labels !!!!!!! */
+.form-group__input,
+.form-group__textarea
+ {
+    width: 100%;
+    padding: 10px;
+    
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    color: $color-grey-dark1;
+    
+    
+}
+
+.form-group__select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.6rem;    
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+        
+}
+
+/* Fade-In Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Element: form-group__label */
+.form-group__label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    color: blue;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    animation: fadeInUp 0.3s ease forwards;
+    z-index: -2;
+}
+
+
+/* Modifier: form-group__input--focus, form-group__textarea--focus, form-group__select--focus */
+.form-group__input:focus + .form-group__label,
+.form-group__input:not(:placeholder-shown) + .form-group__label,
+.form-group__textarea:focus + .form-group__label,
+.form-group__textarea:not(:placeholder-shown) + .form-group__label,
+.form-group__select:focus + .form-group__label,
+.form-group__select:not([value=""]) + .form-group__label {
+    top: -2.5rem;
+    left: 10px;
+    font-size: 12px;
+    color: orangered;
+    z-index: 1;
+    
+}
+
+        
+
+/* Platzhalter-Animation */
+/* .form-group__input::placeholder,
+.form-group__textarea::placeholder {
+    color: $color-white;
+    
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    
+} */
+
+.form-group__input:focus::placeholder,
+.form-group__textarea:focus::placeholder {
+    opacity: 0;
+    transform: translateY(-2rem);
+}
+
+
+
+.form-group__input:focus::placeholder,
+.form-group__textarea:focus::placeholder {
+    animation: fadeInUp 0.3s ease forwards;
+    
+}
+
+
+
+/* Block: button */
+.button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Modifier: button--submit */
+.button--submit {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Modifier: button--reset */
+.button--reset {
+    background-color: #f44336;
+    color: white;
 }

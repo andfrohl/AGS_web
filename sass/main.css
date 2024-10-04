@@ -949,18 +949,211 @@ img {
   background-color: aqua;
 }
 .kontaktForm__formular {
-  background-color: blueviolet;
+  background-color: blanchedalmond;
+  width: 60rem;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* .form-group {
+      position: relative;
+      margin-bottom: 20px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      outline: none;
+  }
+
+  .form-group label {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 16px;
+      color: #999;
+      transition: all 0.3s ease;
+      pointer-events: none;
+  }
+
+  .form-group input:focus + label,
+  .form-group input:not(:placeholder-shown) + label,
+  .form-group textarea:focus + label,
+  .form-group textarea:not(:placeholder-shown) + label,
+  .form-group select:focus + label,
+  .form-group select:not([value=""]) + label {
+      top: -20px;
+      left: 10px;
+      font-size: 12px;
+      color: #333;
+  }
+
+  input[type="submit"],
+  input[type="reset"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+  }
+
+  input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+  }
+
+  input[type="reset"] {
+      background-color: #f44336;
+      color: white;
+  } */
+}
+
+/* Block: form */
+.form {
   width: 100%;
-  height: 40rem;
 }
-.kontaktForm__formular input::-moz-placeholder, .kontaktForm__formular textarea::-moz-placeholder {
-  color: #888;
-  font-style: italic;
+
+/* Element: form__heading */
+.form__heading {
+  text-align: center;
 }
-.kontaktForm__formular input::placeholder,
-.kontaktForm__formular textarea::placeholder {
-  color: #888;
-  font-style: italic;
+
+/* Block: form-group */
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Element: form-group__input, form-group__textarea, form-group__select */
+/*  !!!!!!! Hier sind die Placeholder Labels !!!!!!! */
+.form-group__input,
+.form-group__textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  color: #333;
+}
+
+.form-group__select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* Fade-In Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Element: form-group__label */
+.form-group__label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 16px;
+  color: blue;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  animation: fadeInUp 0.3s ease forwards;
+  z-index: -2;
+}
+
+/* Modifier: form-group__input--focus, form-group__textarea--focus, form-group__select--focus */
+.form-group__input:not(:-moz-placeholder-shown) + .form-group__label, .form-group__textarea:not(:-moz-placeholder-shown) + .form-group__label {
+  top: -2.5rem;
+  left: 10px;
+  font-size: 12px;
+  color: orangered;
+  z-index: 1;
+}
+.form-group__input:focus + .form-group__label,
+.form-group__input:not(:placeholder-shown) + .form-group__label,
+.form-group__textarea:focus + .form-group__label,
+.form-group__textarea:not(:placeholder-shown) + .form-group__label,
+.form-group__select:focus + .form-group__label,
+.form-group__select:not([value=""]) + .form-group__label {
+  top: -2.5rem;
+  left: 10px;
+  font-size: 12px;
+  color: orangered;
+  z-index: 1;
+}
+
+/* Platzhalter-Animation */
+/* .form-group__input::placeholder,
+.form-group__textarea::placeholder {
+    color: $color-white;
+
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+} */
+.form-group__input:focus::-moz-placeholder, .form-group__textarea:focus::-moz-placeholder {
+  opacity: 0;
+  transform: translateY(-2rem);
+}
+.form-group__input:focus::placeholder,
+.form-group__textarea:focus::placeholder {
+  opacity: 0;
+  transform: translateY(-2rem);
+}
+
+.form-group__input:focus::-moz-placeholder, .form-group__textarea:focus::-moz-placeholder {
+  animation: fadeInUp 0.3s ease forwards;
+}
+
+.form-group__input:focus::placeholder,
+.form-group__textarea:focus::placeholder {
+  animation: fadeInUp 0.3s ease forwards;
+}
+
+/* Block: button */
+.button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Modifier: button--submit */
+.button--submit {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Modifier: button--reset */
+.button--reset {
+  background-color: #f44336;
+  color: white;
 }
 
 .introduction {
@@ -3097,19 +3290,27 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 }
 
 .gallery {
-  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  padding: 2rem;
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  grid-auto-rows: 11rem;
   grid-auto-flow: dense;
-  gap: 1rem;
+  gap: 2rem;
   overflow: hidden;
   margin-bottom: 5rem;
 }
 .gallery-item__img {
   width: 100%;
   height: 100%;
-  display: block;
+  /* display: block; */
   -o-object-fit: cover;
      object-fit: cover;
+}
+.gallery-item__img:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.1);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .gallery-item_four-grid-cells {
   grid-row: span 2/auto;
