@@ -505,30 +505,37 @@
                             <option value="Divers">Divers</option>
                         </select>
                         <label class="form-group__label" for="salutation">Anrede</label>
+                        <p class="form-group__error" id="salutationError"></p>
                     </div>
                     <div class="form-group">
                         <input class="form-group__input" type="text" id="firstname" name="firstname" placeholder="Vorname" pattern="[A-Za-z]+" title="Bitte nur Buchstaben eingeben" required>
                         <label class="form-group__label" for="firstname">Vorname</label>
+                        <p class="form-group__error" id="firstnameError"></p>
                     </div>
                     <div class="form-group">
                         <input class="form-group__input" type="text" id="name" name="name" placeholder="Name" pattern="[A-Za-z]+" title="Bitte nur Buchstaben eingeben" required>
                         <label class="form-group__label" for="name">Name</label>
+                        <p class="form-group__error" id="nameError"></p>
                     </div>
                     <div class="form-group">
                         <input class="form-group__input" type="text" id="company" name="company" placeholder="Firma" pattern="[A-Za-z0-9\s]+" title="Bitte nur Buchstaben und Zahlen eingeben">
                         <label class="form-group__label" for="company">Firma</label>
+                        <p class="form-group__error" id="companyError"></p>
                     </div>
                     <div class="form-group">
                         <input class="form-group__input" type="text" id="position" name="position" placeholder="Position" pattern="[A-Za-z\s]+" title="Bitte nur Buchstaben eingeben">
                         <label class="form-group__label" for="position">Position</label>
+                        <p class="form-group__error" id="positionError"></p>
                     </div>
                     <div class="form-group">
                         <input class="form-group__input" type="email" id="email" name="email" placeholder="E-Mail" required>
                         <label class="form-group__label" for="email">E-Mail</label>
+                        <p class="form-group__error" id="emailError"></p>
                     </div>
                     <div class="form-group">
                         <textarea class="form-group__textarea" id="message" name="message" placeholder="Nachricht" rows="4" required></textarea>
                         <label class="form-group__label" for="message">Nachricht</label>
+                        <p class="form-group__error" id="messageError"></p>
                     </div>
                     <div class="h-captcha" data-sitekey="DEIN_SITE_KEY"></div><br>
                     <input class="button button--submit" type="submit" value="Absenden">
@@ -794,7 +801,7 @@
     <script src="js/mini-navbar.js"></script>
     <script src="js/gmap-consent.js"></script>
     <script src="js/hero-carousel.js"></script>
-    <!-- <script src="js/kontaktForm.js"></script> -->
+    <script src="js/kontaktForm.js"></script>
     <script src="https://hcaptcha.com/1/api.js" async defer></script>
 
     </body>

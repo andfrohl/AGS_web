@@ -1078,9 +1078,9 @@ img {
   left: 10px;
   font-size: 16px;
   color: blue;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   pointer-events: none;
-  animation: fadeInUp 0.3s ease forwards;
+  animation: fadeInUp 0.4s ease forwards;
   z-index: -2;
 }
 
@@ -1105,6 +1105,57 @@ img {
   z-index: 1;
 }
 
+.form-group__error {
+  display: none;
+  color: red;
+  position: absolute;
+  right: 0;
+  top: 100%; /* Direkt unterhalb des Eingabefeldes */
+  margin-top: 5px; /* Abstand nach oben */
+  opacity: 0;
+  transition: opacity 2s ease; /* Dauer auf 2 Sekunden verlängert */
+}
+
+.form-group__error.visible {
+  display: block;
+  opacity: 1;
+}
+
+.form-group__input.error {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 2px solid red; /* Rote Unterstreichung bei Fehler */
+}
+
+.form-group__input.error::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  transition: width 2s ease, left 2s ease; /* Dauer auf 2 Sekunden verlängert */
+}
+
+.form-group__input.error.animated::before {
+  width: 100%;
+  left: 0;
+}
+
+.form-group__input:focus::-moz-placeholder, .form-group__textarea:focus::-moz-placeholder {
+  opacity: 0;
+  transform: translateY(-2rem);
+  animation: fadeInUp 2s ease forwards;
+}
+
+.form-group__input:focus::placeholder,
+.form-group__textarea:focus::placeholder {
+  opacity: 0;
+  transform: translateY(-2rem);
+  animation: fadeInUp 2s ease forwards;
+}
+
 /* Platzhalter-Animation */
 /* .form-group__input::placeholder,
 .form-group__textarea::placeholder {
@@ -1114,25 +1165,6 @@ img {
     transition: opacity 0.3s ease, transform 0.3s ease;
 
 } */
-.form-group__input:focus::-moz-placeholder, .form-group__textarea:focus::-moz-placeholder {
-  opacity: 0;
-  transform: translateY(-2rem);
-}
-.form-group__input:focus::placeholder,
-.form-group__textarea:focus::placeholder {
-  opacity: 0;
-  transform: translateY(-2rem);
-}
-
-.form-group__input:focus::-moz-placeholder, .form-group__textarea:focus::-moz-placeholder {
-  animation: fadeInUp 0.3s ease forwards;
-}
-
-.form-group__input:focus::placeholder,
-.form-group__textarea:focus::placeholder {
-  animation: fadeInUp 0.3s ease forwards;
-}
-
 /* Block: button */
 .button {
   width: 100%;
