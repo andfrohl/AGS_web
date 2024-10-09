@@ -3,7 +3,7 @@
 .footer {
     background-color: $color-primary-dark;
     color: #fff;
-    height: 10rem;    
+    height: 15rem;    
     padding: 2rem;
 
     &_tele, 
@@ -37,6 +37,8 @@
             border-bottom: 2px $color-white solid;
         }
     }
+
+   
 }
 
 

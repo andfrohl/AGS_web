@@ -61,11 +61,12 @@ img {
 
 .page {
     
-    margin: 0 auto;
+    
     display: flex;
     justify-content: center;
-    background-color: orangered;
+    background-color: $color-grey-light-5;
     margin: 0 auto;
+    padding: 1rem 1rem;
     /* background-color: $color-grey-light-5; */ 
 
     &__container {
@@ -78,7 +79,7 @@ img {
     }
 
     &__heading {
-        
+        padding-left: 2rem;
         font-style: oblique;
         font-size: 2.5rem;
         font-weight: 500;

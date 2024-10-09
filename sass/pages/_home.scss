@@ -793,9 +793,9 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
 .catProdukte {
     
     flex-direction: column;
-    width: 44rem;
-    height: 30rem;
-    padding: 2rem;
+    width: 50rem;
+    height: 35rem;
+    padding: 2.5rem;
     
     
     background-color: rgba($color-primary, 0.9);
@@ -823,7 +823,8 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
         font-size: 3rem;
         color: whitesmoke;
         align-items: start;
-        
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 
     &_description {
@@ -953,7 +954,7 @@ $animationSpeed: 40s;
 
     .slide img {
         width: auto;
-        max-height: 10rem;
+        max-height: 20rem;
         height: 100%;
     }
 }

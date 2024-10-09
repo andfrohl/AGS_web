@@ -460,10 +460,33 @@
         <div class="kontaktForm__container">
            
             <div class="kontaktForm__heading">
-                <h2> ANfahrt und Kontakt     </h2>
+                <h2> Anfahrt und Kontakt     </h2>
             </div>
             
-            <div class="kontaktForm__anfahrt" >         <!-- <div class="kontaktForm__anfahrt-map-background-blur" id="background-blur"></div> -->
+                   <!-- <div class="kontaktForm__anfahrt-map-background-blur" id="background-blur"></div> -->
+
+            <div class="kontaktForm__anfahrt-beschreibung">
+                <ul>    
+                    <p>
+                        Unser Firmensitz ist in Frankfurt am Main
+                    </p>
+                    <p>
+                        <div class="">
+                            AGS Engineering Metalltechnik GmbH<br>
+                            Ernst-Wiss-Straße 18<br>
+                            65933 Frankfurt am Main<br>
+                        </div>
+                    </p>
+
+                    <p>
+                        Wir sind sowohl per Auto als auch öffentlichen Verkehrsmittel leicht zu erreichen. <br>
+                        z.B. mit der Straßenbahn Linie 21 Haltestelle Jägerallee von FFM Hauptbahnhof aus in 15 Minuten. <br>
+                        oder von der A5 Ausfahrt Rebstockgelände innerhalb von 10 Minuten, je nach Verkehrslage.
+                        
+                    </p>
+                    
+                </ul>
+            </div>
                 
             <div id="map-container" class="kontaktForm__anfahrt-map">
                 <div class="kontaktForm__anfahrt-map-background-blur" id="background-blur"></div>
@@ -474,23 +497,36 @@
                 <div id="map" style="display:none; width: 100%; height: 100%;">
                   <iframe id="google-map" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40941.19822990516!2d8.572919678153477!3d50.10828453248716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd0a3bfdd13df3%3A0xb164e93efb216cf2!2sErnst-Wiss-Stra%C3%9Fe%2018%2C%2065933%20Frankfurt%20am%20Main!5e0!3m2!1sde!2sde!4v1727170068193!5m2!1sde!2sde" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
-              </div>
+            </div>
                 <!-- <div class="kontaktForm__anfahrt-map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40941.19822990516!2d8.572919678153477!3d50.10828453248716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd0a3bfdd13df3%3A0xb164e93efb216cf2!2sErnst-Wiss-Stra%C3%9Fe%2018%2C%2065933%20Frankfurt%20am%20Main!5e0!3m2!1sde!2sde!4v1727170068193!5m2!1sde!2sde" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
      -->
-                <div class="kontaktForm__anfahrt-beschreibung">
+                <div class="kontaktForm__formular-beschreibung">
                     <ul>    
-                    
-                        <li class="ags-text__item">kostenreduzierung durch Produktoptimierung</li>
-                        <li class="ags-text__item">direkter Kontakt zu einem Maschinenbautechniker</li>
-                        <li class="ags-text__item">konstruktive Lösungsfindung</li>
-                        <li class="ags-text__item">schnell und flexibel</li>
-                        <li class="ags-text__item">Beschaffung von Speziallegierungen</li>
-                        
+                        <p>
+                            Möchten Sie ein persönliches Gespräch mit unseren Experten? <br>
+                            Haben Sie Fragen oder wünschen Informationen zu unseren Dienstleistungen? <br>
+                            Dann kontaktieren Sie uns gerne über das Kontaktformular.
+                        </p>
+
+                        <p>
+                            Wir beraten Sie individuell, kostenfrei und in einem Kommunikationskanal Ihrer Wahl,
+                        </p>
+                        <li class="ags-text__item">per Mail</li>
+                        <li class="ags-text__item">per Telefon</li>
+                        <li class="ags-text__item">per Onlinemeeting</li>
+
+                        <p>
+                            Senden Sie uns Ihre Anfrage oder vereinbaren Sie einen Termin. <br>
+                            Wir werden uns schnellstmöglich bei Ihnen melden.
+                        </p>
                     </ul>
                 </div>
-            </div>
+
+
+
+            
     
             <div class="kontaktForm__formular">
                 <h2 class="form__heading">Kontaktformular</h2>
@@ -542,6 +578,8 @@
                     <input class="button button--reset" type="reset" value="Zurücksetzen">
                 </form>
             </div>
+
+
         </div>    
 
     </section>
@@ -663,7 +701,7 @@
     </main>
     <footer class="footer bg-secondary-dark" role="contentinfo">
         <div class="container flex">
-            <div class="logo-style">
+            <div class="footer_logo-style">
                 <a href="index.html"><img src="img/Logo AGS_2018_300_194.png" alt="Logo AGS" height="94"></a>
             </div>
             <address class="grid">
