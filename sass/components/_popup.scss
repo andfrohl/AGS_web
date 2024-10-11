@@ -75,8 +75,15 @@
         
         width: 60rem;
         z-index: 50;
-
         
+        &__frame {
+            display: flex; /* Flexbox auf den Frame anwenden */
+            flex-direction: column; /* Inhalte vertikal ausrichten */
+            justify-content: center; /* Vertikale Zentrierung */
+            align-items: center; /* Horizontale Zentrierung */
+            height: 100%;
+        }
+
         & p {
             
             text-align: center;
@@ -104,15 +111,13 @@
             animation: buttonRing 1s ease-in-out;
             animation-delay: 2s;
 
-           
+
 
             & p {
                 color: $color-white;
-                text-align: center;
-                
                 margin: 0 0;
                 padding-bottom: .6rem;
-
+                
                 
             }
 
@@ -154,22 +159,19 @@
                 fill: rgba($color-primary-dark, 0.5);
                 animation: buttonRing 1s ease-in-out;
                 animation-delay: 2s;
-            }
-            
-           
-       
-            
-       
-            
+            } 
         }
+
+        
+        
 
         
     }
 
     &__description {
         display: flex;
-        justify-content: space-between;
-        
+        justify-content: space-around;
+        gap: 10rem;
         width: 60rem;
         z-index: 50;
     }
@@ -191,6 +193,12 @@
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
         hyphens: auto;
+
+    }
+
+    &__button-anfahrt {
+        display: flex;
+        align-self: center;
 
     }
 

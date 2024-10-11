@@ -98,6 +98,10 @@
     align-items: flex-start;
     height: 100%;
     width: 50%;
+
+    @include respond(tab-port) {    
+        width: 90%;
+    }
 }
 
 .grid-2 {

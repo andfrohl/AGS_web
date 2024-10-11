@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="de">
     <head>
+        <title>Homepage- Über AGS - AGS Engineering GmbH - Metallteile - Kunststoffteile - Drehteile Schmiedeteile Frästeile - Metallbearbeitung - Messingteile - Edelstahlbearbeitung - Stahlkonstruktionen - Schweißen - Spritzgussteile günstige Fertigung in Frankfurt Rhein-Main und Taunus Kreis</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
@@ -28,7 +29,7 @@
             <div class="navigation navbar-container">
                 
                 <div class="top-logo-style">
-                    <a href="index.html"><img src="img/Logo AGS_2018_300_194.png" alt="Logo AGS" height="94"></a>
+                    <a href="index.html"><img src="img/Logo AGS_2018_300_194.png" alt="Unternehmenslogo AGS" height="94"></a>
                 </div>
 
                 <input class="navigation__checkbox" type="checkbox" id="navi-toggle" />
@@ -474,7 +475,7 @@
                         Unser Firmensitz ist in Frankfurt am Main
                     </p>
                     <p>
-                        <div class="">
+                        <div class="kontaktForm__anfahrt-beschreibung_adresse">
                             AGS Engineering Metalltechnik GmbH<br>
                             Ernst-Wiss-Straße 18<br>
                             65933 Frankfurt am Main<br>
@@ -505,34 +506,38 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40941.19822990516!2d8.572919678153477!3d50.10828453248716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd0a3bfdd13df3%3A0xb164e93efb216cf2!2sErnst-Wiss-Stra%C3%9Fe%2018%2C%2065933%20Frankfurt%20am%20Main!5e0!3m2!1sde!2sde!4v1727170068193!5m2!1sde!2sde" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
      -->
-                <div class="kontaktForm__formular-beschreibung">
-                    <ul>    
-                        <p>
-                            Möchten Sie ein persönliches Gespräch? <br>
-                            Haben Sie Fragen oder benötigen Sie Informationen zu unseren Leistungen? <br>
-                            
-                        </p>
-
-                        <p>
-                            Wir beraten Sie individuell in einem Kommunikationskanal Ihrer Wahl,
-                        </p>
-                        <li class="ags-text__item">per Mail</li>
-                        <li class="ags-text__item">per Telefon</li>
-                        <li class="ags-text__item">per Onlinemeeting</li>
-
-                        <p>
-                            Wir freuen uns über Ihre Anfrage <br>
-                            und melden uns schnellstmöglich zurück.
-                        </p>
-                    </ul>
-                </div>
+             <div  class="kontaktForm__heading">
+                <h2 id="anfahrt">Kontaktformular</h2>
+            </div>
+            
+            <div class="kontaktForm__formular-beschreibung">
+                   
+                <p>
+                    Möchten Sie ein persönliches Gespräch? <br>
+                    Haben Sie Fragen oder benötigen Sie Informationen zu unseren Leistungen? <br>
+                    
+                </p>
+                <p>
+                    Wir beraten Sie individuell in einem Kommunikationskanal Ihrer Wahl,
+                </p>
+                <ul> 
+                    <li class="ags-text__item">per Mail</li>
+                    <li class="ags-text__item">per Telefon</li>
+                    <li class="ags-text__item">per Onlinemeeting</li>
+                </ul>
+                <p>
+                    Wir freuen uns über Ihre Anfrage <br>
+                    und melden uns schnellstmöglich zurück.
+                </p>
+                
+            </div>
 
 
 
             
     
             <div class="kontaktForm__formular">
-                <h2 class="form__heading">Kontaktformular</h2>
+                
                 <form class="form" name="contactForm" action="kontakt_form.php" method="post" onsubmit="return validateForm()">
                     <input type="text" name="honeypot" style="display:none">
 
@@ -570,6 +575,11 @@
                         <input class="form-group__input" type="email" id="email" name="email" placeholder="E-Mail" required>
                         <label class="form-group__label" for="email">E-Mail</label>
                         <p class="form-group__error" id="emailError"></p>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-group__input" type="subject" id="subject" name="subject" placeholder="Betreff" required>
+                        <label class="form-group__label" for="subject">Betreff</label>
+                        <p class="form-group__error" id="subjectError"></p>
                     </div>
                     <div class="form-group">
                         <textarea class="form-group__textarea" id="message" name="message" placeholder="Nachricht" rows="4" required></textarea>
@@ -822,9 +832,10 @@
                         </table>
                     </div>
                     <div class="text">  
-                        <p class="popup__text">
-                        </p>
-                        <a href="#" class="btn btn--green">Anfahrt</a>
+                    <p class="">
+                        
+                        <a href="index.html#anfahrt" class="popup__button-anfahrt btn btn--green">Anfahrt</a>
+                    </p>
 
                     </div>
 
