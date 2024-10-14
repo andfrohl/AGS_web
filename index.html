@@ -12,11 +12,11 @@
         <link rel="stylesheet" href="sass/main.css">
        
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
 
         <title>AGS-Engineering</title>
     </head>
@@ -44,7 +44,7 @@
                         <li class="navigation__item"><a href="materialien.html" class="navigation__link">Materialien</a></li>
                         <li class="navigation__item"><a href="fertigung.html" class="navigation__link">Fertigung</a></li>
                         <li class="navigation__item"><a href="produkte.html" class="navigation__link">Produkte</a></li>
-                        <li class="navigation__kontakt"><a href="#popup" class="navigation__kontakt">Kontakt</a></li>
+                        <li class="navigation__kontakt"><a href="#popup" class="navigation__kontakt button_style-darkblue">Kontakt</a></li>
                     </ul>
                     
                 </nav>
@@ -209,7 +209,7 @@
                 Bei anspruchsvollen Konstruktionsaufgaben, unterstützen und beraten wir Sie gerne. </p>
                 
                 <p>Sie erreichen uns per Telefon und E-Mail.</p>
-                <a href="entwicklung.html" class="btn ">Erfahren Sie mehr </a>
+                <a href="entwicklung.html" class="button_style-darkblue p-2">Erfahren Sie mehr </a>
             </div>
     
          </div>
@@ -262,7 +262,7 @@
                     
                 </ul>
            
-                    <a href="#popup" class="btn btn--white">Jetzt Teile Anfragen</a>
+                    <a href="#popup" class="button_style-weiss p-2">Jetzt Teile Anfragen</a>
             </div>
     
             <div class="ags-cnc__maschine">
@@ -472,7 +472,8 @@
             <div class="kontaktForm__anfahrt-beschreibung">
                 <ul>    
                     <p>
-                        Unser Firmensitz ist in Frankfurt am Main
+                        Unser Firmensitz ist in Frankfurt am Main <br>
+                        AGS Engineering Metalltechnik GmbH - Ihr kompetenter Partner aus Frankfurt am Main für das Rhein-Main-Gebiet
                     </p>
                     <p>
                         <div class="kontaktForm__anfahrt-beschreibung_adresse">
@@ -513,7 +514,7 @@
             <div class="kontaktForm__formular-beschreibung">
                    
                 <p>
-                    Möchten Sie ein persönliches Gespräch? <br>
+                    Möchten Sie ein persönliches Gespräch? <br> <br>
                     Haben Sie Fragen oder benötigen Sie Informationen zu unseren Leistungen? <br>
                     
                 </p>
@@ -587,6 +588,14 @@
                         <p class="form-group__error" id="messageError"></p>
                     </div>
                     <div class="h-captcha" data-sitekey="DEIN_SITE_KEY"></div><br>
+                    <p class="form-group__note">
+                        Dieses Formular ist durch hCaptcha geschützt. Ihre Nutzung des hCaptcha-Dienstes unterliegt den 
+                        <a href="https://www.hcaptcha.com/terms" target="_blank">Datenschutzbestimmungen</a> 
+                        und 
+                        <a href="https://www.hcaptcha.com/privacy" target="_blank">Nutzungsbedingungen</a> von hCaptcha. 
+                        Weitere Informationen finden Sie in unserer 
+                        <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a>.
+                    </p>
                     <input class="button button--submit" type="submit" value="Absenden">
                     <input class="button button--reset" type="reset" value="Zurücksetzen">
                 </form>
@@ -746,7 +755,7 @@
             <nav>
                 <ul>
                     <li><a href="impressum.html">Impressum</a></li>
-                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="index.html#anfahrt">Kontakt</a></li>
                     <li><a href="datenschutz.html">Datenschutz</a></li>
                 </ul>
             </nav>
@@ -806,7 +815,7 @@
                 <!-- <h3 class="heading-tertiary">Geschäftszeiten &ndash; Please read these terms before booking</h3>  -->
                 
                 <div class="popup__description">
-                    <div class="table">
+                    <div class="popup__description-zeiten">
                         <table class="popup__table">
                             <caption>Geschäftszeiten</caption>
                             <tr>
@@ -831,26 +840,25 @@
                             </tr>
                         </table>
                     </div>
-                    <div class="text">  
-                    <p class="">
-                        
-                        <a href="index.html#anfahrt" class="popup__button-anfahrt btn btn--green">Anfahrt</a>
-                    </p>
 
+                    <div class="popup__description-anfahrt">
+                        <div class="popup__description-anfahrt-map-background-blur">  
+                            <a href="index.html#anfahrt">
+                                <div class="popup__description-anfahrt-button">
+                                    <p class="popup__description-anfahrt-button-link">Anfahrt</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
 
                 </div>
-                
-               
                 
                 
             </div>
         </div>
     </div>
-
     
   
-    <script src="js/mini-navbar.js"></script>
     <script src="js/gmap-consent.js"></script>
     <script src="js/hero-carousel.js"></script>
     <script src="js/kontaktForm.js"></script>

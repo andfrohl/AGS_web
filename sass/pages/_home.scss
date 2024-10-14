@@ -509,28 +509,26 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
         &__item {
             flex: 0 0 80%;
             line-height: 2em;
-            margin-bottom: .7rem;
-            text-indent: 1rem;
-            list-style-position: outside;
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+            padding-left: 2.8rem;  // Hinzugefügt, um Abstand zu halten
+            position: relative;  // Für die absolute Positionierung des Pseudo-Elements
+    
+            &::before {
+                content: "";
+                display: inline-flex;
+                height: 1.9rem;
+                width: 1.9rem;
+                position: absolute;  // Absolut positioniert
+                left: 0;  // Immer auf der linken Seite des Containers
+                top: .8rem;  // Anpassen nach Bedarf
+                background-color: $color-primary;
+                -webkit-mask-image: url(../img/checkmark.svg);
+                -webkit-mask-size: cover;
+                mask-image: url(../img/checkmark.svg);
+                mask-size: cover;
+            }
         }
-
-        &__item::before {
-            content: "";
-            display: inline-flex;
-            
-            height: 1.9rem;
-            width: 1.9rem;
-            margin-right: .9rem;
-            list-style-position: outside;
-            
-        
-            background-color: $color-primary;
-            -webkit-mask-image: url(../img/checkmark.svg);
-            -webkit-mask-size: cover;
-            mask-image: url(../img/checkmark.svg);
-            mask-size: cover;
-          }
-
     }
 
     &-cnc__maschine {
@@ -796,8 +794,6 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
     width: 50rem;
     height: 35rem;
     padding: 2.5rem;
-    
-    
     background-color: rgba($color-primary, 0.9);
     
     border: .2rem;
@@ -831,7 +827,6 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
         
         display: flex;
         flex-wrap: wrap;
-        
         flex-direction: row;
         
         
@@ -841,20 +836,18 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
         &-link {
             display: flex;
             padding: .5rem 2rem;
-            
+            transition: all .2s;
             text-decoration: none;
             color: $color-white;
 
             &:hover {
-                color: rgba($color-grey-light-2, 0.7);
+                color: $color-white;
                 background-color: rgba($color-primary-light, 0.7);
-                transition: all .2s;
+                
             }
             
         }
     }
-
-    
 
     &:hover,
     &:hover &_icon,
@@ -869,10 +862,9 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
     &:hover &_description,
     &:hover &_description a {
                
-        color: rgba($color-grey-dark1, 0.8);
+        color: $color-primary-dark;
         transition: all .2s;
     }
-
 
     &:hover {
         transition: all .2s;
@@ -966,6 +958,10 @@ $animationSpeed: 40s;
     display: flex;
     align-items: baseline;
     align-content: center;
+}
+
+#anfahrt {
+    padding-top: 15rem;
 }
 
 

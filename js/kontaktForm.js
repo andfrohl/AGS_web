@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { id: 'company', pattern: /^[A-Za-z0-9\s]+$/, errorMessage: 'Bitte nur Buchstaben und Zahlen im Firmenfeld eingeben.', optional: true },
         { id: 'position', pattern: /^[A-Za-z\s]+$/, errorMessage: 'Bitte nur Buchstaben im Positionsfeld eingeben.', optional: true },
         { id: 'email', pattern: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/, errorMessage: 'Bitte eine gültige E-Mail-Adresse eingeben.' },
-        { id: 'subject', pattern: /.+/, errorMessage: 'Nachricht darf nicht leer sein.' },
+        { id: 'subject', pattern: /.+/, errorMessage: 'Betreff darf nicht leer sein.' },
         { id: 'message', pattern: /.+/, errorMessage: 'Nachricht darf nicht leer sein.' }
     ];
 
