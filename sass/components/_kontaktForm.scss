@@ -25,7 +25,7 @@
         flex: 1;
         min-width: 100%;
 
-        
+        margin-top: 10rem;
         margin-bottom: 3rem;
         font-size: 2.5rem;
         text-transform: uppercase;
@@ -77,6 +77,7 @@
     &__anfahrt-beschreibung {
         
         display: flex;
+        flex-direction: column;
         padding: 1rem 2rem ;
         
         flex: 1;
@@ -88,11 +89,11 @@
         
     }
 
-    &__formular-beschreibung {
+    &__kontakt-beschreibung {
         
         display: flex;
         flex-direction: column;
-        width: 52rem;
+        max-width: 52rem;
         padding: 1rem 2rem;
 
         /* background-color: yellowgreen; */
@@ -109,6 +110,43 @@
         flex-direction: column;
         
         
+    }
+
+    &__kontakt {
+        display: flex;
+        flex-direction: column;
+
+        &-frame {
+            display: flex;
+            flex-direction: row;
+            align-items: center; /* Horizontale Zentrierung */
+            height: 100%;
+            margin-top: 3rem;
+        }
+
+        &-email,
+        &-festnetz,
+        &-mobil {
+            display: inline-flex;
+            
+
+            &-icon {
+                height: 6rem;
+                width: 6rem;
+                margin-right: 3rem;
+                align-self: center;
+                fill: $color-primary;
+            }
+
+            &-titel {
+                display: inline-block;
+                min-width: 8rem;
+            }
+
+            &-nummer {
+                padding-left: 3rem;
+            }
+        }
     }
 
 }

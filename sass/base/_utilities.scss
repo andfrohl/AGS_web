@@ -79,7 +79,11 @@
 
 
 
-
+.background-grey {
+    background-color: $color-grey-light-5;
+    margin: 0 auto;
+    width: 100%;
+}
 
 
 .flex {
@@ -94,6 +98,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    line-height: 2em;
     justify-content: center;
     align-items: flex-start;
     height: 100%;
@@ -164,3 +169,6 @@
 .p-4 { padding: 3rem;}
 
 .p-5 { padding: 4rem;}
+
+// Margin bottom
+.mb-10 { margin-bottom: 15rem;}

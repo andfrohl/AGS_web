@@ -19,9 +19,14 @@
   .gaengieMaterialien__liste {
     justify-content: center;
     // background-color: orangered;
-    margin: 0 auto;
+    
+    margin: 10rem auto;
     padding: 5rem 0;
     background-color: $color-white;
+    
+    & h2 {
+      margin-bottom: 10rem;
+    }
   
     @include respond(tab-port) {
       padding: 0 2.5rem;

@@ -304,6 +304,12 @@ img {
   text-align: center;
 }
 
+.background-grey {
+  background-color: #f8f8f8;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .flex {
   display: flex;
   justify-content: center;
@@ -316,6 +322,7 @@ img {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+  line-height: 2em;
   justify-content: center;
   align-items: flex-start;
   height: 100%;
@@ -422,6 +429,10 @@ img {
 
 .p-5 {
   padding: 4rem;
+}
+
+.mb-10 {
+  margin-bottom: 15rem;
 }
 
 .btn {
@@ -759,9 +770,13 @@ img {
 .weitereFertigung__liste,
 .gaengieMaterialien__liste {
   justify-content: center;
-  margin: 0 auto;
+  margin: 10rem auto;
   padding: 5rem 0;
   background-color: #fff;
+}
+.weitereFertigung__liste h2,
+.gaengieMaterialien__liste h2 {
+  margin-bottom: 10rem;
 }
 @media (max-width: 56.25em) {
   .weitereFertigung__liste,
@@ -1032,6 +1047,7 @@ img {
   display: flex;
   flex: 1;
   min-width: 100%;
+  margin-top: 10rem;
   margin-bottom: 3rem;
   font-size: 2.5rem;
   text-transform: uppercase;
@@ -1075,6 +1091,7 @@ img {
 }
 .kontaktForm__anfahrt-beschreibung {
   display: flex;
+  flex-direction: column;
   padding: 1rem 2rem;
   flex: 1;
   /* background-color: aqua; */
@@ -1082,10 +1099,10 @@ img {
 .kontaktForm__anfahrt-beschreibung_adresse {
   padding: 1rem 3rem 1rem;
 }
-.kontaktForm__formular-beschreibung {
+.kontaktForm__kontakt-beschreibung {
   display: flex;
   flex-direction: column;
-  width: 52rem;
+  max-width: 52rem;
   padding: 1rem 2rem;
   /* background-color: yellowgreen; */
 }
@@ -1095,6 +1112,34 @@ img {
   padding: 2rem;
   display: flex;
   flex-direction: column;
+}
+.kontaktForm__kontakt {
+  display: flex;
+  flex-direction: column;
+}
+.kontaktForm__kontakt-frame {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Horizontale Zentrierung */
+  height: 100%;
+  margin-top: 3rem;
+}
+.kontaktForm__kontakt-email, .kontaktForm__kontakt-festnetz, .kontaktForm__kontakt-mobil {
+  display: inline-flex;
+}
+.kontaktForm__kontakt-email-icon, .kontaktForm__kontakt-festnetz-icon, .kontaktForm__kontakt-mobil-icon {
+  height: 6rem;
+  width: 6rem;
+  margin-right: 3rem;
+  align-self: center;
+  fill: #4BB3FD;
+}
+.kontaktForm__kontakt-email-titel, .kontaktForm__kontakt-festnetz-titel, .kontaktForm__kontakt-mobil-titel {
+  display: inline-block;
+  min-width: 8rem;
+}
+.kontaktForm__kontakt-email-nummer, .kontaktForm__kontakt-festnetz-nummer, .kontaktForm__kontakt-mobil-nummer {
+  padding-left: 3rem;
 }
 
 /* Block: form */
@@ -3494,12 +3539,12 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 .service__heading,
 .leichtbau__heading,
 .qualitaet__heading {
-  margin-top: 5rem;
-  margin-bottom: 3rem;
+  margin-top: 15rem;
+  margin-bottom: 5rem;
   font-size: 2.5rem;
   text-transform: uppercase;
   font-weight: 700;
-  text-align: center;
+  text-align: left;
   background-image: linear-gradient(to right, #005088, rgba(27, 124, 194, 0.9176470588));
   background-clip: text;
   -webkit-background-clip: text;
