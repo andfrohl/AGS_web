@@ -1,5 +1,4 @@
 // Hero Slider
-
 img {
     width: 100%;
     object-fit: cover;
@@ -14,7 +13,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    min-height: 15rem;
+    min-height: 55rem;
     padding: 0.5rem;
 
     @include respond(tab-port) {
@@ -71,8 +70,8 @@ img {
     justify-content: center;
     align-items: center;
     height: auto;
-    
-
+    width: 100%;
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
@@ -524,7 +523,7 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
 
     &-text {
         max-width: 55rem;
-        
+        padding-top: 6rem;
         //padding-left: 5rem;
         
         @include respond (phone) {
@@ -562,7 +561,6 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
     
         justify-content: space-around;
         max-width: 55rem;
-        height: 40rem;
         padding: 0 1rem;
         
         //animation: slideInFromRight 1s ease-in;
@@ -570,7 +568,6 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
         &__bild {
             width: 22rem;
             height: auto;
-
             box-shadow: 0 1.5rem 2rem rgba($color-black, .4);
             border-radius: 1px;
             /* position: absolute; */
