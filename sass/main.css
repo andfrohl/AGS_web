@@ -2168,6 +2168,7 @@ img {
 
 img {
   width: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -2203,6 +2204,8 @@ img {
 .carousel-wrapper {
   height: 100%;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: absolute;
   overflow: hidden;
   top: 0;
@@ -2237,14 +2240,12 @@ img {
   display: none;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  width: 100%;
   height: auto;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 0;
-  transform: translate(100%, 0);
+  /* transform: translate(100%, 0); */
   opacity: 0;
 }
 @media (max-width: 56.25em) {
