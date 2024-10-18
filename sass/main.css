@@ -232,7 +232,7 @@ img {
 }
 @media (max-width: 25em) {
   .page__heading {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 300;
   }
 }
@@ -3578,13 +3578,13 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 @media (max-width: 56.25em) {
   .start-container__text {
     font-size: 2rem;
-    padding: 1rem 4rem;
+    padding: 1rem 2rem;
   }
 }
 @media (max-width: 25em) {
   .start-container__text {
     font-size: 1.5rem;
-    padding: 1rem 2.5rem;
+    padding: 1rem 2rem;
   }
 }
 
