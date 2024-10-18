@@ -149,7 +149,7 @@ body {
 }
 
 body {
-  font-family: "Exo 2", Arial, sans-serif;
+  font-family: "Lato", Arial, sans-serif;
   color: #333;
 }
 
@@ -224,6 +224,18 @@ img {
   /* text-transform: uppercase; */
   color: rgba(51, 51, 51, 0.7);
 }
+@media (max-width: 56.25em) {
+  .page__heading {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+}
+@media (max-width: 25em) {
+  .page__heading {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+}
 
 .introduction_entwicklung-text,
 .introduction_materialien-text,
@@ -231,6 +243,7 @@ img {
   margin-bottom: 1rem;
   font-size: 1.8rem;
   font-weight: 400;
+  padding: 0 2rem;
 }
 
 .container-big {
@@ -1047,6 +1060,7 @@ img {
   display: flex;
   flex: 1;
   min-width: 100%;
+  padding-left: 2rem;
   margin-top: 10rem;
   margin-bottom: 3rem;
   font-size: 2.5rem;
@@ -1971,6 +1985,7 @@ img {
 .schleifen__heading-secondary {
   margin-top: 10rem;
   padding-top: 10rem;
+  padding-left: 2rem;
   margin-bottom: 5rem;
   font-size: 2.5rem;
   text-transform: uppercase;
@@ -2000,6 +2015,7 @@ img {
 .schleifen__heading-secondary-home {
   margin-top: 3rem;
   padding-top: 1rem;
+  padding-left: 2rem;
   font-size: 2.5rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -2191,7 +2207,7 @@ img {
   overflow: hidden;
   top: 0;
   left: 0;
-  background-color: orangered;
+  /* background-color: orangered; */
 }
 
 .heading-wrapper {
@@ -2223,13 +2239,23 @@ img {
   align-items: center;
   text-align: center;
   width: 100%;
-  height: 100%;
+  height: auto;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 0;
   transform: translate(100%, 0);
   opacity: 0;
+}
+@media (max-width: 56.25em) {
+  .carousel-slide {
+    height: auto;
+  }
+}
+@media (max-width: 25em) {
+  .carousel-slide {
+    height: auto;
+  }
 }
 
 .heading-slide {
@@ -2257,7 +2283,7 @@ img {
 }
 @media (max-width: 56.25em) {
   .heading-slide--text {
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding: 1rem 3rem;
   }
 }
@@ -2544,6 +2570,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   justify-content: center;
   padding-top: 8rem;
   padding-bottom: 8rem;
+  padding-left: 3rem;
   background-color: whitesmoke;
 }
 .welcome_heading {
@@ -2553,6 +2580,18 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   line-height: 1.4em;
   text-transform: uppercase;
   color: rgba(27, 124, 194, 0.7);
+}
+@media (max-width: 56.25em) {
+  .welcome_heading {
+    font-size: 4em;
+    font-weight: 500;
+  }
+}
+@media (max-width: 25em) {
+  .welcome_heading {
+    font-size: 1.5em;
+    font-weight: 300;
+  }
 }
 
 .vorstellung {
@@ -2571,6 +2610,16 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 .vorstellung-text {
   max-width: 55rem;
   margin-left: 4rem;
+}
+@media (max-width: 56.25em) {
+  .vorstellung-text {
+    margin-left: 3rem;
+  }
+}
+@media (max-width: 25em) {
+  .vorstellung-text {
+    margin-left: 2rem;
+  }
 }
 .vorstellung-bild {
   max-width: 45rem;
@@ -3027,7 +3076,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   align-content: center;
 }
 
-#anfahrt {
+#kontakt {
   padding-top: 15rem;
 }
 
@@ -3526,6 +3575,18 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   font-size: 3rem;
   text-transform: uppercase;
 }
+@media (max-width: 56.25em) {
+  .start-container__text {
+    font-size: 2rem;
+    padding: 1rem 4rem;
+  }
+}
+@media (max-width: 25em) {
+  .start-container__text {
+    font-size: 1.5rem;
+    padding: 1rem 2.5rem;
+  }
+}
 
 .content_layout {
   margin-top: 5rem;
@@ -3545,6 +3606,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   text-transform: uppercase;
   font-weight: 700;
   text-align: left;
+  padding-left: 2rem;
   background-image: linear-gradient(to right, #005088, rgba(27, 124, 194, 0.9176470588));
   background-clip: text;
   -webkit-background-clip: text;

@@ -3,6 +3,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $honeypot = $_POST["honeypot"];
     $startTime = $_POST["start_time"];
     $currentTime = time();
+    $jsEnabled = isset($_POST["jsEnabled"]) ? $_POST["jsEnabled"] : false;
+    $captcha = isset($_POST["captcha"]) ? $_POST["captcha"] : '';
+    $correctAnswer = isset($_POST["correctAnswer"]) ? $_POST["correctAnswer"] : '';
     $errors = [];
 
     // Honeypot-Überprüfung
@@ -15,86 +18,86 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors[] = "Formular zu schnell ausgefüllt.";
     }
 
+    // Überprüfung, ob JavaScript aktiviert ist
+    if (!$jsEnabled) {
+        $errors[] = "Bitte aktivieren Sie JavaScript.";
+    }
+
+    // Rechenaufgabe überprüfen
+    if ($captcha != $correctAnswer) {
+        $errors[] = "Falsche Antwort auf die Rechenaufgabe.";
+    }
+
     // Weitere Validierungen und Verarbeitung
-    if (empty($errors)) {
-        // Daten verarbeiten
-        echo "Formular erfolgreich abgeschickt.";
-    } else {
+    $salutation = trim($_POST["salutation"]);
+    $firstname = trim($_POST["firstname"]);
+    $name = trim($_POST["name"]);
+    $company = trim($_POST["company"]);
+    $position = trim($_POST["position"]);
+    $email = trim($_POST["email"]);
+    $subject = trim($_POST["subject"]);
+    $message = trim($_POST["message"]);
+
+    // Vorname validieren
+    if (!preg_match("/^[A-Za-z]+$/", $firstname)) {
+        $errors[] = "Bitte nur Buchstaben im Vornamenfeld eingeben.";
+    }
+
+    // Name validieren
+    if (!preg_match("/^[A-Za-z]+$/", $name)) {
+        $errors[] = "Bitte nur Buchstaben im Namensfeld eingeben.";
+    }
+
+    // Firma validieren
+    if (!empty($company) && !preg_match("/^[A-Za-z0-9\s]+$/", $company)) {
+        $errors[] = "Bitte nur Buchstaben und Zahlen im Firmenfeld eingeben.";
+    }
+
+    // Position validieren
+    if (!empty($position) && !preg_match("/^[A-Za-z\s]+$/", $position)) {
+        $errors[] = "Bitte nur Buchstaben im Positionsfeld eingeben.";
+    }
+
+    // E-Mail validieren
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = "Bitte eine gültige E-Mail-Adresse eingeben.";
+    }
+
+    // Nachricht validieren
+    if (empty($message)) {
+        $errors[] = "Nachricht darf nicht leer sein.";
+    }
+
+    // Fehler ausgeben oder Daten verarbeiten
+    if (!empty($errors)) {
         foreach ($errors as $error) {
             echo "<p>$error</p>";
         }
-    }
-}
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $secret = 'DEIN_GEHEIMER_SCHLÜSSEL';
-    $response = $_POST['h-captcha-response'];
-    $remoteip = $_SERVER['REMOTE_ADDR'];
-
-    $url = 'https://hcaptcha.com/siteverify';
-    $data = array('secret' => $secret, 'response' => $response, 'remoteip' => $remoteip);
-
-    $options = array(
-        'http' => array(
-            'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-            'method'  => 'POST',
-            'content' => http_build_query($data),
-        ),
-    );
-    $context  = stream_context_create($options);
-    $result = file_get_contents($url, false, $context);
-    $resultJson = json_decode($result);
-
-    if ($resultJson->success != true) {
-        echo '<p>Captcha-Überprüfung fehlgeschlagen. Bitte versuche es erneut.</p>';
     } else {
-        $salutation = trim($_POST["salutation"]);
-        $firstname = trim($_POST["firstname"]);
-        $name = trim($_POST["name"]);
-        $company = trim($_POST["company"]);
-        $position = trim($_POST["position"]);
-        $email = trim($_POST["email"]);
-        $message = trim($_POST["message"]);
-        $errors = [];
-
-        // Vorname validieren
-        if (!preg_match("/^[A-Za-z]+$/", $firstname)) {
-            $errors[] = "Bitte nur Buchstaben im Vornamenfeld eingeben.";
-        }
-
-        // Name validieren
-        if (!preg_match("/^[A-Za-z]+$/", $name)) {
-            $errors[] = "Bitte nur Buchstaben im Namensfeld eingeben.";
-        }
-
-        // Firma validieren
-        if (!empty($company) && !preg_match("/^[A-Za-z0-9\s]+$/", $company)) {
-            $errors[] = "Bitte nur Buchstaben und Zahlen im Firmenfeld eingeben.";
-        }
-
-        // Position validieren
-        if (!empty($position) && !preg_match("/^[A-Za-z\s]+$/", $position)) {
-            $errors[] = "Bitte nur Buchstaben im Positionsfeld eingeben.";
-        }
-
-        // E-Mail validieren
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $errors[] = "Bitte eine gültige E-Mail-Adresse eingeben.";
-        }
-
-        // Nachricht validieren
-        if (empty($message)) {
-            $errors[] = "Nachricht darf nicht leer sein.";
-        }
-
-        // Fehler ausgeben oder Daten verarbeiten
-        if (!empty($errors)) {
-            foreach ($errors as $error) {
-                echo "<p>$error</p>";
-            }
+        $to = "info@ags-engineering.de"; // Zieladresse hier eintragen
+        $subject = "Neue Nachricht von der Webseite: $subject";
+        $body = "<html><body>";
+        $body .= "<p>Vielen Dank für Ihre Nachricht. Wir haben Ihre Anfrage erhalten und werden uns so schnell wie möglich bei Ihnen melden.</p>";
+        $body .= "<p>Hier sind die Details Ihrer Nachricht:</p>";
+        $body .= "<p><strong>Anrede:</strong> $salutation<br>";
+        $body .= "<strong>Vorname:</strong> $firstname<br>";
+        $body .= "<strong>Name:</strong> $name<br>";
+        $body .= "<strong>Firma:</strong> $company<br>";
+        $body .= "<strong>Position:</strong> $position<br>";
+        $body .= "<strong>E-Mail:</strong> $email<br>";
+        $body .= "<strong>Nachricht:</strong><br>$message</p>";
+        $body .= "<p>Mit freundlichen Grüßen,<br>Ihr AGS Team</p>";
+        $body .= "<img src='img/Logo AGS_2018_300_194.png' alt='Logo' style='width:100px;height:auto;'><br>";
+        $body .= "</body></html>";
+        $headers = "From: $email\r\n";
+        $headers .= "Reply-To: $email\r\n";
+        $headers .= "CC: $email\r\n"; // Sendet eine Kopie an den Absender
+        $headers .= "Content-type: text/html\r\n"; // Stellt sicher, dass die E-Mail als HTML gesendet wird
+    
+        if (mail($to, $subject, $body, $headers)) {
+            echo "<p>Formular erfolgreich abgeschickt. Vielen Dank für Ihre Nachricht.</p>";
         } else {
-            echo "<p>Formular erfolgreich abgeschickt. Vielen Dank für deine Nachricht.</p>";
-            // Weitere Verarbeitung der Daten
+            echo "<p>Fehler beim Senden der E-Mail. Bitte versuchen Sie es später erneut.</p>";
         }
     }
 }

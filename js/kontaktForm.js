@@ -1,3 +1,55 @@
+var formStartTime;
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Speichere den Startzeitpunkt des Formulars
+    formStartTime = new Date().getTime();
+
+    var jsEnabledInput = document.createElement('input');
+    jsEnabledInput.setAttribute('type', 'hidden');
+    jsEnabledInput.setAttribute('name', 'jsEnabled');
+    jsEnabledInput.setAttribute('value', 'true');
+    document.forms['contactForm'].appendChild(jsEnabledInput);
+
+    // Zufällige Rechenaufgabe generieren
+    var num1 = Math.floor(Math.random() * 10) + 1;
+    var num2 = Math.floor(Math.random() * 10) + 1;
+    document.getElementById('num1').textContent = num1;
+    document.getElementById('num2').textContent = num2;
+
+    document.forms['contactForm'].setAttribute('data-correct-answer', (num1 + num2));
+});
+
+function validateForm() {
+    var honeypot = document.getElementsByName("honeypot")[0].value;
+    if (honeypot) {
+        // Honeypot-Feld wurde ausgefüllt – vermutlich ein Bot
+        return false;
+    }
+
+    var captcha = document.getElementById("captcha").value;
+    var correctAnswer = document.forms['contactForm'].getAttribute('data-correct-answer');
+    if (captcha != correctAnswer) {
+        // Captcha wurde falsch ausgefüllt
+        alert("Bitte geben Sie die richtige Antwort auf die Rechenaufgabe ein.");
+        return false;
+    }
+
+    // Überprüfe die Zeit, die seit dem Start vergangen ist
+    var formEndTime = new Date().getTime();
+    var timeTaken = (formEndTime - formStartTime) / 1000; // Zeit in Sekunden
+
+    if (timeTaken < 10) {
+        // Formular wurde zu schnell ausgefüllt – vermutlich ein Bot
+        alert("Formular zu schnell ausgefüllt. Bitte nehmen Sie sich etwas mehr Zeit.");
+        return false;
+    }
+
+    // Weitere Validierungen
+
+    return true;
+
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     const fields = [
         { id: 'firstname', pattern: /^[A-Za-z]+$/, errorMessage: 'Bitte nur Buchstaben im Vornamenfeld eingeben.' },

@@ -1,7 +1,7 @@
 
 
 body {
-    font-family: 'Exo 2', Arial, sans-serif;
+    font-family: 'Lato', Arial, sans-serif;
     color: #333;
     
     
@@ -91,6 +91,16 @@ img {
         /* text-transform: uppercase; */    
         color: rgba($color-grey-dark1, 0.7);
 
+        @include respond(tab-port) {
+            font-size: 2rem;
+            font-weight: 500;
+        }  
+        
+        @include respond(phone) {
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
     }
 }
 
@@ -103,7 +113,7 @@ img {
       margin-bottom: 1rem;
       font-size: 1.8rem;
       font-weight: 400;
-      
+      padding: 0 2rem;
     }
   }
   
