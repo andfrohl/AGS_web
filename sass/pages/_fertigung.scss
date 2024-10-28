@@ -246,25 +246,33 @@ $content-selector: "~ .content > section";
   @media (max-width: map-get($breakpoints, medium)) {
     ul li label {
       white-space: initial;
+      width: 8rem;
       
       br {
         display: initial;
       }
       
       svg {
-        height: 3.2em;
-        padding-bottom: 2rem;
+        height: 5rem;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
       }
     }
   }
   
   @media (max-width: map-get($breakpoints, small)) {
     ul li label {
-      padding: 5px;
+      padding: .2rem;
       border-radius: 5px;
       
       span {
         display: none;
+      }
+
+      svg {
+        height: 5rem;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
       }
     }
     

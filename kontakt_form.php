@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $honeypot = $_POST["honeypot"];
-    $startTime = $_POST["start_time"];
+    $startTime = intval($_POST["start_time"]); // Sicherstellen, dass $startTime als Ganzzahl behandelt wird
     $currentTime = time();
     $jsEnabled = isset($_POST["jsEnabled"]) ? $_POST["jsEnabled"] : false;
     $captcha = isset($_POST["captcha"]) ? $_POST["captcha"] : '';
@@ -39,22 +39,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = trim($_POST["message"]);
 
     // Vorname validieren
-    if (!preg_match("/^[A-Za-z]+$/", $firstname)) {
+    if (!preg_match("/^[A-Za-zÄÖÜäöüß]+$/", $firstname)) {
         $errors[] = "Bitte nur Buchstaben im Vornamenfeld eingeben.";
     }
 
     // Name validieren
-    if (!preg_match("/^[A-Za-z]+$/", $name)) {
+    if (!preg_match("/^[A-Za-zÄÖÜäöüß]+$/", $name)) {
         $errors[] = "Bitte nur Buchstaben im Namensfeld eingeben.";
     }
 
     // Firma validieren
-    if (!empty($company) && !preg_match("/^[A-Za-z0-9\s]+$/", $company)) {
+    if (!empty($company) && !preg_match("/^[A-Za-z0-9\sÄÖÜäöüß]+$/", $company)) {
         $errors[] = "Bitte nur Buchstaben und Zahlen im Firmenfeld eingeben.";
     }
 
     // Position validieren
-    if (!empty($position) && !preg_match("/^[A-Za-z\s]+$/", $position)) {
+    if (!empty($position) && !preg_match("/^[A-Za-z\sÄÖÜäöüß]+$/", $position)) {
         $errors[] = "Bitte nur Buchstaben im Positionsfeld eingeben.";
     }
 
@@ -87,9 +87,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $body .= "<strong>E-Mail:</strong> $email<br>";
         $body .= "<strong>Nachricht:</strong><br>$message</p>";
         $body .= "<p>Mit freundlichen Grüßen,<br>Ihr AGS Team</p>";
-        $body .= "<img src='img/Logo AGS_2018_300_194.png' alt='Logo' style='width:100px;height:auto;'><br>";
+        $body .= "<img src='https://www.ags-engineering.de/img/Logo%20AGS_2018_300_194.png' alt='Logo' style='width:300px;height:auto;'><br>";
         $body .= "</body></html>";
-        $headers = "From: $email\r\n";
+        $headers = "From: info@ags-engineering.de\r\n"; // Verwende eine gültige und aktive E-Mail-Adresse auf deiner Domain
         $headers .= "Reply-To: $email\r\n";
         $headers .= "CC: $email\r\n"; // Sendet eine Kopie an den Absender
         $headers .= "Content-type: text/html\r\n"; // Stellt sicher, dass die E-Mail als HTML gesendet wird

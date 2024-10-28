@@ -15,6 +15,49 @@ $breakpoint argument choices::after
 1em = 16px
 
 */
+/* @mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) { // 600px / 16px
+            @content;
+        }
+        @media (max-width: 37.5em) and (max-resolution: 2dppx) {
+            @content;
+        }
+    }
+    @if $breakpoint == phone-land {
+        @media (max-width: 48em) { // 768px / 16px
+            @content;
+        }
+        @media (max-width: 48em) and (max-resolution: 2dppx) {
+            @content;
+        }
+    }
+    @if $breakpoint == tab-port {
+        @media (max-width: 64em) { // 1024px / 16px
+            @content;
+        }
+        @media (max-width: 64em) and (max-resolution: 2dppx) {
+            @content;
+        }
+    }
+    @if $breakpoint == tab-land {
+        @media (max-width: 85.375em) { // 1366px / 16px
+            @content;
+        }
+        @media (max-width: 85.375em) and (max-resolution: 2dppx) {
+            @content;
+        }
+    }
+    @if $breakpoint == big-desktop {
+        @media (min-width: 120em) { // 1920px / 16px
+            @content;
+        }
+        @media (min-width: 120em) and (min-resolution: 2dppx) {
+            @content;
+        }
+    }
+}
+ */
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
@@ -115,7 +158,6 @@ $breakpoint argument choices::after
 *::after,
 *::before {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -195,6 +237,7 @@ img {
   color: transparent;
   letter-spacing: 0.2rem;
   transition: all 0.2s;
+  padding-left: 2rem;
 }
 .heading-secondary:hover {
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
@@ -228,17 +271,20 @@ img {
   .page__heading {
     font-size: 2rem;
     font-weight: 500;
+    padding-left: 2rem;
   }
 }
 @media (max-width: 25em) {
   .page__heading {
     font-size: 1.5rem;
     font-weight: 300;
+    padding-left: 2rem;
   }
 }
 
 .introduction_entwicklung-text,
 .introduction_materialien-text,
+.introduction_fertigung-text,
 .introduction_produkte-text {
   margin-bottom: 1rem;
   font-size: 1.8rem;
@@ -1137,6 +1183,7 @@ img {
   align-items: center; /* Horizontale Zentrierung */
   height: 100%;
   margin-top: 3rem;
+  padding-left: 2rem;
 }
 .kontaktForm__kontakt-email, .kontaktForm__kontakt-festnetz, .kontaktForm__kontakt-mobil {
   display: inline-flex;
@@ -1391,6 +1438,7 @@ img {
 }
 .navbar-container {
   display: flex;
+  align-content: space-around;
   padding-top: 0.8rem;
   position: fixed;
   top: 0;
@@ -1424,6 +1472,23 @@ img {
 @media (max-width: 56.25em) {
   .navigation {
     background-color: transparent;
+  }
+}
+.navigation_heading {
+  display: none;
+}
+@media (max-width: 56.25em) {
+  .navigation_heading {
+    display: flex;
+    border-bottom: 2px rgba(27, 124, 194, 0.9176470588) solid;
+    font-weight: 600;
+    transition: all 0.1s;
+    color: rgba(27, 124, 194, 0.9176470588);
+    padding: 1rem 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 .navigation__nav {
@@ -1579,7 +1644,7 @@ img {
     width: 6rem;
     position: fixed;
     top: 1.5rem;
-    right: 2rem;
+    right: 3rem;
     border-radius: 0.8rem;
     z-index: 2000;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
@@ -1593,7 +1658,7 @@ img {
     border-radius: 0.8rem;
     position: fixed;
     top: 1.75rem;
-    right: 2.5rem;
+    right: 3.5rem;
     background-image: radial-gradient(#64c6f3, rgba(27, 124, 194, 0.9176470588));
     z-index: 1000;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
@@ -2083,7 +2148,7 @@ img {
   .schiffbohr-text,
   .dreidteile-text,
   .schleifen-text {
-    width: 38rem;
+    width: 45rem;
   }
 }
 .ags-bild,
@@ -2144,7 +2209,7 @@ img {
   .schiffbohr-bild,
   .dreidteile-bild,
   .schleifen-bild {
-    width: 38rem;
+    width: 44rem;
   }
 }
 .ags-bild img,
@@ -2175,23 +2240,21 @@ img {
 .carousel {
   margin-top: 9rem;
   width: 100%;
-  height: auto;
   background-color: grey;
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  min-height: 55rem;
+  min-height: 75rem;
   padding: 0.5rem;
 }
 @media (max-width: 56.25em) {
   .carousel {
-    min-height: 30rem;
+    min-height: 55rem;
   }
 }
 @media (max-width: 25em) {
   .carousel {
-    min-height: 30rem;
+    min-height: 35rem;
   }
 }
 
@@ -2203,8 +2266,7 @@ img {
 .carousel-wrapper {
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  /* object-fit: cover; */
   position: absolute;
   overflow: hidden;
   top: 0;
@@ -2238,12 +2300,9 @@ img {
 .carousel-slide {
   display: none;
   justify-content: center;
-  align-items: center;
-  height: auto;
+  height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  position: absolute;
+  position: inherit;
   top: 0;
   left: 0;
   z-index: 0;
@@ -2304,12 +2363,13 @@ input[name=carousel-css] {
   margin: 0;
   background-color: rgb(250, 250, 250);
   width: 5rem;
-  height: 0.4rem;
+  height: 0.8rem;
   cursor: pointer;
   border-radius: 10%;
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  align-self: end;
   position: relative;
   z-index: 3;
   margin: 0.25rem;
@@ -2586,13 +2646,13 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 }
 @media (max-width: 56.25em) {
   .welcome_heading {
-    font-size: 4em;
+    font-size: 2.5em;
     font-weight: 500;
   }
 }
 @media (max-width: 25em) {
   .welcome_heading {
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: 300;
   }
 }
@@ -2610,18 +2670,29 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   align-self: center;
   padding: 0 1rem;
 }
+@media (max-width: 56.25em) {
+  .vorstellung_logo {
+    max-width: 40rem;
+  }
+}
+@media (max-width: 25em) {
+  .vorstellung_logo {
+    max-width: 40rem;
+  }
+}
 .vorstellung-text {
   max-width: 55rem;
-  margin-left: 4rem;
+  /* margin-left: 4rem; */
+  padding: 0 2rem;
 }
 @media (max-width: 56.25em) {
   .vorstellung-text {
-    margin-left: 3rem;
+    padding: 2rem;
   }
 }
 @media (max-width: 25em) {
   .vorstellung-text {
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
 }
 .vorstellung-bild {
@@ -2666,7 +2737,6 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 }
 .ags-text {
   max-width: 55rem;
-  padding-top: 6rem;
 }
 @media (max-width: 25em) {
   .ags-text {
@@ -2678,8 +2748,13 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   line-height: 2em;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
-  padding-left: 2.8rem;
+  padding-left: 0.5rem;
   position: relative;
+}
+@media (max-width: 25em) {
+  .ags-text__item {
+    padding-left: 0.5rem;
+  }
 }
 .ags-text__item::before {
   content: "";
@@ -2687,7 +2762,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   height: 1.9rem;
   width: 1.9rem;
   position: absolute;
-  left: 0;
+  left: -4rem;
   top: 0.8rem;
   background-color: #4BB3FD;
   -webkit-mask-image: url(../img/checkmark.svg);
@@ -2695,12 +2770,18 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   mask-image: url(../img/checkmark.svg);
   mask-size: cover;
 }
+@media (max-width: 25em) {
+  .ags-text__item::before {
+    left: -4rem;
+  }
+}
 .ags-cnc__maschine {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   max-width: 55rem;
   padding: 0 1rem;
+  height: 45rem;
 }
 .ags-cnc__maschine__bild {
   width: 22rem;
@@ -2886,6 +2967,26 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   border: 0.2rem;
   border-color: rgba(75, 179, 253, 0.9);
   border-style: solid;
+}
+@media (max-width: 56.25em) {
+  .catEntwicklung,
+  .catMaterialien,
+  .catFertigung,
+  .catProdukte {
+    width: 45rem;
+    height: 40rem;
+    padding: 2rem;
+  }
+}
+@media (max-width: 25em) {
+  .catEntwicklung,
+  .catMaterialien,
+  .catFertigung,
+  .catProdukte {
+    width: 45rem;
+    height: 40rem;
+    padding: 2rem;
+  }
 }
 .catEntwicklung_icon,
 .catMaterialien_icon,
@@ -3383,22 +3484,29 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
 @media (max-width: 1500px) {
   .tabs ul li label {
     white-space: initial;
+    width: 8rem;
   }
   .tabs ul li label br {
     display: initial;
   }
   .tabs ul li label svg {
-    height: 3.2em;
-    padding-bottom: 2rem;
+    height: 5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 }
 @media (max-width: 900px) {
   .tabs ul li label {
-    padding: 5px;
+    padding: 0.2rem;
     border-radius: 5px;
   }
   .tabs ul li label span {
     display: none;
+  }
+  .tabs ul li label svg {
+    height: 5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
   .tabs .slider {
     display: none;

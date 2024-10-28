@@ -15,8 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
     var num2 = Math.floor(Math.random() * 10) + 1;
     document.getElementById('num1').textContent = num1;
     document.getElementById('num2').textContent = num2;
+    document.getElementById('correctAnswer').value = num1 + num2; // Setze die korrekte Antwort im versteckten Feld
 
-    document.forms['contactForm'].setAttribute('data-correct-answer', (num1 + num2));
+    document.forms['contactForm'].setAttribute('data-correct-answer', num1 + num2); // Optionale zusätzliche Absicherung
 });
 
 function validateForm() {
@@ -27,7 +28,7 @@ function validateForm() {
     }
 
     var captcha = document.getElementById("captcha").value;
-    var correctAnswer = document.forms['contactForm'].getAttribute('data-correct-answer');
+    var correctAnswer = document.getElementById("correctAnswer").value; // Holen Sie die korrekte Antwort aus dem versteckten Feld
     if (captcha != correctAnswer) {
         // Captcha wurde falsch ausgefüllt
         alert("Bitte geben Sie die richtige Antwort auf die Rechenaufgabe ein.");
@@ -38,7 +39,7 @@ function validateForm() {
     var formEndTime = new Date().getTime();
     var timeTaken = (formEndTime - formStartTime) / 1000; // Zeit in Sekunden
 
-    if (timeTaken < 10) {
+    if (timeTaken < 5) {
         // Formular wurde zu schnell ausgefüllt – vermutlich ein Bot
         alert("Formular zu schnell ausgefüllt. Bitte nehmen Sie sich etwas mehr Zeit.");
         return false;
@@ -47,13 +48,12 @@ function validateForm() {
     // Weitere Validierungen
 
     return true;
-
 }
 
 document.addEventListener('DOMContentLoaded', function () {
     const fields = [
-        { id: 'firstname', pattern: /^[A-Za-z]+$/, errorMessage: 'Bitte nur Buchstaben im Vornamenfeld eingeben.' },
-        { id: 'name', pattern: /^[A-Za-z]+$/, errorMessage: 'Bitte nur Buchstaben im Namensfeld eingeben.' },
+        { id: 'firstname', pattern: /^[A-Za-zÄÖÜäöüß]+$/, errorMessage: 'Bitte nur Buchstaben im Vornamenfeld eingeben.' },
+        { id: 'name', pattern: /^[A-Za-zÄÖÜäöüß]+$/, errorMessage: 'Bitte nur Buchstaben im Namensfeld eingeben.' },
         { id: 'company', pattern: /^[A-Za-z0-9\s]+$/, errorMessage: 'Bitte nur Buchstaben und Zahlen im Firmenfeld eingeben.', optional: true },
         { id: 'position', pattern: /^[A-Za-z\s]+$/, errorMessage: 'Bitte nur Buchstaben im Positionsfeld eingeben.', optional: true },
         { id: 'email', pattern: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/, errorMessage: 'Bitte eine gültige E-Mail-Adresse eingeben.' },

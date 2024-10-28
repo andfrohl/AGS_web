@@ -34,8 +34,49 @@ $breakpoint argument choices::after
 	}
 }
 
-
-
+/* @mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) { // 600px / 16px
+            @content;
+        }
+        @media (max-width: 37.5em) and (max-resolution: 2dppx) {
+            @content;
+        }
+    }
+    @if $breakpoint == phone-land {
+        @media (max-width: 48em) { // 768px / 16px
+            @content;
+        }
+        @media (max-width: 48em) and (max-resolution: 2dppx) {
+            @content;
+        }
+    }
+    @if $breakpoint == tab-port {
+        @media (max-width: 64em) { // 1024px / 16px
+            @content;
+        }
+        @media (max-width: 64em) and (max-resolution: 2dppx) {
+            @content;
+        }
+    }
+    @if $breakpoint == tab-land {
+        @media (max-width: 85.375em) { // 1366px / 16px
+            @content;
+        }
+        @media (max-width: 85.375em) and (max-resolution: 2dppx) {
+            @content;
+        }
+    }
+    @if $breakpoint == big-desktop {
+        @media (min-width: 120em) { // 1920px / 16px
+            @content;
+        }
+        @media (min-width: 120em) and (min-resolution: 2dppx) {
+            @content;
+        }
+    }
+}
+ */
 
 
 

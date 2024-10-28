@@ -43,6 +43,10 @@
                 <div class="top-logo-style">
                     <a href="index.html"><img src="img/Logo AGS_2018_300_194.png" alt="Logo AGS" height="94"></a>
                 </div>
+
+                <div class="navigation_heading" data-i18n="nav_heading_mobile-entwicklung">
+                    Entwicklung
+                </div>
   
                 <input class="navigation__checkbox" type="checkbox" id="navi-toggle" />
                 <label class="navigation__button" for="navi-toggle"><span class="navigation__icon"></span></label>
@@ -51,12 +55,12 @@
   
                 <nav  class="navigation__nav">
                   <ul class="navigation__list"> 
-                    <li class="navigation__item"><a href="index.html" class="navigation__link">Unternehmen</a></li>
-                    <li class="navigation__item"><a href="entwicklung.html" class="navigation__link  navigation__link-active">Entwicklung</a></li>
-                    <li class="navigation__item"><a href="materialien.html" class="navigation__link">Materialien</a></li>
-                    <li class="navigation__item"><a href="fertigung.html" class="navigation__link">Fertigung</a></li>
-                    <li class="navigation__item"><a href="produkte.html" class="navigation__link">Produkte</a></li>
-                    <li class="navigation__kontakt"><a href="#popup" class="navigation__kontakt button_style-darkblue">Kontakt</a></li>
+                    <li class="navigation__item"><a href="index.html" class="navigation__link" data-i18n="nav_link_unternehmen">Unternehmen</a></li>
+                        <li class="navigation__item"><a href="entwicklung.html" class="navigation__link navigation__link-active" data-i18n="nav_link_entwicklung">Entwicklung</a></li>
+                        <li class="navigation__item"><a href="materialien.html" class="navigation__link" data-i18n="nav_link_materialien">Materialien</a></li>
+                        <li class="navigation__item"><a href="fertigung.html" class="navigation__link" data-i18n="nav_link_fertigung">Fertigung</a></li>
+                        <li class="navigation__item"><a href="produkte.html" class="navigation__link" data-i18n="nav_link_produkte">Produkte</a></li>
+                        <li class="navigation__kontakt"><a href="#popup" class="navigation__kontakt button_style-darkblue" data-i18n="nav_link_kontakt">Kontakt</a></li>
                 </ul>
                 </nav>
             
@@ -89,20 +93,35 @@
     
     <div class="start-container">
         <div class="start-container__bild">
-            <img src="img/gall/slkv_1_1920.jpg" alt="CNC Frästeile Aluminiumspulen Hülsen">
+            <img src="img/gall/slkv_1_1920.jpg" data-i18n-alt="alt_img_entwicklung" alt="CNC Frästeile Aluminiumspulen Hülsen">
         </div>
 
         <div class="start-container__text">
             <p>
-              <span class="">konstruieren</span>
+              <span class="" data-i18n="img_entwicklung_heading">konstruieren</span>
             </p>        
+        </div>
+    </div>
+
+    
+    <!-- Sticky Contact -->
+    <div role='navigation' class="sticky-contact">
+  
+        <input type="checkbox" id="post" class="postToggle" />
+        <label for="post" class="sticky-contact-Btn"></label>
+        <div class="sticky-contact-list">
+        
+          <div class="sticky-contact-list__item landline"><a href="tel:+496915394928"></a></div>
+          <div class="sticky-contact-list__item mobile"><a href="tel:++4915257629112"></a></div>
+          <div class="sticky-contact-list__item mail"><a href="mailto:info@ags-engineering.de?subject=Anfrage"></a></div>
+          
         </div>
     </div>
 
     <div class="page">
         <div class="page__container">
             
-            <h1 class="page__heading">Innovation und Präzision in der Entwicklung</h1>
+            <h1 class="page__heading" data-i18n="entwicklung_page_h1">Innovation und Präzision in der Entwicklung</h1>
           
         </div>
     </div>
@@ -112,15 +131,15 @@
 
 
     <section class="container">
-        <h2 class="heading-secondary">
+        <h2 class="heading-secondary" data-i18n="intro_entwicklung_head">
             Von der Idee, zum fertigen Produkt.
         </h2>
         <div class="introduction_entwicklung">
             <div class="introduction_entwicklung-text">
-                <p>
+                <p data-i18n="intro_entwicklung_text">
                     In unserer Entwicklung begleiten wir Sie durch den gesamten Prozess der Produktentstehung – von der ersten Idee bis zur finalen Realisierung. 
                     Alles beginnt mit einer Skizze, welche die Grundidee festhält. Diese Skizze wird in eine technische Zeichnung (CAD) 
-                    oder ein 3D-Modell transferiert. Anschließend übernehmen CNC-Maschinen die Bearbeitung und Fertigstellung des Modells. 
+                    oder ein 3D-Modell transferiert. Anschließend übernehmen CNC-Maschinen die Bearbeitung und Fertigstellung des Modells. <br> <br>
                     Auch die Leichtbaufertigung spielt eine entscheidende Rolle, um effiziente und innovative Lösungen zu finden. 
                     Jeder Schritt wird sorgfältig überwacht und kontrolliert. Schließlich wird Ihr Produkt sicher verpackt und pünktlich an Sie übergeben. 
                     Vertrauen Sie auf unser Know-How, um Ihre Idee in die Realität umzusetzen.
@@ -130,43 +149,43 @@
     </section>
 
     <section id="konstruktion" class="container">
-        <h2 class="konstruktion__heading">
+        <h2 class="konstruktion__heading" data-i18n="konstruktion_head">
             Entwicklungssbereich
         </h2>
         
         <div class="konstruktion">
             
             <div class="konstruktion-bild">
-                <img src="img/gall/konstruktionsbereich_1200.jpg" alt="Zahnrad Eingangswelle Verzahnungsschleifen">
+                <img src="img/gall/konstruktionsbereich_1200.jpg" data-i18n-alt="alt_img_konstruktion" alt="Zahnrad Eingangswelle Verzahnungsschleifen">
             </div>
 
             <div class="konstruktion-text">
 
-                <p>Unsere Werkzeuge zur methodischen Konstruktion sind:</p>
+                <p data-i18n="konstruktion_text_start">Unsere Werkzeuge zur methodischen Konstruktion sind:</p>
                 <ul>
-                    <li class="ags-text__item">FMEA</li>
-                    <li class="ags-text__item">moderne Konstruktions-Methoden</li>
-                    <li class="ags-text__item">Berechnungen</li>
-                    <li class="ags-text__item">Netzplantechnik</li>
-                    <li class="ags-text__item">Gant-Diagramme</li>
-                    <li class="ags-text__item">Erzeugnisstrukturen</li>
-                    <li class="ags-text__item">Pflichtenhefte</li>
-                    <li class="ags-text__item">Funktionsstrukturen</li>
+                    <li class="ags-text__item" data-i18n="konstruktion_tool_1">FMEA</li>
+                    <li class="ags-text__item" data-i18n="konstruktion_tool_2">moderne Konstruktions-Methoden</li>
+                    <li class="ags-text__item" data-i18n="konstruktion_tool_3">Berechnungen</li>
+                    <li class="ags-text__item" data-i18n="konstruktion_tool_4">Netzplantechnik</li>
+                    <li class="ags-text__item" data-i18n="konstruktion_tool_5">Gant-Diagramme</li>
+                    <li class="ags-text__item" data-i18n="konstruktion_tool_6">Erzeugnisstrukturen</li>
+                    <li class="ags-text__item" data-i18n="konstruktion_tool_7">Pflichtenhefte</li>
+                    <li class="ags-text__item" data-i18n="konstruktion_tool_8">Funktionsstrukturen</li>
                 </ul>
-                <p>Unsere Tools und Prozessen folgen der aktuellen Marktentwicklung.</p>
-                <p>Sprechen Sie uns gerne an.</p>
-                
+                <p data-i18n="konstruktion_text_expl">Unsere Tools und Prozessen folgen der aktuellen Marktentwicklung.</p>
+                <p data-i18n="konstruktion_text_end">Sprechen Sie uns gerne an.</p> <br>
+                <a href="index.html#kontakt" class="button_style-darkblue p-2" data-i18n="kontakt_text_button">Kontakt</a>
             </div>
         </div>
     </section>
 
     <section id="leichtbau" class="container">
-        <h2 class="leichtbau__heading">
+        <h2 class="leichtbau__heading" data-i18n="leichtbau_head">
             Leichtbau
         </h2>
         <div class="leichtbau">
 
-            <div class="leichtbau-text">
+            <div class="leichtbau-text" data-i18n="leichtbau_text">
                 <p>Ursprünglich für die Luft- und Raumfahrt konzipiert, findet der Leichtbau zunehmend in anderen Industrien und Branchen Einzug. Die daraus resultierenden Möglichkeiten weltweit sind grenzenlos. </p>
                 <p>Die additive Fertigung hat einen ökonomischen und ökologischen Vorteil.</p>
                 <p>Im heutigen Karosserie-Engineering wird hauptsächlich Aluminium, hochfeste und ultrahochfeste Stähle eingesetzt. 
@@ -179,7 +198,7 @@
             </div>
 
             <div class="leichtbau-bild">
-                <img src="img/gall/leichtbau_A.jpg" alt="Leichtbaugehäuse Konstruktion">
+                <img src="img/gall/leichtbau_A.jpg" data-i18n-alt="alt_img_leichtbau" alt="Leichtbaugehäuse Konstruktion">
             </div>
 
         </div>
@@ -187,69 +206,71 @@
 
 
     <section id="service" class="container">
-        <h2 class="service__heading">
+        <h2 class="service__heading" data-i18n="service_head">
             Serviceleistungen
         </h2>
         <div class="service">
 
             <div class="service-bild">
-                <img src="img/gall/titan_C_1200.jpg" alt="Titanteile">
+                <img src="img/gall/titan_C_1200.jpg" data-i18n-alt="alt_img_service" alt="Titanteile">
             </div>
         
         
             <div class="service-text">
                 
-                <strong>Sie sind internationler Kunde, wie z.B. aus der Schweiz?</strong><br> <br>
-                Gerne übernehmen wir Logistik und Exportverzollung, bis zu Ihnen vor Ort. 
-                <br> <br>
-                <strong>Ihr Produkt ist zu kostenaufwendig?</strong><br> <br>
-                Wir beraten Sie gerne zu möglichen Optimierungen.
-                <br> <br>
-                <h4>Weitere Leistungen</h4>
+                <p data-i18n="service_text">
+                    <strong>Sie sind internationler Kunde, wie z.B. aus der Schweiz?</strong><br> <br>
+                    Gerne übernehmen wir Logistik und Exportverzollung, bis zu Ihnen vor Ort. 
+                    <br> <br>
+                    <strong>Ihr Produkt ist zu kostenaufwendig?</strong><br> <br>
+                    Wir beraten Sie gerne zu möglichen Optimierungen.
+                    <br> <br>
+                    <h3>Weitere Leistungen</h3>
+                    
+                </p>
                 <ul>
                     
-                    <li class="ags-text__item">Übernahme Lieferantenmanagement weltweit</li>
-                    <li class="ags-text__item">Verlagerung der Fertigung oder Montage</li>
-                    <li class="ags-text__item">Übernahme Ihrer Einkaufsabteilung mittels Vertragsvereinbarungen</li>
+                    <li class="ags-text__item" data-i18n="service_leistung_1">Übernahme Lieferantenmanagement weltweit</li>
+                    <li class="ags-text__item" data-i18n="service_leistung_2">Verlagerung der Fertigung oder Montage</li>
+                    <li class="ags-text__item" data-i18n="service_leistung_3">Übernahme Ihrer Einkaufsabteilung mittels Vertragsvereinbarungen</li>
                     <br>                    
-                    <br>
-                    <li>Sprechen Sie uns gerne an. </li>
-                    
                 </ul>
+                <p data-i18n="service_end_cta">Sprechen Sie uns gerne an.</p> <br>
+                <a href="index.html#kontakt" class="button_style-darkblue p-2" data-i18n="kontakt_text_button">Kontakt</a>
             </div>
 
         </div>
     </section>
 
     <section id="qualitaet" class="container mb-10">
-        <h2 class="qualitaet__heading">
+        <h2 class="qualitaet__heading" data-i18n="quality_head">
             Qualität ist, wenn der Kunde wieder kommt und nicht das Produkt.
         </h2>
         <div class="qualitaet">
 
             <div class="qualitaet-text">
-                <p>Um unseren Kunden ein hohes Maß an Qualität und Präzision zu liefern, 
+                <p data-i18n="quality_text_1">Um unseren Kunden ein hohes Maß an Qualität und Präzision zu liefern, 
                  arbeiten wir mit neuwertiger und modernster Bearbeitungs- und Prüftechnik.</p>
-                 <p>Unsere Partner in der Oberflächenbehandlung und Wärmebehandlung sind nach DIN ISO 9001, teilweise nach ISO/TS 16949 zertifiziert.</p>
+                 <p data-i18n="quality_text_2">Unsere Partner in der Oberflächenbehandlung und Wärmebehandlung sind nach DIN ISO 9001, teilweise nach ISO/TS 16949 zertifiziert.</p>
                  <br>
                 
-                 <p>Natürlich können wir Ihre Produkte mit folgender Dokumentation ausliefern.:</p>
+                 <p data-i18n="quality_text_3">Natürlich können wir Ihre Produkte mit folgender Dokumentation ausliefern.:</p>
                  <ul>
-                     <li class="ags-text__item">EMPB nach VDA (Erstmusterprüfberichte)</li>
-                     <li class="ags-text__item">IMDS Einträge (International Material Data System)</li>
-                     <li class="ags-text__item">Cpk und Cp Werte, für die Prozessfähigkeit</li>
-                     <li class="ags-text__item">Cmk und Cm Werte, für die Maschinenfähigkeit</li>
-                     <li class="ags-text__item">PPAP Production Part Approval Process</li>
-                     <li class="ags-text__item">FMEA ,Prozess-FMEA (Fehlermöglichkeits- und Einflussanalyse Auswirkungsanalyse)</li>
-                     <li class="ags-text__item">SPC-Auswertungen</li>
-                     <li class="ags-text__item">PPC-RRP-8D-PPAP report</li>
+                     <li class="ags-text__item" data-i18n="quality_doku_1">EMPB nach VDA (Erstmusterprüfberichte)</li>
+                     <li class="ags-text__item" data-i18n="quality_doku_2">IMDS Einträge (International Material Data System)</li>
+                     <li class="ags-text__item" data-i18n="quality_doku_3">Cpk und Cp Werte, für die Prozessfähigkeit</li>
+                     <li class="ags-text__item" data-i18n="quality_doku_4">Cmk und Cm Werte, für die Maschinenfähigkeit</li>
+                     <li class="ags-text__item" data-i18n="quality_doku_5">PPAP Production Part Approval Process</li>
+                     <li class="ags-text__item" data-i18n="quality_doku_6">FMEA ,Prozess-FMEA (Fehlermöglichkeits- und Einflussanalyse Auswirkungsanalyse)</li>
+                     <li class="ags-text__item" data-i18n="quality_doku_7">SPC-Auswertungen</li>
+                     <li class="ags-text__item" data-i18n="quality_doku_8">PPC-RRP-8D-PPAP report</li>
                  </ul>
                  
             </div>
 
             
             <div class="qualitaet-bild">
-                <img src="img/gall/qualitaetsabteilung_1200.jpg" alt="3D Messmaschine">
+                <img src="img/gall/qualitaetsabteilung_1200.jpg" data-i18n-alt="alt_img_quality" alt="3D Messmaschine">
             </div>
 
         </div>
