@@ -32,7 +32,7 @@
        display: flex;
        
        align-content: space-around;
-       padding-top: .8rem;
+       padding-top: .6rem;
        
        position: fixed;
        top: 0;
@@ -119,7 +119,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 0 1rem;
-    padding-top: .8rem;
+    padding-top: .4rem;
     background-color: $color-white;
 
     @include respond(tab-port) {
@@ -249,17 +249,33 @@
 
 
 .top-logo-style {
-    background-color: $color-white;
+    background-color: $color-white; //$color-white
     border-radius: .5rem;
+    display: flex;
+
     //box-shadow: 0 3px 1rem rgba($color-black, .2);
     //padding: .5rem 1rem;
+    height: 8rem;
+    padding: .2rem;
     margin: 0 1rem;
     z-index: 9000;
 
     & img {
-        width: 100%;
-        height: 7.5rem;
+        width: auto;
+        height: 100%;
         pointer-events: auto;
+        display: flex;
+        //object-fit: cover;
+
+        /*@include respond(tab-port) {
+            width: 100%;
+            height: auto;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+            height: auto;
+        }*/
     }
     
 }

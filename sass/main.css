@@ -392,6 +392,11 @@ img {
     width: 90%;
   }
 }
+@media (max-width: 25em) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 
 .grid-2 {
   grid-template-columns: repeat(2, 1fr);
@@ -1439,7 +1444,7 @@ img {
 .navbar-container {
   display: flex;
   align-content: space-around;
-  padding-top: 0.8rem;
+  padding-top: 0.6rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -1466,7 +1471,7 @@ img {
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 0 1rem;
-  padding-top: 0.8rem;
+  padding-top: 0.4rem;
   background-color: #fff;
 }
 @media (max-width: 56.25em) {
@@ -1592,13 +1597,26 @@ img {
 .top-logo-style {
   background-color: #fff;
   border-radius: 0.5rem;
+  display: flex;
+  height: 8rem;
+  padding: 0.2rem;
   margin: 0 1rem;
   z-index: 9000;
 }
 .top-logo-style img {
-  width: 100%;
-  height: 7.5rem;
+  width: auto;
+  height: 100%;
   pointer-events: auto;
+  display: flex;
+  /*@include respond(tab-port) {
+      width: 100%;
+      height: auto;
+  }
+
+  @include respond(phone) {
+      width: 100%;
+      height: auto;
+  }*/
 }
 
 /* .navbar .active {
@@ -1796,6 +1814,18 @@ img {
 }
 .footer ul a:hover {
   border-bottom: 2px #fff solid;
+}
+.footer_logo-style {
+  height: 10rem;
+  display: flex;
+}
+.footer_logo-style img {
+  width: 100%;
+  height: 9rem;
+  pointer-events: auto;
+  display: flex;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .sticky-contact {
@@ -2249,7 +2279,7 @@ img {
 }
 @media (max-width: 56.25em) {
   .carousel {
-    min-height: 55rem;
+    min-height: 40rem;
   }
 }
 @media (max-width: 25em) {
@@ -2264,10 +2294,11 @@ img {
 }
 
 .carousel-wrapper {
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   /* object-fit: cover; */
   position: absolute;
+  display: flex;
   overflow: hidden;
   top: 0;
   left: 0;
@@ -2983,7 +3014,7 @@ input[name=carousel-css][value=slide-4]:checked ~ label[data-value=slide-5]::aft
   .catMaterialien,
   .catFertigung,
   .catProdukte {
-    width: 45rem;
+    width: 38rem;
     height: 40rem;
     padding: 2rem;
   }

@@ -107,6 +107,12 @@
     @include respond(tab-port) {    
         width: 90%;
     }
+
+    @include respond(phone) {    
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+ 
 }
 
 .grid-2 {

@@ -19,7 +19,7 @@ img {
     padding: 0.5rem;
 
     @include respond(tab-port) {
-        min-height: 55rem;
+        min-height: 40rem;
       }  
       
       @include respond(phone) {
@@ -33,10 +33,11 @@ img {
 }
 
 .carousel-wrapper {
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     /* object-fit: cover; */
     position: absolute;
+    display: flex;
     overflow: hidden;
     top: 0;
     left: 0;
@@ -854,7 +855,7 @@ input[name="carousel-css"][value="slide-4"]:checked~label[data-value="slide-5"]:
     }  
     
     @include respond(phone) {
-        width: 45rem;
+        width: 38rem;
         height: 40rem;
         padding: 2rem;
     }
