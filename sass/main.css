@@ -219,10 +219,10 @@ p {
   line-height: 1.6;
 }
 
-img {
-  width: 100%;
-}
+/*img {
+    width: 100%;
 
+}*/
 .heading-secondary {
   margin-top: 10rem;
   margin-bottom: 10rem;
@@ -1597,7 +1597,6 @@ img {
 .top-logo-style {
   background-color: #fff;
   border-radius: 0.5rem;
-  display: flex;
   height: 8rem;
   padding: 0.2rem;
   margin: 0 1rem;
@@ -1607,7 +1606,6 @@ img {
   width: auto;
   height: 100%;
   pointer-events: auto;
-  display: flex;
   /*@include respond(tab-port) {
       width: 100%;
       height: auto;

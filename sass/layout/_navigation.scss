@@ -251,7 +251,7 @@
 .top-logo-style {
     background-color: $color-white; //$color-white
     border-radius: .5rem;
-    display: flex;
+    //display: flex;
 
     //box-shadow: 0 3px 1rem rgba($color-black, .2);
     //padding: .5rem 1rem;
@@ -264,7 +264,7 @@
         width: auto;
         height: 100%;
         pointer-events: auto;
-        display: flex;
+        //display: flex;
         //object-fit: cover;
 
         /*@include respond(tab-port) {
